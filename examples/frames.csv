@@ -1,0 +1,3 @@
+image,elapsed_s,phase,lat,lon,alt_m,segment_id,spatial_block,split,vegetation_fraction,registration_reliable,holdout_rmse_m,vegetation_cells,water,road,building,forest,snow,field
+img_006806.jpg,6806,Floating,36.8,-111.5,23000,seg_0003,block_example,test,0.041,true,12.4,"['0,0', '1,0', '2,3', '3,3']",yes,uncertain,no,no,no,no
+

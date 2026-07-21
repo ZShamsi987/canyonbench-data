@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/presence.schema.json",
+  "title": "CanyonBench feature-presence annotation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["image", "annotator", "water", "road", "building", "forest", "snow", "field"],
+  "properties": {
+    "image": {"type": "string", "pattern": "^img_[0-9]{6,}\\.jpg$"},
+    "annotator": {"type": "string", "minLength": 1, "maxLength": 32},
+    "water": {"$ref": "#/$defs/presence"},
+    "road": {"$ref": "#/$defs/presence"},
+    "building": {"$ref": "#/$defs/presence"},
+    "forest": {"$ref": "#/$defs/presence"},
+    "snow": {"$ref": "#/$defs/presence"},
+    "field": {"$ref": "#/$defs/presence"}
+  },
+  "$defs": {"presence": {"enum": ["yes", "no", "uncertain"]}}
+}
+

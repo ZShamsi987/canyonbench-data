@@ -1,0 +1,7 @@
+<View>
+  <Header value="Registered frames only. Review the computed 4x4 overlay; override only if the final mask is visibly wrong and log it."/>
+  <Image name="overlay" value="$overlay" zoom="true"/>
+  <Choices name="review" toName="overlay" choice="single" required="true"><Choice value="accept"/><Choice value="override_logged"/></Choices>
+  <TextArea name="override_cells" toName="overlay" placeholder="Only if override_logged: e.g. 1,2=false"/>
+</View>
+

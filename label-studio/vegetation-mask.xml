@@ -1,0 +1,9 @@
+<View>
+  <Header value="Mask only resolvable living green vegetation at 100% zoom. Follow rules A-1 through A-10."/>
+  <Image name="image" value="$image" zoom="true"/>
+  <BrushLabels name="mask" toName="image">
+    <Label value="green_visible_vegetation" background="#2E7D32"/>
+  </BrushLabels>
+  <Choices name="uncertain_region" toName="image" choice="single"><Choice value="none"/><Choice value="present"/></Choices>
+</View>
+

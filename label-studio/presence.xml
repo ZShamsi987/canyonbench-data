@@ -1,0 +1,11 @@
+<View>
+  <Header value="Label only visible evidence. Use uncertain when evidence is nonzero but below the manual minimum."/>
+  <Image name="image" value="$image" zoom="true"/>
+  <Choices name="water" toName="image" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="uncertain"/></Choices>
+  <Choices name="road" toName="image" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="uncertain"/></Choices>
+  <Choices name="building" toName="image" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="uncertain"/></Choices>
+  <Choices name="forest" toName="image" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="uncertain"/></Choices>
+  <Choices name="snow" toName="image" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="uncertain"/></Choices>
+  <Choices name="field" toName="image" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="uncertain"/></Choices>
+</View>
+

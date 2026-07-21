@@ -1,0 +1,10 @@
+<View>
+  <Image name="image" value="$image" zoom="true"/>
+  <Choices name="cloud" toName="image" choice="single" required="true"><Choice value="none"/><Choice value="partial"/><Choice value="heavy"/></Choices>
+  <Choices name="clarity" toName="image" choice="single" required="true"><Choice value="clear"/><Choice value="moderate"/><Choice value="heavy"/></Choices>
+  <Choices name="balloon" toName="image" choice="single" required="true"><Choice value="none"/><Choice value="partial"/></Choices>
+  <Choices name="sharpness" toName="image" choice="single" required="true"><Choice value="sharp"/><Choice value="blurred"/></Choices>
+  <Choices name="exposure" toName="image" choice="single" required="true"><Choice value="ok"/><Choice value="over"/><Choice value="under"/></Choices>
+  <Choices name="glare" toName="image" choice="single" required="true"><Choice value="none"/><Choice value="present"/></Choices>
+</View>
+

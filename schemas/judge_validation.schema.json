@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/judge_validation.schema.json",
+  "title": "CanyonBench caption-judge validation annotation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["caption_id", "annotator", "asserts"],
+  "properties": {
+    "caption_id": {"type": "string", "minLength": 1},
+    "annotator": {"type": "string", "minLength": 1, "maxLength": 32},
+    "asserts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["water", "road", "building", "forest", "snow", "field"],
+      "properties": {
+        "water": {"$ref": "#/$defs/assertion"},
+        "road": {"$ref": "#/$defs/assertion"},
+        "building": {"$ref": "#/$defs/assertion"},
+        "forest": {"$ref": "#/$defs/assertion"},
+        "snow": {"$ref": "#/$defs/assertion"},
+        "field": {"$ref": "#/$defs/assertion"}
+      }
+    }
+  },
+  "$defs": {"assertion": {"enum": ["yes", "no", "hedged"]}}
+}
+

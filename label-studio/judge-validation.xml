@@ -1,0 +1,11 @@
+<View>
+  <Header value="Judge caption text only. Do not open the image. Model identity must remain hidden."/>
+  <Text name="caption" value="$caption"/>
+  <Choices name="water" toName="caption" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="hedged"/></Choices>
+  <Choices name="road" toName="caption" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="hedged"/></Choices>
+  <Choices name="building" toName="caption" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="hedged"/></Choices>
+  <Choices name="forest" toName="caption" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="hedged"/></Choices>
+  <Choices name="snow" toName="caption" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="hedged"/></Choices>
+  <Choices name="field" toName="caption" choice="single" required="true"><Choice value="yes"/><Choice value="no"/><Choice value="hedged"/></Choices>
+</View>
+

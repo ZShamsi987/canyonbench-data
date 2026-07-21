@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/frames.schema.json",
+  "title": "CanyonBench master frame record",
+  "type": "object",
+  "required": ["image", "elapsed_s", "phase", "lat", "lon", "alt_m", "segment_id", "split", "vegetation_fraction", "registration_reliable", "water", "road", "building", "forest", "snow", "field"],
+  "properties": {
+    "image": {"type": "string", "pattern": "^img_[0-9]{6,}\\.jpg$"},
+    "elapsed_s": {"type": "integer", "minimum": 0},
+    "phase": {"enum": ["Launching", "Floating"]},
+    "lat": {"type": "number", "minimum": -90, "maximum": 90, "not": {"const": 0}},
+    "lon": {"type": "number", "minimum": -180, "maximum": 180, "not": {"const": 0}},
+    "alt_m": {"type": "number"},
+    "segment_id": {"type": "string", "minLength": 1},
+    "spatial_block": {"type": "string"},
+    "split": {"enum": ["train", "validation", "test"]},
+    "vegetation_fraction": {"type": "number", "minimum": 0, "maximum": 1},
+    "registration_reliable": {"type": "boolean"},
+    "holdout_rmse_m": {"type": ["number", "null"], "minimum": 0},
+    "vegetation_cells": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "array", "uniqueItems": true, "items": {"pattern": "^[0-3],[0-3]$"}}
+      ]
+    },
+    "water": {"$ref": "#/$defs/presence"}, "road": {"$ref": "#/$defs/presence"},
+    "building": {"$ref": "#/$defs/presence"}, "forest": {"$ref": "#/$defs/presence"},
+    "snow": {"$ref": "#/$defs/presence"}, "field": {"$ref": "#/$defs/presence"}
+  },
+  "$defs": {"presence": {"enum": ["yes", "no", "uncertain"]}}
+}
+

@@ -1,0 +1,24 @@
+schema_version: "1.0.0"
+frames:
+  image: {type: string, description: "img_SSSSSS.jpg public key"}
+  elapsed_s: {type: integer, unit: s, description: "operational flight elapsed second"}
+  phase: {type: enum, values: [Launching, Floating]}
+  lat: {type: number, unit: degree_north}
+  lon: {type: number, unit: degree_east}
+  alt_m: {type: number, unit: m}
+  speed: {type: number, unit: "source-log unit; resolve before release"}
+  heading: {type: number, unit: degree}
+  segment_id: {type: string, description: contiguous trajectory cluster}
+  spatial_block: {type: string, description: geographic anti-leakage block}
+  split: {type: enum, values: [train, validation, test]}
+  vegetation_fraction: {type: number, range: [0, 1], source: adjudicated human mask}
+  vegetation_cells: {type: list, nullable: true, source: reliable registered frames only}
+  registration_reliable: {type: boolean}
+  holdout_rmse_m: {type: number, unit: m, nullable: true}
+  water: &presence {type: enum, values: [yes, no, uncertain]}
+  road: *presence
+  building: *presence
+  forest: *presence
+  snow: *presence
+  field: *presence
+

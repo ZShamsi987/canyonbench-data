@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/control-points.schema.json",
+  "title": "CanyonBench canonical control point",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["image_x", "image_y", "map_x", "map_y", "role"],
+  "properties": {
+    "image_x": {"type": "number"},
+    "image_y": {"type": "number"},
+    "map_x": {"type": "number", "description": "Metric projected reference coordinate"},
+    "map_y": {"type": "number", "description": "Metric projected reference coordinate"},
+    "role": {"enum": ["fit", "holdout"]}
+  }
+}
+

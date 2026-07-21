@@ -1,0 +1,47 @@
+schema_version: "1.0.0"
+release_version: null
+status: pre-data
+created_at: "2026-07-21"
+code:
+  repository: https://github.com/zafirshamsi/canyonbench
+  commit: null
+capture:
+  platform: high-altitude balloon
+  camera_model: null
+  lens_model: null
+  horizontal_fov_degrees: null
+  vertical_fov_degrees: null
+  flight_date: null
+  geographic_summary: Glen and Marble Canyon corridor near Page and Lake Powell
+private_sources:
+  flight_log:
+    filename: WORLD10.txt
+    sha256: null
+  thermal_log:
+    filename: W10_MLX.txt
+    used_in_benchmark: false
+    sha256: null
+  video:
+    file_count: null
+    checksum_manifest_sha256: null
+public_reference_sources: []
+processing:
+  sync_anchor_event: null
+  sync_anchor_flight_elapsed_s: null
+  sync_offset_s: null
+  crop: remove left third
+  archive_fps: 1
+  sampling_config_sha256: null
+  vari_calibration_sha256: null
+annotation:
+  manual_revision: 2
+  annotators: null
+  qualification_passed: null
+  shared_calibration_frames: 30
+  decision_log_sha256: null
+release:
+  huggingface_url: null
+  zenodo_doi: null
+  frames_sha256: null
+  splits_sha256: null
+

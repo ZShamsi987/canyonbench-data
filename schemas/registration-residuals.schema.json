@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/registration-residuals.schema.json",
+  "title": "CanyonBench registration residual record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["image", "n_points", "n_fit_points", "n_holdout_points", "holdout_rmse_m", "threshold_m", "reliable"],
+  "properties": {
+    "image": {"type": "string", "pattern": "^img_[0-9]{6,}\\.jpg$"},
+    "n_points": {"type": "integer", "minimum": 6},
+    "n_fit_points": {"type": "integer", "minimum": 4},
+    "n_holdout_points": {"type": "integer", "minimum": 2},
+    "holdout_rmse_m": {"type": "number", "minimum": 0},
+    "threshold_m": {"type": "number", "exclusiveMinimum": 0},
+    "reliable": {"type": "boolean"}
+  }
+}
+

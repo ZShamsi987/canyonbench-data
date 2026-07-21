@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Cite the frozen CanyonBench data release and accompanying paper."
+title: "CanyonBench Dataset"
+type: dataset
+authors:
+  - name: "CanyonBench contributors"
+version: 0.1.0-predata
+date-released: 2026-07-21
+license: CC-BY-4.0
+repository-code: "https://github.com/zafirshamsi/canyonbench-data"
+notes: "Pre-data schema release; DOI and paper identifiers are pending."
+
