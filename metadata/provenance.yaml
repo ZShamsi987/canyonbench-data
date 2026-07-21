@@ -3,7 +3,7 @@ release_version: null
 status: pre-data
 created_at: "2026-07-21"
 code:
-  repository: https://github.com/zafirshamsi/canyonbench
+  repository: https://github.com/ZShamsi987/canyonbench
   commit: null
 capture:
   platform: high-altitude balloon
@@ -44,4 +44,3 @@ release:
   zenodo_doi: null
   frames_sha256: null
   splits_sha256: null
-

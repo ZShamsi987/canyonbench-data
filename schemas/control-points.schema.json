@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/control-points.schema.json",
+  "$id": "https://github.com/ZShamsi987/canyonbench-data/schemas/control-points.schema.json",
   "title": "CanyonBench canonical control point",
   "type": "object",
   "additionalProperties": false,
@@ -13,4 +13,3 @@
     "role": {"enum": ["fit", "holdout"]}
   }
 }
-

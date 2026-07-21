@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/quality.schema.json",
+  "$id": "https://github.com/ZShamsi987/canyonbench-data/schemas/quality.schema.json",
   "title": "CanyonBench quality and condition annotation",
   "type": "object",
   "additionalProperties": false,
@@ -16,4 +16,3 @@
     "glare": {"enum": ["none", "present"]}
   }
 }
-

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/frames.schema.json",
+  "$id": "https://github.com/ZShamsi987/canyonbench-data/schemas/frames.schema.json",
   "title": "CanyonBench master frame record",
   "type": "object",
   "required": ["image", "elapsed_s", "phase", "lat", "lon", "alt_m", "segment_id", "split", "vegetation_fraction", "registration_reliable", "water", "road", "building", "forest", "snow", "field"],
@@ -29,4 +29,3 @@
   },
   "$defs": {"presence": {"enum": ["yes", "no", "uncertain"]}}
 }
-

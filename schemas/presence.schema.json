@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/presence.schema.json",
+  "$id": "https://github.com/ZShamsi987/canyonbench-data/schemas/presence.schema.json",
   "title": "CanyonBench feature-presence annotation",
   "type": "object",
   "additionalProperties": false,
@@ -17,4 +17,3 @@
   },
   "$defs": {"presence": {"enum": ["yes", "no", "uncertain"]}}
 }
-

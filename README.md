@@ -1,6 +1,6 @@
 # CanyonBench Data
 
-This is the schema, annotation, and release repository for CanyonBench, a geospatially registered benchmark for hallucination and spatial grounding in vision-language models on high-altitude aerial imagery. The separate [CanyonBench code repository](https://github.com/zafirshamsi/canyonbench) contains derivation, registration, inference, and scoring software.
+This is the schema, annotation, and release repository for CanyonBench, a geospatially registered benchmark for hallucination and spatial grounding in vision-language models on high-altitude aerial imagery. The separate [CanyonBench code repository](https://github.com/ZShamsi987/canyonbench) contains derivation, registration, inference, and scoring software.
 
 The repository intentionally contains no recovered flight logs, raw video, extracted frames, reference tiles, or real annotations yet. Those inputs will be added only after source checks, annotation, registration validation, privacy review, and release validation. Small example records document every contract without pretending placeholder labels are ground truth.
 

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/judge_validation.schema.json",
+  "$id": "https://github.com/ZShamsi987/canyonbench-data/schemas/judge_validation.schema.json",
   "title": "CanyonBench caption-judge validation annotation",
   "type": "object",
   "additionalProperties": false,
@@ -24,4 +24,3 @@
   },
   "$defs": {"assertion": {"enum": ["yes", "no", "hedged"]}}
 }
-

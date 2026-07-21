@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/registration-residuals.schema.json",
+  "$id": "https://github.com/ZShamsi987/canyonbench-data/schemas/registration-residuals.schema.json",
   "title": "CanyonBench registration residual record",
   "type": "object",
   "additionalProperties": false,
@@ -15,4 +15,3 @@
     "reliable": {"type": "boolean"}
   }
 }
-

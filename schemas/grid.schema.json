@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/zafirshamsi/canyonbench-data/schemas/grid.schema.json",
+  "$id": "https://github.com/ZShamsi987/canyonbench-data/schemas/grid.schema.json",
   "title": "CanyonBench 4x4 grounding-grid annotation",
   "type": "object",
   "additionalProperties": false,
@@ -25,4 +25,3 @@
     }
   }
 }
-
