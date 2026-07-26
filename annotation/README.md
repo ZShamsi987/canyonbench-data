@@ -62,11 +62,11 @@ The entire dataset, adjudication, training, evaluation, and freeze target is
 If the sprint begins on a later date, keep the same four-to-five-day annotation
 sequence. Tell Zafir immediately if anything threatens the August 20 deadline.
 
-For the **entire registered benchmark** to finish by August 20, Zafir must also
-provide the selected reference-imagery product and documented use/redistribution
-terms by August 5. That dependency is separate from A1-A4 annotation. Without
-it, visible-image mask/presence/quality training can proceed, but registration
-and the final grounded 4x4 task cannot be frozen.
+The separate registration-source dependency was resolved on July 26: the
+project now records public-domain 2023 USGS NAIP, streamed through QGIS in
+`EPSG:26912`. A1-A4 still do not need QGIS or reference imagery. Zafir and
+lead-assigned registration checkers complete that separate work after the
+visible-image annotations are locked.
 
 ## Shared Google Drive submission folder
 
