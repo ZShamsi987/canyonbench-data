@@ -164,6 +164,13 @@ def validate_annotation_release() -> None:
 
     roster = csv_records(ROOT / "annotation" / "annotator_roster.csv")
     assert tuple(row["annotator_id"] for row in roster) == ANNOTATORS
+    assert tuple(row["coauthor_name"] for row in roster) == (
+        "Atharva",
+        "Pranav G.",
+        "Kunsh",
+        "Prabhav",
+    )
+    assert {row["qualification_status"] for row in roster} == {"waived_by_lead"}
 
     assigned_count: Counter[str] = Counter()
     production_loads: list[int] = []
@@ -251,6 +258,12 @@ def validate_annotation_release() -> None:
         for stage in ("QUALIFICATION", "CALIBRATION", "PRODUCTION")
         for task in ("MASK", "PRESENCE", "QUALITY")
     }
+    assert {
+        row["start_after"] for row in project_plan if row["stage"] == "QUALIFICATION"
+    } == {"waived for current team; do not create"}
+    assert {
+        row["start_after"] for row in project_plan if row["stage"] == "CALIBRATION"
+    } == {"qualification waived by Zafir; start here"}
 
 
 def main() -> None:
@@ -305,14 +318,18 @@ def main() -> None:
     assert annotator_readme.is_file()
     readme_text = annotator_readme.read_text(encoding="utf-8")
     for required_section in (
+        "exact team and current plan",
+        "Shared Google Drive submission folder",
         "Mac installation",
         "Windows installation",
-        "qualification projects",
+        "create your calibration projects",
+        "Sammy only",
+        "Exact daily annotation loop",
         "how to label vegetation masks",
         "how to label feature presence",
         "how to label image quality",
         "pausing and resuming safely",
-        "export qualification results",
+        "exact export and Google Drive upload procedure",
         "Troubleshooting",
     ):
         assert required_section.casefold() in readme_text.casefold()

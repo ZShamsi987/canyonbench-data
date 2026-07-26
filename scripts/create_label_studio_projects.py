@@ -16,6 +16,13 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 VALID_ANNOTATORS = ("A1", "A2", "A3", "A4")
 VALID_STAGES = ("QUALIFICATION", "CALIBRATION", "PRODUCTION", "MIDPOINT")
+ANNOTATOR_NAMES = {
+    "A1": "Atharva",
+    "A2": "Pranav G.",
+    "A3": "Kunsh",
+    "A4": "Prabhav",
+    "LEAD": "Sammy",
+}
 
 
 class LabelStudio:
@@ -210,6 +217,14 @@ def main() -> None:
         action="store_true",
         help="Print the projects without calling Label Studio",
     )
+    parser.add_argument(
+        "--allow-waived-qualification",
+        action="store_true",
+        help=(
+            "Override the current A1-A4 qualification waiver. "
+            "Do not use during the July-August 2026 annotation sprint."
+        ),
+    )
     args = parser.parse_args()
 
     if args.lead_gold:
@@ -221,6 +236,13 @@ def main() -> None:
     else:
         if not args.stage:
             parser.error("--stage is required with --annotator")
+        if args.stage == "QUALIFICATION" and not args.allow_waived_qualification:
+            parser.error(
+                "Qualification is waived for the current A1-A4 team. "
+                "Start with --stage CALIBRATION. Use "
+                "--allow-waived-qualification only if the project lead "
+                "explicitly reinstates the gate."
+            )
         annotator = args.annotator
         stage = args.stage
         rows = plan_rows(annotator, stage)
@@ -255,9 +277,10 @@ def main() -> None:
             raise ValueError(
                 f"{row['task_file']} has {len(tasks)} tasks; expected {expected}"
             )
+        person = ANNOTATOR_NAMES[annotator]
         description = (
             f"CanyonBench {stage.lower()} {row['task'].lower()} work "
-            f"for {annotator}. Follow annotation/README.md and "
+            f"for {annotator} ({person}). Follow annotation/README.md and "
             "docs/annotation-manual.md. Do not view another coauthor's work."
         )
         project_id = client.create_project(title, label_config, description)

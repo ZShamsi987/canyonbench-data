@@ -19,6 +19,11 @@ Python, Docker, or Label Studio experience. Project leads use the
 Google Drive footage: Label Studio reads the curated frames from public GitHub
 URLs.
 
+Current sprint assignments are Sammy=`GOLD`, Atharva=`A1`, Pranav G.=`A2`,
+Kunsh=`A3`, and Prabhav=`A4`. Qualification is waived for A1-A4 after prior
+testing; they start at calibration. The full dataset/training freeze target is
+August 20, 2026.
+
 Rebuild the public handoff from the code repository's sampled manifest:
 
 ```bash

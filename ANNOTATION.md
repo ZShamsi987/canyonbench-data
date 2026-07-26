@@ -13,12 +13,15 @@ Google Drive footage.
 
 ## Production workflow
 
-1. Map the four coauthors to stable `A1` through `A4` ids in
-   `annotation/annotator_roster.csv`; never change the mapping after work starts.
-2. Have the lead create private gold labels for the 12 qualification candidates.
-3. Each coauthor creates only the three qualification projects and meets all
-   agreement targets.
-4. All four label the shared 30-frame calibration set, review the first five,
+1. Keep the fixed mapping in `annotation/annotator_roster.csv`: Atharva=`A1`,
+   Pranav G.=`A2`, Kunsh=`A3`, and Prabhav=`A4`.
+2. Sammy creates private gold/reference labels for the 12 qualification
+   candidates and keeps them hidden until production exports are locked.
+3. Qualification is waived for this previously tested A1-A4 team; everyone
+   starts with calibration.
+4. All four label the shared 30-frame calibration set, upload the first-five
+   checkpoint to their own shared-Drive folders, and resolve ambiguities in a
+   lead-run meeting.
    and resolve ambiguities through the append-only decision log.
 5. Create the production projects from the fixed per-annotator worklist.
 6. At 100% zoom, pan left-to-right and top-to-bottom. Mark unresolved cases
@@ -39,12 +42,14 @@ python3 scripts/create_label_studio_projects.py --lead-gold
 # Each coauthor runs this with their own id:
 python3 scripts/create_label_studio_projects.py \
   --annotator A1 \
-  --stage QUALIFICATION
+  --stage CALIBRATION
 unset LABEL_STUDIO_API_KEY
 ```
 
-The lead authorizes `CALIBRATION` and then `PRODUCTION` only after the preceding
-gate passes. The exact 36-project plan is in `label-studio/project_plan.csv`.
+The lead authorizes `PRODUCTION` after reviewing calibration. At 84 completed
+tasks per production project, each annotator runs `--stage MIDPOINT`, uploads
+the four midpoint exports, and waits for authorization to resume. The reusable
+36-project plan remains in `label-studio/project_plan.csv`.
 
 ## Rebuild the public handoff
 
@@ -76,20 +81,21 @@ under `label-studio/tasks/`.
 
 ## Annotator workload
 
-- A1 and A4: 168 production + 30 calibration + 12 qualification images.
-- A2 and A3: 167 production + 30 calibration + 12 qualification images.
+- A1 and A4: 168 production + 30 calibration + 12 midpoint images.
+- A2 and A3: 167 production + 30 calibration + 12 midpoint images.
 - Every ordinary production image has exactly two independent annotators.
-- Calibration and qualification images are labeled by all four.
+- Calibration and midpoint images are labeled by all four.
 - Each image is completed in the mask, presence, and quality projects.
 
 ## Task order
 
-1. Qualification
-2. Calibration
-3. Production
-4. Midpoint qualification repeat
-5. Adjudication
-6. Registration and grounding after licensed reference imagery is available
+1. Sammy's private gold/reference set
+2. Calibration checkpoint and final
+3. Production first half
+4. Midpoint repeat
+5. Production final
+6. Adjudication
+7. Registration and grounding after licensed reference imagery is available
 
 Do not skip a gate.
 

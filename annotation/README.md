@@ -9,47 +9,119 @@ expected to write code or understand the software internally.
 If something does not look exactly as described, stop and send the project lead
 the error message or a screenshot. Do not guess how to fix a partial project.
 
-## The one rule to remember
+## Read this first: the exact team and current plan
 
-You will work in three stages:
+These assignments are final. Never exchange ids or use somebody else's id in a
+command, project name, export filename, or Google Drive folder.
 
-1. **QUALIFICATION** - 12 images per task.
-2. **CALIBRATION** - 30 images per task, only after the lead says you passed.
-3. **PRODUCTION** - 167 or 168 images per task, only after the lead approves
-   calibration.
+| Person | Permanent id | Role | Assigned images per project | First project command |
+|---|---|---|---:|---|
+| Sammy | `GOLD` | Private gold/reference annotator | 12 private reference images | `--lead-gold` |
+| Atharva | `A1` | Independent production annotator | 168 | `--annotator A1 --stage CALIBRATION` |
+| Pranav G. | `A2` | Independent production annotator | 167 | `--annotator A2 --stage CALIBRATION` |
+| Kunsh | `A3` | Independent production annotator | 167 | `--annotator A3 --stage CALIBRATION` |
+| Prabhav | `A4` | Independent production annotator | 168 | `--annotator A4 --stage CALIBRATION` |
 
-Halfway through production, the lead will pause you for one fresh 12-image
-**MIDPOINT** repeat. The software creates new projects for it, so you never
-reopen or copy your original qualification answers.
+Zafir has already tested and approved A1-A4. **Qualification is waived for this
+run. A1-A4 must not create `QUALIFICATION` projects.** The qualification task
+files remain in the repository only for Sammy's private gold work and the fresh
+midpoint check.
 
-For every stage, there are three separate projects:
+The A1-A4 workflow is:
+
+1. **CALIBRATION CHECKPOINT** - the first 5 of 30 images in each task;
+2. **CALIBRATION FINAL** - all 30 images in each task;
+3. **PRODUCTION FIRST HALF** - 84 images in each task;
+4. **MIDPOINT** - a fresh 12-image check in each task;
+5. **PRODUCTION FINAL** - finish all 167 or 168 images in each task;
+6. export and upload every required file.
+
+Every stage has three separate projects:
 
 1. vegetation mask;
 2. feature presence;
 3. image quality.
 
-Create only the stage the lead has authorized. When you first receive this
-guide, that stage is **QUALIFICATION**.
+## Fixed deadline
 
-## What the project lead must send you
+The annotation sprint is designed to finish in four to five intensive days.
+The entire dataset, adjudication, training, evaluation, and freeze target is
+**August 20, 2026**.
 
-Before doing anything, you must receive:
+| Date | Required outcome |
+|---|---|
+| July 27 | Everyone installs and tests Label Studio; Sammy finishes gold; A1-A4 finish the 5-image checkpoint, attend alignment, and complete calibration |
+| July 28-29 | A1-A4 complete the first 84 production images in all three projects; midpoint is completed and uploaded on July 29 |
+| July 30-31 | A1-A4 finish production and upload all final exports |
+| August 1-4 | Zafir validates imports, measures agreement, and coordinates adjudication with Sammy and the annotators |
+| August 5-7 | Final labels, masks, registration/grounding inputs, and dataset audit are frozen |
+| August 8-14 | Training and benchmark evaluation |
+| August 15-18 | Error analysis, final reruns, tables, and figures |
+| August 19-20 | Final reproducibility run, documentation, and release freeze |
 
-- one permanent annotator id: `A1`, `A2`, `A3`, or `A4`;
-- confirmation that you may start **QUALIFICATION**;
-- the lead's preferred private method for returning exports, such as a private
-  Drive folder or direct message.
+If the sprint begins on a later date, keep the same four-to-five-day annotation
+sequence. Tell Zafir immediately if anything threatens the August 20 deadline.
 
-Write your assigned id here before continuing:
+For the **entire registered benchmark** to finish by August 20, Zafir must also
+provide the selected reference-imagery product and documented use/redistribution
+terms by August 5. That dependency is separate from A1-A4 annotation. Without
+it, visible-image mask/presence/quality training can proceed, but registration
+and the final grounded 4x4 task cannot be frozen.
+
+## Shared Google Drive submission folder
+
+Zafir will send one Google Drive link shared with the team. The link is a
+submission location; it is not an invitation to review another person's work.
+
+The Drive root must contain these folders:
 
 ```text
-My permanent annotator id: A__
+CanyonBench Annotation Submissions/
+  A1_Atharva/
+    calibration_checkpoint5/
+    calibration_final/
+    midpoint/
+    production_final/
+  A2_Pranav_G/
+    calibration_checkpoint5/
+    calibration_final/
+    midpoint/
+    production_final/
+  A3_Kunsh/
+    calibration_checkpoint5/
+    calibration_final/
+    midpoint/
+    production_final/
+  A4_Prabhav/
+    calibration_checkpoint5/
+    calibration_final/
+    midpoint/
+    production_final/
 ```
 
-Use that same id everywhere. Do not use your name, initials, or another
-coauthor's id in filenames or commands.
+Each annotator uploads only to their own folder. Do not open, preview, download,
+rename, move, or delete anything inside another annotator's folder. Because the
+folder is shared by link, scientific independence depends on following this
+rule exactly.
 
-If the lead has not assigned an id, stop here and ask for one.
+Sammy's gold exports must **not** go in this shared folder while A1-A4 are still
+working. Sammy sends gold exports to Zafir through a separate private folder
+accessible only to Sammy and Zafir. Zafir may move them into the project archive
+after all production exports are locked.
+
+Use this private gold folder structure:
+
+```text
+CanyonBench Gold Private/
+  Sammy_gold_final/
+```
+
+Before starting, confirm that you have:
+
+- your fixed id from the table above;
+- the shared Google Drive link;
+- edit access to your own named folder;
+- confirmation from Zafir that the annotation sprint has started.
 
 ## What you need and do not need
 
@@ -84,8 +156,10 @@ Do not:
 
 - look at another annotator's labels, masks, exports, screen, or project;
 - show another annotator your labels before the lead says comparison is allowed;
-- discuss what a particular image contains during qualification or independent
-  calibration;
+- open another annotator's files merely because the shared Drive link permits
+  it;
+- discuss what a particular image contains during calibration, midpoint, or
+  production unless Zafir is leading an adjudication meeting;
 - open maps, GPS coordinates, satellite imagery, or the raw flight path;
 - use outside knowledge of the Grand Canyon to decide a label;
 - ask an AI system to label an image;
@@ -319,10 +393,13 @@ The setup script needs an API key so it can create the correct projects.
 4. Keep it private. Do not paste it into chat or a shared document.
 5. Return to Terminal or PowerShell.
 
-## Part 4: create your qualification projects
+## Part 4: create your calibration projects
 
 Before running a command, replace `A1` with your assigned id. For example, an
 annotator assigned `A3` must type `A3`.
+
+Do not type `--stage QUALIFICATION`. Qualification has been waived for A1-A4.
+Your first stage is `CALIBRATION`.
 
 ### Mac commands
 
@@ -350,7 +427,7 @@ Now paste the following, replacing the token and `A1`:
 export LABEL_STUDIO_API_KEY='paste-your-private-token-here'
 python3 scripts/create_label_studio_projects.py \
   --annotator A1 \
-  --stage QUALIFICATION
+  --stage CALIBRATION
 unset LABEL_STUDIO_API_KEY
 ```
 
@@ -382,7 +459,7 @@ Now paste the following, replacing the token and `A1`:
 
 ```powershell
 $env:LABEL_STUDIO_API_KEY = "paste-your-private-token-here"
-py scripts/create_label_studio_projects.py --annotator A1 --stage QUALIFICATION
+py scripts/create_label_studio_projects.py --annotator A1 --stage CALIBRATION
 Remove-Item Env:LABEL_STUDIO_API_KEY
 ```
 
@@ -391,10 +468,10 @@ Remove-Item Env:LABEL_STUDIO_API_KEY
 For annotator `A1`, the output should mention:
 
 ```text
-CREATED CB-A1-QUAL-MASK: 12 tasks
-CREATED CB-A1-QUAL-PRESENCE: 12 tasks
-CREATED CB-A1-QUAL-QUALITY: 12 tasks
-Created 3 project(s) for A1 QUALIFICATION.
+CREATED CB-A1-CALI-MASK: 30 tasks
+CREATED CB-A1-CALI-PRESENCE: 30 tasks
+CREATED CB-A1-CALI-QUALITY: 30 tasks
+Created 3 project(s) for A1 CALIBRATION.
 ```
 
 Your id will appear instead of `A1`.
@@ -403,15 +480,117 @@ Open [http://localhost:8080/projects](http://localhost:8080/projects). Confirm
 that you see exactly these three new projects:
 
 ```text
-CB-A1-QUAL-MASK
-CB-A1-QUAL-PRESENCE
-CB-A1-QUAL-QUALITY
+CB-A1-CALI-MASK
+CB-A1-CALI-PRESENCE
+CB-A1-CALI-QUALITY
+```
+
+Each project must contain exactly 30 images.
+
+If the count is wrong, an image is broken, or only some projects were created,
+stop and send the lead the complete Terminal/PowerShell output.
+
+### What the project script imports
+
+The script performs the import automatically. It combines one task list with
+one labeling interface:
+
+| Stage/project type | Task JSON imported | Labeling configuration | Expected tasks |
+|---|---|---|---:|
+| Calibration mask | `label-studio/tasks/shared_calibration_30.json` | `label-studio/vegetation-mask.xml` | 30 |
+| Calibration presence | `label-studio/tasks/shared_calibration_30.json` | `label-studio/presence.xml` | 30 |
+| Calibration quality | `label-studio/tasks/shared_calibration_30.json` | `label-studio/quality.xml` | 30 |
+| Production, all three types | `label-studio/tasks/A1_production.json` using your own id | matching mask/presence/quality XML | 167 or 168 |
+| Midpoint, all three types | `label-studio/tasks/qualification_12.json` | matching mask/presence/quality XML | 12 |
+| Sammy gold, all three types | `label-studio/tasks/qualification_12.json` | matching mask/presence/quality XML | 12 |
+
+These JSON files contain public image URLs. Do not import the `frames` folders,
+individual JPEGs, a CSV, or the repository ZIP.
+
+### Manual import fallback
+
+Use this only if Zafir specifically tells you the automatic script cannot be
+used. Never create a manual project in addition to a correct automatic project.
+
+For each required project:
+
+1. Open Label Studio's **Projects** page.
+2. Click **Create Project**.
+3. Enter the exact project title from this guide.
+4. Open **Labeling Setup**.
+5. Choose the **Code** or XML editor.
+6. On the computer, open the matching XML file from `label-studio`.
+7. Copy the entire file, including the opening and closing `<View>` lines.
+8. Paste it into Label Studio's code editor, replacing any example content.
+9. Save the labeling setup.
+10. Open the project's **Import** screen.
+11. Upload the one matching JSON task file from `label-studio/tasks`.
+12. Complete the import.
+13. Confirm the exact task count.
+14. Open the first task and confirm the full image and correct controls load.
+15. Repeat for the other two project types.
+
+Stop if the count or interface differs. Do not try several imports into the same
+project, because that can duplicate tasks.
+
+## Sammy only: create the private gold/reference set
+
+This section is only for Sammy. A1-A4 skip it.
+
+Sammy is the separate gold/reference annotator, not A1, A2, A3, or A4. The gold
+set is used for quality control and adjudication. Because Zafir waived the
+qualification gate for the trusted production annotators, it does not delay
+their start.
+
+Sammy follows Parts 1-3 to install and start a separate private Label Studio
+instance. From the downloaded repository folder, run:
+
+Mac:
+
+```bash
+export LABEL_STUDIO_API_KEY='paste-your-private-token-here'
+python3 scripts/create_label_studio_projects.py --lead-gold
+unset LABEL_STUDIO_API_KEY
+```
+
+Windows PowerShell:
+
+```powershell
+$env:LABEL_STUDIO_API_KEY = "paste-your-private-token-here"
+py scripts/create_label_studio_projects.py --lead-gold
+Remove-Item Env:LABEL_STUDIO_API_KEY
+```
+
+Success creates:
+
+```text
+CB-LEAD-GOLD-MASK
+CB-LEAD-GOLD-PRESENCE
+CB-LEAD-GOLD-QUALITY
 ```
 
 Each project must contain exactly 12 images.
 
-If the count is wrong, an image is broken, or only some projects were created,
-stop and send the lead the complete Terminal/PowerShell output.
+Sammy then:
+
+1. completes all 12 mask tasks using Part 6;
+2. completes all 12 presence tasks using Part 7;
+3. completes all 12 quality tasks using Part 8;
+4. verifies every project shows `12 of 12` complete;
+5. follows Part 11 to export four files;
+6. names them exactly:
+
+```text
+Sammy_gold_mask.json
+Sammy_gold_mask_png.zip
+Sammy_gold_presence.json
+Sammy_gold_quality.json
+```
+
+7. uploads them to the separate Sammy-and-Zafir private Drive folder;
+8. tells Zafir the upload is complete;
+9. does not upload them into the shared A1-A4 folder or show them to A1-A4
+   before their production exports are locked.
 
 ## Part 5: understand the annotation screen
 
@@ -430,11 +609,42 @@ Open only one project in one browser tab.
 Never open **Label All Tasks** in two tabs. Doing so can create duplicate or
 conflicting work.
 
-Complete the three project types in this order:
+### Exact daily annotation loop
+
+Use this loop every time you sit down to work:
+
+1. Open Docker Desktop and wait until it says it is running.
+2. Start or resume the `canyonbench-label-studio` container.
+3. Open [http://localhost:8080](http://localhost:8080).
+4. Open exactly one authorized project.
+5. Confirm the project title contains your own id.
+6. Confirm its total task count is correct before labeling.
+7. Click **Label All Tasks**.
+8. On each image, wait for the full-resolution image to finish loading.
+9. Inspect at 100% zoom from upper-left to lower-right.
+10. Complete every field or mask required by that project.
+11. Review the result once before submitting.
+12. Click **Submit**. Never click **Skip**.
+13. Confirm the next image appears and the completed count increased.
+14. Stop at the exact checkpoint count required by this guide.
+15. Before ending the day, export any required checkpoint and upload a copy to
+    your own Google Drive folder.
+
+If you accidentally open the wrong person's project or the wrong stage, close
+it without submitting anything and tell Zafir. If you accidentally submit a
+mistake, record the filename and tell Zafir; do not conceal it or improvise a
+repair.
+
+Within a checkpoint, work on the project types in this order:
 
 1. all images in the mask project;
 2. all images in the presence project;
 3. all images in the quality project.
+
+For example, at the five-image calibration checkpoint, submit five mask tasks,
+then five presence tasks, then five quality tasks. Do not finish all 30 mask
+tasks before completing the required five-image checkpoint in the other two
+projects.
 
 ## Part 6: how to label vegetation masks
 
@@ -442,6 +652,10 @@ Open the project ending in `-MASK`.
 
 The target is **visible living green vegetation**. The target is not every plant
 and not every naturally colored area.
+
+The required tool is Label Studio's built-in brush and eraser. Segment Anything
+is optional. If no automatic proposal appears, continue manually with the brush;
+that is a valid and complete workflow.
 
 ### Include
 
@@ -470,22 +684,33 @@ Do not mask:
 
 ### Paint the mask
 
-1. Select `green_visible_vegetation`.
-2. Use the brush to paint only target vegetation.
-3. Adjust brush size for the object.
-4. Use the eraser to correct every spill outside vegetation.
-5. At a boundary, include a pixel only when vegetation occupies more than half
+1. Find the brush-label controls beside or below the image.
+2. Select the brush label named `green_visible_vegetation`.
+3. Move the pointer over the target region.
+4. Press and hold the primary mouse/trackpad button while moving to paint.
+5. Release the button at the end of the region.
+6. Change the brush size so narrow vegetation is not covered by an oversized
+   stroke.
+7. Select the eraser tool and erase every spill onto rock, water, cloud, or
+   another excluded surface.
+8. Zoom and pan; never assume a small preview is accurate.
+9. At a boundary, include a pixel only when vegetation occupies more than half
    of that pixel.
-6. Do not make the mask larger merely to be safe.
-7. Inspect the entire image a second time before submitting.
+10. Do not make the mask larger merely to be safe.
+11. Inspect the entire image once with the overlay visible and, if the interface
+    provides an overlay toggle, once with it hidden.
+12. Choose an uncertain-region answer.
+13. Click **Submit** only after both the mask and uncertainty choice are final.
 
-If there is no qualifying green vegetation, leave the green mask empty.
+If there is no qualifying green vegetation, leave the green mask empty, choose
+`uncertain_region=none` unless a genuine ambiguity remains, and submit.
 
 ### About the red `background` option
 
-Do not paint the whole image red. `background` is only a negative correction
-prompt for an interactive Segment Anything setup. The final target mask must
-contain only `green_visible_vegetation`.
+Do not use a red brush to paint the whole image. `background` under the smart
+point controls is only a negative correction prompt for an interactive Segment
+Anything setup. The final target mask must contain only
+`green_visible_vegetation`.
 
 ### If Segment Anything is available
 
@@ -518,6 +743,18 @@ For every feature, choose:
   ambiguous.
 
 Do not leave any feature unanswered.
+
+For each image, click exactly one answer for each row in this order:
+
+1. `water`;
+2. `road`;
+3. `building`;
+4. `forest`;
+5. `snow`;
+6. `field`.
+
+Before clicking **Submit**, count six selected answers. A selection in one row
+does not answer any other row.
 
 ### Water
 
@@ -590,6 +827,17 @@ Open the project ending in `-QUALITY`.
 
 Complete all six fields.
 
+For each image, click exactly one answer for each row in this order:
+
+1. `cloud`;
+2. `clarity`;
+3. `balloon`;
+4. `sharpness`;
+5. `exposure`;
+6. `glare`.
+
+Before clicking **Submit**, count six selected answers.
+
 ### Cloud
 
 - `none`: cloud or haze covers less than 5% of visible ground;
@@ -637,7 +885,7 @@ After submitting, send the lead:
 
 ```text
 Annotator id:
-Stage: qualification / calibration / production
+Stage: calibration / midpoint / production
 Project: mask / presence / quality
 Image filename: img_XXXXXX.jpg
 Question:
@@ -685,122 +933,97 @@ If Docker says the container name already exists, that is normally good: use
 the resume command above. Do not delete and recreate the container, because the
 existing container holds your project database.
 
-## Part 11: export qualification results
+## Part 11: exact export and Google Drive upload procedure
 
-Export only after each project shows 100% complete.
+Every checkpoint or completed stage produces exactly four files:
 
-Create a private folder on your computer:
+1. mask project original JSON;
+2. mask project PNG/NumPy archive;
+3. presence project original JSON;
+4. quality project original JSON.
+
+Never upload your API token, the Label Studio data folder, screenshots containing
+the token, or the repository ZIP.
+
+### Export original JSON
+
+Repeat these steps for the mask, presence, and quality projects:
+
+1. Open the correct project.
+2. Verify its completed count matches the checkpoint or final count.
+3. Click **Export** in the project interface.
+4. Choose the format named **JSON**, meaning original Label Studio JSON.
+5. Do not choose `JSON_MIN`, CSV, COCO, or another converted format.
+6. Click **Export** or **Download** and wait for the browser download to finish.
+7. Find the downloaded file in the computer's **Downloads** folder.
+8. Rename it to the exact stage filename shown later in this guide.
+
+### Export the mask PNG/NumPy archive
+
+For the mask project only:
+
+1. Return to the mask project's **Export** screen.
+2. Choose **Brush labels to NumPy and PNG**.
+3. Start the export.
+4. Wait until the ZIP/archive download is complete.
+5. Do not unzip it, reorganize it, or rename files inside it.
+6. Rename the complete archive to the exact `_mask_png.zip` filename shown in
+   this guide.
+
+If the browser downloaded an archive with another extension, keep the actual
+extension and tell Zafir. Do not merely change a non-ZIP file's extension to
+`.zip`.
+
+### Rename files safely
+
+- Mac: select the file in Finder, press Enter, type the exact name, and press
+  Enter again.
+- Windows: select the file in File Explorer, press `F2`, type the exact name,
+  and press Enter.
+- Do not add a second extension such as `.json.json` or `.zip.zip`.
+- Every filename must begin with your exact id, not your name.
+
+### Check the four files before upload
+
+1. Confirm all four files exist.
+2. Confirm none has a size of `0 bytes`.
+3. Open each JSON file in a text editor and confirm it begins with `[` or `{`
+   and contains text. Do not edit or re-save it.
+4. Confirm the mask archive opens as a ZIP without an error, but do not modify
+   its contents.
+5. Keep an untouched local backup.
+
+### Upload to the shared Google Drive
+
+1. Open the Google Drive link sent by Zafir.
+2. Open only your assigned root folder, such as `A1_Atharva`.
+3. Open the correct stage subfolder.
+4. Click **New > File upload**, or drag the four files into that subfolder.
+5. Wait until Google Drive reports that every upload is complete.
+6. Refresh the folder once.
+7. Confirm that exactly four correctly named files are visible and each has a
+   nonzero size.
+8. Do not open or change another annotator's folder.
+9. Send Zafir a short message in this format:
 
 ```text
-CanyonBench exports/
-  A1/
-    qualification/
+UPLOAD COMPLETE
+Annotator: A1 - Atharva
+Stage: calibration checkpoint 5 / calibration final / midpoint / production final
+Drive folder:
+Mask JSON:
+Mask PNG ZIP:
+Presence JSON:
+Quality JSON:
+Completed count in each Label Studio project:
+Problems or uncertainties:
 ```
 
-Replace `A1` with your id.
-
-### Export the mask project
-
-1. Open the completed `CB-A1-QUAL-MASK` project.
-2. Open **Export**.
-3. Export the original Label Studio **JSON**.
-4. Rename it:
-
-```text
-A1_qualification_mask.json
-```
-
-5. Export **Brush labels to NumPy and PNG**.
-6. Keep the complete downloaded ZIP/archive together.
-7. Rename the archive:
-
-```text
-A1_qualification_mask_png.zip
-```
-
-### Export the presence project
-
-1. Open `CB-A1-QUAL-PRESENCE`.
-2. Export the original **JSON**.
-3. Rename it:
-
-```text
-A1_qualification_presence.json
-```
-
-### Export the quality project
-
-1. Open `CB-A1-QUAL-QUALITY`.
-2. Export the original **JSON**.
-3. Rename it:
-
-```text
-A1_qualification_quality.json
-```
-
-### Qualification handoff checklist
-
-You should send the lead exactly four files:
-
-```text
-A1_qualification_mask.json
-A1_qualification_mask_png.zip
-A1_qualification_presence.json
-A1_qualification_quality.json
-```
-
-Before sending:
-
-- replace `A1` with your id;
-- open each JSON file and confirm it is not empty;
-- confirm the ZIP/archive is not empty;
-- keep your own untouched backup;
-- send through the lead's private channel;
-- do not upload exports to the public GitHub repository;
-- do not send them to other annotators.
-
-Wait for the lead to say either:
-
-- **qualification passed; start calibration**, or
-- **review required; do not continue yet**.
-
-Do not create calibration projects until you receive the first message.
+Replace the example identity and stage with your own.
 
 ## Part 12: calibration
 
-After the lead explicitly authorizes calibration, create the projects.
-
-### Mac
-
-From the repository folder:
-
-```bash
-export LABEL_STUDIO_API_KEY='paste-your-private-token-here'
-python3 scripts/create_label_studio_projects.py \
-  --annotator A1 \
-  --stage CALIBRATION
-unset LABEL_STUDIO_API_KEY
-```
-
-### Windows PowerShell
-
-```powershell
-$env:LABEL_STUDIO_API_KEY = "paste-your-private-token-here"
-py scripts/create_label_studio_projects.py --annotator A1 --stage CALIBRATION
-Remove-Item Env:LABEL_STUDIO_API_KEY
-```
-
-Replace `A1` with your id.
-
-Success creates:
-
-```text
-CB-A1-CALI-MASK
-CB-A1-CALI-PRESENCE
-CB-A1-CALI-QUALITY
-```
-
-Each contains 30 images.
+Part 4 already created these projects. Do not run the creation command again.
 
 ### Required five-image checkpoint
 
@@ -820,9 +1043,11 @@ A1_calibration_checkpoint5_presence.json
 A1_calibration_checkpoint5_quality.json
 ```
 
-7. send the four files privately to the lead;
+7. upload the four files to your own `calibration_checkpoint5` Drive folder;
 8. leave the local projects unchanged;
-9. wait for the lead's alignment meeting and explicit permission to continue.
+9. send Zafir the `UPLOAD COMPLETE` message;
+10. attend the short alignment meeting and wait for the exact word
+    **CONTINUE** before labeling image 6.
 
 During the meeting, discuss the written rules and boundaries under the lead's
 direction. Do not independently exchange or compare actual submissions with
@@ -844,7 +1069,9 @@ A1_calibration_presence.json
 A1_calibration_quality.json
 ```
 
-Wait for explicit production authorization.
+Upload these four files to your own `calibration_final` Drive folder. Confirm
+the folder contains exactly four nonempty files, send Zafir the completion
+message, and wait for the exact words **START PRODUCTION**.
 
 ## Part 13: production
 
@@ -868,26 +1095,39 @@ py scripts/create_label_studio_projects.py --annotator A1 --stage PRODUCTION
 Remove-Item Env:LABEL_STUDIO_API_KEY
 ```
 
-Expected image counts:
+Replace `A1` with your own id. Open the projects page and verify the exact titles
+and counts:
 
-| Annotator id | Images in each production project |
-|---|---:|
-| A1 | 168 |
-| A2 | 167 |
-| A3 | 167 |
-| A4 | 168 |
+| Person | ID | Expected project titles | Images in each project |
+|---|---|---|---:|
+| Atharva | A1 | `CB-A1-PROD-MASK`, `CB-A1-PROD-PRESENCE`, `CB-A1-PROD-QUALITY` | 168 |
+| Pranav G. | A2 | `CB-A2-PROD-MASK`, `CB-A2-PROD-PRESENCE`, `CB-A2-PROD-QUALITY` | 167 |
+| Kunsh | A3 | `CB-A3-PROD-MASK`, `CB-A3-PROD-PRESENCE`, `CB-A3-PROD-QUALITY` | 167 |
+| Prabhav | A4 | `CB-A4-PROD-MASK`, `CB-A4-PROD-PRESENCE`, `CB-A4-PROD-QUALITY` | 168 |
 
 If your count differs, stop before labeling.
 
 Production uses the same mask, presence, and quality rules. Work carefully; do
 not rush because the project is larger.
 
-The lead will schedule a midpoint qualification repeat. When instructed:
+### Stop automatically at the production halfway point
 
-1. pause production;
-2. finish and submit the production image currently open;
-3. record the completion count of each production project;
-4. create three fresh midpoint projects using the commands below.
+Every annotator stops after exactly 84 completed tasks in **each** production
+project:
+
+1. complete mask tasks until the mask project shows `84` completed, then stop
+   that project;
+2. complete presence tasks until the presence project shows `84` completed,
+   then stop that project;
+3. complete quality tasks until the quality project shows `84` completed, then
+   stop that project;
+4. do not label task 85 in any production project yet.
+
+Then:
+
+1. record or screenshot the `84` completion count for all three production
+   projects;
+2. create three fresh midpoint projects using the commands below.
 
 Mac:
 
@@ -917,8 +1157,10 @@ CB-A1-MID-QUALITY
 
 Each midpoint project contains exactly 12 images.
 
-1. Complete those three projects without reopening the old `QUAL` projects.
-2. Export and privately send:
+1. Complete all 12 tasks in each midpoint project without opening any old
+   `QUAL` project.
+2. Verify every midpoint project shows `12 of 12` complete.
+3. Export and name:
 
 ```text
 A1_midpoint_mask.json
@@ -927,11 +1169,16 @@ A1_midpoint_presence.json
 A1_midpoint_quality.json
 ```
 
-3. Wait for the lead to confirm that you may resume production.
-4. Return to the same production projects and confirm their completion counts
-   match the counts you recorded before the midpoint repeat.
+4. Upload the four files to your own `midpoint` Google Drive folder.
+5. Send Zafir the `UPLOAD COMPLETE` message.
+6. Wait for the exact words **RESUME PRODUCTION**.
+7. Return to the same production projects.
+8. Confirm each still shows exactly `84` completed.
+9. Start at task 85 and finish every remaining task in this order: mask,
+   presence, then quality.
 
-At the end, export:
+At the end, confirm all three production projects show the final count from the
+team table, then export:
 
 ```text
 A1_production_mask.json
@@ -940,13 +1187,18 @@ A1_production_presence.json
 A1_production_quality.json
 ```
 
+Upload those four files to your own `production_final` Google Drive folder.
+Refresh Drive, verify the names and nonzero sizes, keep your local backup, and
+send the final `UPLOAD COMPLETE` message.
+
 ## Part 14: final completion checklist
 
 Before telling the lead you are finished, confirm:
 
 - [ ] I used only my assigned A1-A4 id.
+- [ ] I did not create or label a `QUALIFICATION` project.
 - [ ] I completed only authorized stages.
-- [ ] Every project shows 100% complete.
+- [ ] Calibration, midpoint, and production projects show 100% complete.
 - [ ] I never used Skip for a required image.
 - [ ] I inspected masks at 100% zoom.
 - [ ] I corrected automatic mask proposals.
@@ -959,7 +1211,8 @@ Before telling the lead you are finished, confirm:
 - [ ] I kept mask PNG/NumPy export archives.
 - [ ] Every export filename begins with my annotator id.
 - [ ] I made a private backup.
-- [ ] I sent exports only to the lead.
+- [ ] I uploaded only to my own named Google Drive folder.
+- [ ] I did not open, move, rename, or delete another annotator's exports.
 
 ## Troubleshooting
 
@@ -1097,8 +1350,11 @@ lead.
 - **GitHub:** the website hosting the public images and setup files.
 - **Label Studio:** the browser application used to create annotations.
 - **Mask:** a pixel-level painted region showing visible green vegetation.
-- **Production:** your main assigned image set after qualification/calibration.
-- **Qualification:** the first 12-image gate checked against private lead gold.
+- **Production:** your main assigned image set after calibration.
+- **Qualification:** a standard 12-image gate that Zafir explicitly waived for
+  A1-A4 in this run.
+- **Gold/reference set:** Sammy's private 12-image reference annotations used
+  for quality control and adjudication.
 - **Repository:** the project folder downloaded from GitHub.
 - **SAM / Segment Anything:** an optional tool that proposes a mask; a human
   must correct it.
@@ -1110,8 +1366,9 @@ lead.
 
 For difficult labeling decisions, the
 [numbered annotation manual](../docs/annotation-manual.md) is authoritative.
-The [project lead guide](../docs/START_ANNOTATING.md) explains qualification,
-agreement, adjudication, registration, and release duties.
+The [project lead guide](../docs/START_ANNOTATING.md) explains the current
+qualification waiver, agreement, adjudication, registration, and release
+duties.
 
 Official software help:
 

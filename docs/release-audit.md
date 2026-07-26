@@ -29,7 +29,8 @@ Complete this document for each frozen release.
 
 ## Annotation and registration
 
-- [ ] Qualification and midpoint drift checks complete
+- [ ] Qualification pass or documented prior-test waiver, plus midpoint drift
+      checks, complete
 - [ ] Dice and kappa reported
 - [ ] Decision log adjudicated and applied retrospectively
 - [ ] Held-out registration residuals recomputed
@@ -52,4 +53,3 @@ Complete this document for each frozen release.
 - [ ] Hugging Face artifacts match hashes
 - [ ] Zenodo archive and DOI verified
 - [ ] Citation records updated
-

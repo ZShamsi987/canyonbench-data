@@ -84,7 +84,11 @@ Rows and columns are zero-indexed from the top-left and keys are `0,0` through `
 
 - **W-1** Two coauthors independently label masks, presence, and quality. One places control points and a second checks a shared subset.
 - **W-2** Assign whole contiguous segments, plus a shared 30-frame calibration subset labeled by all annotators.
-- **W-3** Each annotator must pass the 12-frame gold qualification set before production.
+- **W-3** Each annotator normally passes the 12-frame gold qualification set
+  before production. The lead may document an equivalent prior test and an
+  explicit waiver in `annotation/annotator_roster.csv` before calibration.
+  Zafir recorded that waiver for A1-A4 on 2026-07-26; the midpoint repeat
+  remains mandatory.
 - **W-4** Preserve `img_SSSSSS__ID.png`; the adjudicated final is `img_SSSSSS.png`.
 - **Q-1** Put unresolved cases in the append-only log with frame, question, consulted rules, ruling, and new numbered rule. Apply it retrospectively during adjudication.
 - **Q-2** Hold a short weekly adjudication, finalize conflicts, and fold rulings into the manual.
@@ -111,4 +115,3 @@ Targets: mask Dice at least 0.75; presence and quality Cohen/Fleiss kappa at lea
 ```
 
 Machine-readable definitions in `schemas/` are the release contract.
-

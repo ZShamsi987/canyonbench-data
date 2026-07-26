@@ -17,6 +17,12 @@ from typing import Any
 from urllib.parse import quote
 
 DEFAULT_ANNOTATORS = ("A1", "A2", "A3", "A4")
+DEFAULT_ANNOTATOR_NAMES = {
+    "A1": "Atharva",
+    "A2": "Pranav G.",
+    "A3": "Kunsh",
+    "A4": "Prabhav",
+}
 DEFAULT_BASE_URL = (
     "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames"
 )
@@ -404,11 +410,19 @@ def main() -> None:
     roster_rows = [
         {
             "annotator_id": annotator,
-            "coauthor_name": "",
+            "coauthor_name": DEFAULT_ANNOTATOR_NAMES.get(annotator, ""),
             "label_studio_email": "",
-            "qualification_status": "pending",
-            "qualification_date": "",
-            "notes": "",
+            "qualification_status": (
+                "waived_by_lead" if annotator in DEFAULT_ANNOTATOR_NAMES else "pending"
+            ),
+            "qualification_date": (
+                "2026-07-26" if annotator in DEFAULT_ANNOTATOR_NAMES else ""
+            ),
+            "notes": (
+                "Previously tested and approved by Zafir; starts at calibration"
+                if annotator in DEFAULT_ANNOTATOR_NAMES
+                else ""
+            ),
         }
         for annotator in annotators
     ]
@@ -446,19 +460,19 @@ def main() -> None:
             "QUALIFICATION",
             "qualification_12.json",
             12,
-            "lead marks pass in annotation/annotator_roster.csv",
+            "waived for current team; do not create",
         ),
         (
             "CALIBRATION",
             "shared_calibration_30.json",
             30,
-            "qualification passed",
+            "qualification waived by Zafir; start here",
         ),
         (
             "PRODUCTION",
             "{annotator}_production.json",
             None,
-            "qualification passed and calibration reviewed",
+            "calibration checkpoint and final reviewed",
         ),
     )
     task_info = (

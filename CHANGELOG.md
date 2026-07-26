@@ -19,6 +19,9 @@
 - Added a first-time annotator README with no-account ZIP download, separate
   macOS and Windows setup, per-task decisions, exports, pause/resume, stage
   gates, and troubleshooting.
+- Locked the current sprint roster (Sammy gold; Atharva A1; Pranav G. A2;
+  Kunsh A3; Prabhav A4), documented the qualification waiver, shared-Drive
+  handoff, four-to-five-day annotation sprint, and August 20 freeze target.
 - Kept raw footage, flight logs, reference imagery, qualification gold answers,
   and raw annotation exports out of the public repository.
 

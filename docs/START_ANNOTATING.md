@@ -18,20 +18,23 @@ Label Studio reads each JPEG directly from the URL embedded in the task file.
 
 Do these steps in order.
 
-1. Open `annotation/annotator_roster.csv`.
-2. Map each coauthor to exactly one permanent id: `A1`, `A2`, `A3`, or `A4`.
-   Add the coauthor name and Label Studio email. Never change an id after work
-   starts.
-3. Create the 12-frame lead-gold qualification projects with the one-command
-   setup below, label them, and keep the answers private until every coauthor
-   has submitted their qualification pass.
-4. Send each coauthor their id and the public URL of this guide.
-5. Tell them to create only the three **QUALIFICATION** projects first.
-6. Score qualification. Mark `passed` and the date in
-   `annotation/annotator_roster.csv` only when all three gates pass.
-7. After a pass, authorize the three **CALIBRATION** projects. Review the first
-   five images together before anyone continues.
-8. After calibration alignment, authorize the three **PRODUCTION** projects.
+1. Keep the fixed roster unchanged: Atharva=`A1`, Pranav G.=`A2`, Kunsh=`A3`,
+   and Prabhav=`A4`.
+2. Create the shared Google Drive folder and the four named subfolder trees
+   specified in `annotation/README.md`.
+3. Have Sammy create the 12-frame private lead-gold/reference projects with the
+   one-command setup below. Gold remains private between Sammy and Zafir until
+   A1-A4 production exports are locked.
+4. Send each coauthor their id, the public annotator README, and the shared
+   Drive link.
+5. Qualification was waived by Zafir on 2026-07-26 after prior testing. Tell
+   A1-A4 to create **CALIBRATION**, not `QUALIFICATION`, projects.
+6. Review the first-five calibration checkpoint on July 27 and send the exact
+   word **CONTINUE** after the alignment meeting.
+7. Review the complete 30-image calibration exports and send **START
+   PRODUCTION**.
+8. At exactly 84 completed tasks in every production project, collect the fresh
+   midpoint exports and send **RESUME PRODUCTION** after review.
 
 Do not start registration yet. Visible-image masks, presence, and quality can
 proceed now. Registration remains blocked until the reference imagery product
@@ -40,11 +43,11 @@ and its redistribution/use terms are recorded.
 ## Exact workload
 
 Every ordinary production image has one fixed pair of annotators for all three
-tasks. The pair owns the whole trajectory segment. Shared calibration and
-qualification images are removed from ordinary worklists, so no one labels an
-image twice by accident.
+tasks. The pair owns the whole trajectory segment. Shared calibration and the
+12 reserved gold/midpoint images are removed from ordinary worklists, so no one
+labels an image twice by accident.
 
-| ID | Production | Calibration | Qualification | Unique images | Total submissions |
+| ID | Production | Calibration | Midpoint | Unique images | Total submissions |
 |---|---:|---:|---:|---:|---:|
 | A1 | 168 | 30 | 12 | 210 | 630 |
 | A2 | 167 | 30 | 12 | 209 | 627 |
@@ -100,13 +103,14 @@ and annotation files.
 
 ### 3. Create the three projects for the current stage
 
+The current A1-A4 team starts at calibration because qualification was waived.
 On macOS or Linux:
 
 ```bash
 export LABEL_STUDIO_API_KEY='paste-your-token-here'
 python3 scripts/create_label_studio_projects.py \
   --annotator A1 \
-  --stage QUALIFICATION
+  --stage CALIBRATION
 unset LABEL_STUDIO_API_KEY
 ```
 
@@ -114,19 +118,13 @@ Replace `A1` with the id assigned by the lead. On Windows PowerShell, use:
 
 ```powershell
 $env:LABEL_STUDIO_API_KEY = "paste-your-token-here"
-python scripts/create_label_studio_projects.py --annotator A1 --stage QUALIFICATION
+python scripts/create_label_studio_projects.py --annotator A1 --stage CALIBRATION
 Remove-Item Env:LABEL_STUDIO_API_KEY
 ```
 
 The script creates exactly three projects: mask, presence, and quality. It
-imports 12 tasks into each and prints clickable local project URLs. It never
+imports 30 tasks into each and prints clickable local project URLs. It never
 uploads the images because the tasks already contain public image URLs.
-
-After the lead records a qualification pass, run the same command with:
-
-```text
---stage CALIBRATION
-```
 
 After the lead reviews calibration, run it once more with:
 
@@ -139,9 +137,9 @@ is in `label-studio/project_plan.csv`. The 12 fresh midpoint projects are
 generated on demand with `--stage MIDPOINT` after the lead pauses production;
 they are intentionally separate from the initial plan.
 
-### Lead-only gold project command
+### Sammy-only gold project command
 
-The project lead uses the same local setup and API key, then runs:
+Sammy uses a separate local setup and API key, then runs:
 
 ```bash
 export LABEL_STUDIO_API_KEY='paste-your-token-here'
@@ -151,8 +149,8 @@ unset LABEL_STUDIO_API_KEY
 
 This creates `CB-LEAD-GOLD-MASK`, `CB-LEAD-GOLD-PRESENCE`, and
 `CB-LEAD-GOLD-QUALITY`, each with the correct 12 qualification images. Do not
-invite coauthors into the lead instance or share these exports until all four
-qualification submissions are locked.
+invite A1-A4 into Sammy's instance or place these exports in the shared Drive
+until all four production submissions are locked.
 
 ### Manual project setup if the script cannot be used
 
@@ -169,34 +167,23 @@ For each applicable row in `label-studio/project_plan.csv`:
 
 Stop and notify the lead if the count is wrong or an image does not load.
 
-## Qualification procedure
+## Gold/reference and waived qualification
 
-The lead labels all 12 images in the three automatically created gold projects
-and exports:
+Sammy labels all 12 images in the three automatically created private gold
+projects and exports:
 
 - original Label Studio JSON for all three projects;
 - **Brush labels to NumPy and PNG** for the mask project.
 
-The four coauthors complete their own qualification projects independently.
-They must not discuss specific images, view the lead labels, or view one
-another's labels before submitting.
+A1-A4 do not create qualification projects. Zafir previously tested and
+approved them and documented the waiver in `annotation/annotator_roster.csv`.
+Sammy's gold remains useful as a private quality-control reference and for
+adjudicating the midpoint check.
 
-The lead compares each coauthor with lead gold:
-
-- mean mask Dice must be at least `0.75`;
-- presence kappa must be at least `0.60`;
-- quality kappa must be at least `0.60`;
-- there must be no systematic rule violation such as labeling dry tan grass as
-  green vegetation or calling natural erosion lines roads.
-
-If any gate fails, the lead reviews the relevant numbered rules with that
-coauthor, resets the qualification projects, and asks for one clean repeat.
-Never alter a submitted result to manufacture a pass.
-
-Repeat the same 12-frame qualification check midway through production as the
-manual requires. Pause production and have each annotator create fresh
+Run the fresh 12-frame midpoint check as the manual requires. Pause production
+and have each annotator create fresh
 `CB-A1-MID-*` projects with `--stage MIDPOINT`; do not reopen or overwrite the
-original qualification pass. Collect `A1_midpoint_*` exports, score them against
+private reference work. Collect `A1_midpoint_*` exports, score them against
 the same private gold, and pause a drifting annotator until they re-align.
 
 ## Calibration procedure
@@ -204,14 +191,15 @@ the same private gold, and pause a drifting annotator until they re-align.
 All four coauthors label the same 30 calibration images independently.
 
 1. Everyone labels the first five images.
-2. The lead exports those first-five results and holds a short alignment
-   meeting.
-3. Discuss rules and boundaries, not who was "right."
-4. Every unresolved interpretation enters `metadata/decision_log.csv`.
-5. The lead assigns the next numbered rule and records whether it must be
+2. Everyone uploads their first-five exports to their own shared-Drive
+   subfolder.
+3. The lead downloads those results and holds a short alignment meeting.
+4. Discuss rules and boundaries, not who was "right."
+5. Every unresolved interpretation enters `metadata/decision_log.csv`.
+6. The lead assigns the next numbered rule and records whether it must be
    applied retrospectively.
-6. Everyone completes the remaining 25 images independently.
-7. The lead computes and records Dice and kappa before production starts.
+7. Everyone completes the remaining 25 images independently.
+8. The lead computes and records Dice and kappa before production starts.
 
 Do not replace source passes with consensus labels. Original annotator exports
 remain immutable; adjudication creates separate final records.
@@ -297,27 +285,35 @@ For every project:
 5. Name the files exactly:
 
 ```text
-A1_qualification_mask.json
-A1_qualification_presence.json
-A1_qualification_quality.json
+A1_calibration_checkpoint5_mask.json
+A1_calibration_checkpoint5_mask_png.zip
+A1_calibration_checkpoint5_presence.json
+A1_calibration_checkpoint5_quality.json
 A1_calibration_mask.json
+A1_calibration_mask_png.zip
 A1_calibration_presence.json
 A1_calibration_quality.json
+A1_midpoint_mask.json
+A1_midpoint_mask_png.zip
+A1_midpoint_presence.json
+A1_midpoint_quality.json
 A1_production_mask.json
+A1_production_mask_png.zip
 A1_production_presence.json
 A1_production_quality.json
 ```
 
 Replace `A1` with the assigned id. Do not rename individual images or masks.
-Send the exports privately to the lead; do not commit raw Label Studio exports
-to the public repository.
+Annotators upload only to their own named shared-Drive subfolders. Sammy uses a
+separate private gold folder. Do not commit raw Label Studio exports to the
+public repository.
 
 The lead converts categorical exports after receipt:
 
 ```bash
 python3 scripts/convert_label_studio_choices.py \
-  A1_qualification_presence.json \
   A1_calibration_presence.json \
+  A1_midpoint_presence.json \
   A1_production_presence.json \
   --task presence \
   --annotator A1 \
