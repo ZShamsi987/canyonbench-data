@@ -2,35 +2,98 @@
 
 The full CanyonBench Annotation Manual is authoritative. This page routes files and checks; it does not replace the numbered rules.
 
+## Start here
+
+The complete lead and annotator handoff is
+[`docs/START_ANNOTATING.md`](docs/START_ANNOTATING.md). The public task files
+load the 377 curated JPEGs directly from GitHub; annotators do not need the raw
+Google Drive footage.
+
 ## Production workflow
 
-1. Build the private handoff with `scripts/prepare_curation_package.py`, then have the lead adjudicate gold labels for the 12 qualification candidates.
-2. Set a stable annotator id. Complete the 12-frame qualification set and meet the agreement targets.
-3. Label assigned whole trajectory segments plus the shared 30-frame calibration set.
-4. At 100% zoom, pan left-to-right and top-to-bottom. Mark unresolved cases `uncertain` and add them to `metadata/decision_log.csv`.
-5. Create the vegetation mask first, then presence and quality. Registration points are placed separately and checked by a second coauthor.
-6. Compute the 4x4 grid from the final mask only for reliable registrations; review the overlay and log any override.
-7. Keep per-annotator files. The lead creates adjudicated records without overwriting source passes.
+1. Map the four coauthors to stable `A1` through `A4` ids in
+   `annotation/annotator_roster.csv`; never change the mapping after work starts.
+2. Have the lead create private gold labels for the 12 qualification candidates.
+3. Each coauthor creates only the three qualification projects and meets all
+   agreement targets.
+4. All four label the shared 30-frame calibration set, review the first five,
+   and resolve ambiguities through the append-only decision log.
+5. Create the production projects from the fixed per-annotator worklist.
+6. At 100% zoom, pan left-to-right and top-to-bottom. Mark unresolved cases
+   `uncertain` and add them to `metadata/decision_log.csv`.
+7. Create the vegetation mask first, then presence and quality. Registration
+   begins only after the reference product and license are recorded.
+8. Keep per-annotator exports. The lead creates adjudicated records without
+   overwriting source passes.
 
-## Build the private handoff
+## Create projects automatically
 
-From the data repository:
+After starting a local Label Studio instance and copying its API key:
 
 ```bash
-python scripts/prepare_curation_package.py \
+export LABEL_STUDIO_API_KEY='paste-token'
+python3 scripts/create_label_studio_projects.py \
+  --annotator A1 \
+  --stage QUALIFICATION
+unset LABEL_STUDIO_API_KEY
+```
+
+The lead authorizes `CALIBRATION` and then `PRODUCTION` only after the preceding
+gate passes. The exact 36-project plan is in `label-studio/project_plan.csv`.
+
+## Rebuild the public handoff
+
+The published files are reproducible from the code repository's sampled
+manifest and named-frame directory:
+
+```bash
+python3 scripts/prepare_annotation_release.py \
+  /path/to/work/world10/frames_sampled.csv \
+  /path/to/work/world10/frames_named \
+  --output .
+```
+
+This materializes 377 curated JPEGs, deterministic A1-A4 assignments, task
+JSON, workload summaries, and the pre-annotation metadata manifest.
+
+The older ignored local handoff can still be rebuilt for audit:
+
+```bash
+python3 scripts/prepare_curation_package.py \
   /path/to/work/world10/frames_sampled.csv \
   /path/to/work/world10/frames_named \
   private/curation/world10 \
   splits/splits.csv
 ```
 
-The private output contains hardlinked phase directories, Label Studio tasks,
-registration candidates, the shared calibration set, qualification candidates,
-and a two-annotator segment assignment sheet. It is ignored by Git.
+Its local-file URLs are for offline audit only. Annotators use the public files
+under `label-studio/tasks/`.
+
+## Annotator workload
+
+- A1 and A4: 168 production + 30 calibration + 12 qualification images.
+- A2 and A3: 167 production + 30 calibration + 12 qualification images.
+- Every ordinary production image has exactly two independent annotators.
+- Calibration and qualification images are labeled by all four.
+- Each image is completed in the mask, presence, and quality projects.
+
+## Task order
+
+1. Qualification
+2. Calibration
+3. Production
+4. Midpoint qualification repeat
+5. Adjudication
+6. Registration and grounding after licensed reference imagery is available
+
+Do not skip a gate.
 
 ## Visible green vegetation
 
-Include resolvable green, olive-green, or dark-green living vegetation. Exclude tan/dry grass, water or algae ambiguity, mineral tint, unconfirmed shadow, diffuse sub-resolution green tint, and connected specks under four pixels. Trace the >50% pixel boundary and do not pad segmenter proposals.
+Include resolvable green, olive-green, or dark-green living vegetation. Exclude
+tan/dry grass, water or algae ambiguity, mineral tint, unconfirmed shadow,
+diffuse sub-resolution green tint, and connected specks under four pixels.
+Trace the >50% pixel boundary and do not pad segmenter proposals.
 
 ## Feature minimums
 
@@ -41,17 +104,18 @@ Include resolvable green, olive-green, or dark-green living vegetation. Exclude 
 - snow/ice: soft conforming white cover, distinct from rock/cloud;
 - cultivated field: geometric agricultural parcels.
 
-Some evidence below a minimum is `uncertain`, not `no`. Natural erosion lines with no engineered cues are `no` for road. Never infer one feature from another.
+Some evidence below a minimum is `uncertain`, not `no`. Natural erosion lines
+with no engineered cues are `no` for road. Never infer one feature from another.
 
 ## Output paths
 
 ```text
 masks/annotator/img_SSSSSS__ID.png
 masks/adjudicated/img_SSSSSS.png
-labels/annotator/presence.jsonl
-labels/annotator/quality.jsonl
-labels/annotator/grid.jsonl
-labels/annotator/judge_validation.jsonl
+labels/annotator/ID_presence.jsonl
+labels/annotator/ID_quality.jsonl
+labels/annotator/ID_grid.jsonl
+labels/annotator/ID_judge_validation.jsonl
 labels/adjudicated/presence.jsonl
 labels/adjudicated/quality.jsonl
 labels/adjudicated/grid.jsonl

@@ -4,7 +4,16 @@ The schemas, metadata templates, annotation templates, and original documentatio
 
 Original CanyonBench annotation records and masks may be distributed under CC BY 4.0 in a frozen release after the source audit is complete.
 
-Images, telemetry, NAIP/satellite reference imagery, and third-party geographic layers are not relicensed by this file. Each released source or derivative must carry its own provenance and license record. Material whose redistribution terms are unknown or incompatible is excluded from the public release. The absence of a file from `metadata/provenance.yaml` is not permission to redistribute it.
+The capture owner confirmed on 2026-07-26 that CanyonBench may redistribute the
+377 derived Launching/Floating JPEGs in this repository for public coauthor
+annotation. Those JPEGs are publicly accessible, but this file does not yet
+grant a general downstream image-data license; the final license designation
+will be recorded before the frozen dataset release.
+
+Telemetry, NAIP/satellite reference imagery, and third-party geographic layers
+are not relicensed by this file. Each released source or derivative must carry
+its own provenance and license record. Material whose redistribution terms are
+unknown or incompatible is excluded from the frozen release. The absence of a
+file from `metadata/provenance.yaml` is not permission to redistribute it.
 
 Software in `scripts/` is licensed under the MIT License.
-

@@ -4,8 +4,7 @@ title: "CanyonBench Dataset"
 type: dataset
 authors:
   - name: "CanyonBench contributors"
-version: 0.1.0-predata
-date-released: 2026-07-21
-license: CC-BY-4.0
+version: 0.2.0-annotation
+date-released: 2026-07-26
 repository-code: "https://github.com/ZShamsi987/canyonbench-data"
-notes: "Pre-data schema release; DOI and paper identifiers are pending."
+notes: "Public annotation handoff; final image license, DOI, and paper identifiers are pending. See LICENSE-DATA.md."

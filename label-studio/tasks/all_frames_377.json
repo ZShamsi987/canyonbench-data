@@ -1,0 +1,4903 @@
+[
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_002742.jpg"
+    },
+    "meta": {
+      "image": "img_002742.jpg",
+      "elapsed_s": 2742,
+      "phase": "Launching",
+      "segment_id": "seg_0000",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_002802.jpg"
+    },
+    "meta": {
+      "image": "img_002802.jpg",
+      "elapsed_s": 2802,
+      "phase": "Launching",
+      "segment_id": "seg_0000",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_002862.jpg"
+    },
+    "meta": {
+      "image": "img_002862.jpg",
+      "elapsed_s": 2862,
+      "phase": "Launching",
+      "segment_id": "seg_0000",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_002922.jpg"
+    },
+    "meta": {
+      "image": "img_002922.jpg",
+      "elapsed_s": 2922,
+      "phase": "Launching",
+      "segment_id": "seg_0000",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_002982.jpg"
+    },
+    "meta": {
+      "image": "img_002982.jpg",
+      "elapsed_s": 2982,
+      "phase": "Launching",
+      "segment_id": "seg_0000",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003042.jpg"
+    },
+    "meta": {
+      "image": "img_003042.jpg",
+      "elapsed_s": 3042,
+      "phase": "Launching",
+      "segment_id": "seg_0000",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003102.jpg"
+    },
+    "meta": {
+      "image": "img_003102.jpg",
+      "elapsed_s": 3102,
+      "phase": "Launching",
+      "segment_id": "seg_0000",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003162.jpg"
+    },
+    "meta": {
+      "image": "img_003162.jpg",
+      "elapsed_s": 3162,
+      "phase": "Launching",
+      "segment_id": "seg_0000",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003222.jpg"
+    },
+    "meta": {
+      "image": "img_003222.jpg",
+      "elapsed_s": 3222,
+      "phase": "Launching",
+      "segment_id": "seg_0000",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003282.jpg"
+    },
+    "meta": {
+      "image": "img_003282.jpg",
+      "elapsed_s": 3282,
+      "phase": "Launching",
+      "segment_id": "seg_0000",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003342.jpg"
+    },
+    "meta": {
+      "image": "img_003342.jpg",
+      "elapsed_s": 3342,
+      "phase": "Launching",
+      "segment_id": "seg_0001",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003402.jpg"
+    },
+    "meta": {
+      "image": "img_003402.jpg",
+      "elapsed_s": 3402,
+      "phase": "Launching",
+      "segment_id": "seg_0001",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003462.jpg"
+    },
+    "meta": {
+      "image": "img_003462.jpg",
+      "elapsed_s": 3462,
+      "phase": "Launching",
+      "segment_id": "seg_0001",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003522.jpg"
+    },
+    "meta": {
+      "image": "img_003522.jpg",
+      "elapsed_s": 3522,
+      "phase": "Launching",
+      "segment_id": "seg_0001",
+      "split": "train",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003582.jpg"
+    },
+    "meta": {
+      "image": "img_003582.jpg",
+      "elapsed_s": 3582,
+      "phase": "Launching",
+      "segment_id": "seg_0001",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003642.jpg"
+    },
+    "meta": {
+      "image": "img_003642.jpg",
+      "elapsed_s": 3642,
+      "phase": "Launching",
+      "segment_id": "seg_0001",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003702.jpg"
+    },
+    "meta": {
+      "image": "img_003702.jpg",
+      "elapsed_s": 3702,
+      "phase": "Launching",
+      "segment_id": "seg_0001",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003762.jpg"
+    },
+    "meta": {
+      "image": "img_003762.jpg",
+      "elapsed_s": 3762,
+      "phase": "Launching",
+      "segment_id": "seg_0001",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003822.jpg"
+    },
+    "meta": {
+      "image": "img_003822.jpg",
+      "elapsed_s": 3822,
+      "phase": "Launching",
+      "segment_id": "seg_0001",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003882.jpg"
+    },
+    "meta": {
+      "image": "img_003882.jpg",
+      "elapsed_s": 3882,
+      "phase": "Launching",
+      "segment_id": "seg_0001",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003942.jpg"
+    },
+    "meta": {
+      "image": "img_003942.jpg",
+      "elapsed_s": 3942,
+      "phase": "Launching",
+      "segment_id": "seg_0002",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004002.jpg"
+    },
+    "meta": {
+      "image": "img_004002.jpg",
+      "elapsed_s": 4002,
+      "phase": "Launching",
+      "segment_id": "seg_0002",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004062.jpg"
+    },
+    "meta": {
+      "image": "img_004062.jpg",
+      "elapsed_s": 4062,
+      "phase": "Launching",
+      "segment_id": "seg_0002",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004122.jpg"
+    },
+    "meta": {
+      "image": "img_004122.jpg",
+      "elapsed_s": 4122,
+      "phase": "Launching",
+      "segment_id": "seg_0002",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004182.jpg"
+    },
+    "meta": {
+      "image": "img_004182.jpg",
+      "elapsed_s": 4182,
+      "phase": "Launching",
+      "segment_id": "seg_0002",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004242.jpg"
+    },
+    "meta": {
+      "image": "img_004242.jpg",
+      "elapsed_s": 4242,
+      "phase": "Launching",
+      "segment_id": "seg_0002",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004302.jpg"
+    },
+    "meta": {
+      "image": "img_004302.jpg",
+      "elapsed_s": 4302,
+      "phase": "Launching",
+      "segment_id": "seg_0002",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004362.jpg"
+    },
+    "meta": {
+      "image": "img_004362.jpg",
+      "elapsed_s": 4362,
+      "phase": "Launching",
+      "segment_id": "seg_0002",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004422.jpg"
+    },
+    "meta": {
+      "image": "img_004422.jpg",
+      "elapsed_s": 4422,
+      "phase": "Launching",
+      "segment_id": "seg_0003",
+      "split": "test",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004482.jpg"
+    },
+    "meta": {
+      "image": "img_004482.jpg",
+      "elapsed_s": 4482,
+      "phase": "Launching",
+      "segment_id": "seg_0003",
+      "split": "test",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004542.jpg"
+    },
+    "meta": {
+      "image": "img_004542.jpg",
+      "elapsed_s": 4542,
+      "phase": "Launching",
+      "segment_id": "seg_0004",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004602.jpg"
+    },
+    "meta": {
+      "image": "img_004602.jpg",
+      "elapsed_s": 4602,
+      "phase": "Launching",
+      "segment_id": "seg_0004",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004662.jpg"
+    },
+    "meta": {
+      "image": "img_004662.jpg",
+      "elapsed_s": 4662,
+      "phase": "Launching",
+      "segment_id": "seg_0004",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004722.jpg"
+    },
+    "meta": {
+      "image": "img_004722.jpg",
+      "elapsed_s": 4722,
+      "phase": "Launching",
+      "segment_id": "seg_0004",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004782.jpg"
+    },
+    "meta": {
+      "image": "img_004782.jpg",
+      "elapsed_s": 4782,
+      "phase": "Launching",
+      "segment_id": "seg_0004",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004842.jpg"
+    },
+    "meta": {
+      "image": "img_004842.jpg",
+      "elapsed_s": 4842,
+      "phase": "Launching",
+      "segment_id": "seg_0004",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004902.jpg"
+    },
+    "meta": {
+      "image": "img_004902.jpg",
+      "elapsed_s": 4902,
+      "phase": "Launching",
+      "segment_id": "seg_0004",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004962.jpg"
+    },
+    "meta": {
+      "image": "img_004962.jpg",
+      "elapsed_s": 4962,
+      "phase": "Launching",
+      "segment_id": "seg_0004",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005022.jpg"
+    },
+    "meta": {
+      "image": "img_005022.jpg",
+      "elapsed_s": 5022,
+      "phase": "Launching",
+      "segment_id": "seg_0005",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005084.jpg"
+    },
+    "meta": {
+      "image": "img_005084.jpg",
+      "elapsed_s": 5084,
+      "phase": "Launching",
+      "segment_id": "seg_0005",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005144.jpg"
+    },
+    "meta": {
+      "image": "img_005144.jpg",
+      "elapsed_s": 5144,
+      "phase": "Launching",
+      "segment_id": "seg_0006",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005204.jpg"
+    },
+    "meta": {
+      "image": "img_005204.jpg",
+      "elapsed_s": 5204,
+      "phase": "Launching",
+      "segment_id": "seg_0007",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005264.jpg"
+    },
+    "meta": {
+      "image": "img_005264.jpg",
+      "elapsed_s": 5264,
+      "phase": "Launching",
+      "segment_id": "seg_0007",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005324.jpg"
+    },
+    "meta": {
+      "image": "img_005324.jpg",
+      "elapsed_s": 5324,
+      "phase": "Launching",
+      "segment_id": "seg_0008",
+      "split": "validation",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005384.jpg"
+    },
+    "meta": {
+      "image": "img_005384.jpg",
+      "elapsed_s": 5384,
+      "phase": "Launching",
+      "segment_id": "seg_0008",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005444.jpg"
+    },
+    "meta": {
+      "image": "img_005444.jpg",
+      "elapsed_s": 5444,
+      "phase": "Launching",
+      "segment_id": "seg_0008",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005504.jpg"
+    },
+    "meta": {
+      "image": "img_005504.jpg",
+      "elapsed_s": 5504,
+      "phase": "Launching",
+      "segment_id": "seg_0009",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005564.jpg"
+    },
+    "meta": {
+      "image": "img_005564.jpg",
+      "elapsed_s": 5564,
+      "phase": "Launching",
+      "segment_id": "seg_0009",
+      "split": "train",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005624.jpg"
+    },
+    "meta": {
+      "image": "img_005624.jpg",
+      "elapsed_s": 5624,
+      "phase": "Launching",
+      "segment_id": "seg_0009",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005684.jpg"
+    },
+    "meta": {
+      "image": "img_005684.jpg",
+      "elapsed_s": 5684,
+      "phase": "Launching",
+      "segment_id": "seg_0009",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005744.jpg"
+    },
+    "meta": {
+      "image": "img_005744.jpg",
+      "elapsed_s": 5744,
+      "phase": "Launching",
+      "segment_id": "seg_0010",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005804.jpg"
+    },
+    "meta": {
+      "image": "img_005804.jpg",
+      "elapsed_s": 5804,
+      "phase": "Launching",
+      "segment_id": "seg_0010",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005864.jpg"
+    },
+    "meta": {
+      "image": "img_005864.jpg",
+      "elapsed_s": 5864,
+      "phase": "Launching",
+      "segment_id": "seg_0010",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005924.jpg"
+    },
+    "meta": {
+      "image": "img_005924.jpg",
+      "elapsed_s": 5924,
+      "phase": "Launching",
+      "segment_id": "seg_0010",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005984.jpg"
+    },
+    "meta": {
+      "image": "img_005984.jpg",
+      "elapsed_s": 5984,
+      "phase": "Launching",
+      "segment_id": "seg_0010",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006044.jpg"
+    },
+    "meta": {
+      "image": "img_006044.jpg",
+      "elapsed_s": 6044,
+      "phase": "Launching",
+      "segment_id": "seg_0010",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006104.jpg"
+    },
+    "meta": {
+      "image": "img_006104.jpg",
+      "elapsed_s": 6104,
+      "phase": "Launching",
+      "segment_id": "seg_0010",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006164.jpg"
+    },
+    "meta": {
+      "image": "img_006164.jpg",
+      "elapsed_s": 6164,
+      "phase": "Launching",
+      "segment_id": "seg_0010",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006224.jpg"
+    },
+    "meta": {
+      "image": "img_006224.jpg",
+      "elapsed_s": 6224,
+      "phase": "Launching",
+      "segment_id": "seg_0010",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006284.jpg"
+    },
+    "meta": {
+      "image": "img_006284.jpg",
+      "elapsed_s": 6284,
+      "phase": "Launching",
+      "segment_id": "seg_0010",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006344.jpg"
+    },
+    "meta": {
+      "image": "img_006344.jpg",
+      "elapsed_s": 6344,
+      "phase": "Launching",
+      "segment_id": "seg_0011",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006404.jpg"
+    },
+    "meta": {
+      "image": "img_006404.jpg",
+      "elapsed_s": 6404,
+      "phase": "Launching",
+      "segment_id": "seg_0012",
+      "split": "validation",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006464.jpg"
+    },
+    "meta": {
+      "image": "img_006464.jpg",
+      "elapsed_s": 6464,
+      "phase": "Launching",
+      "segment_id": "seg_0012",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006524.jpg"
+    },
+    "meta": {
+      "image": "img_006524.jpg",
+      "elapsed_s": 6524,
+      "phase": "Launching",
+      "segment_id": "seg_0012",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006584.jpg"
+    },
+    "meta": {
+      "image": "img_006584.jpg",
+      "elapsed_s": 6584,
+      "phase": "Launching",
+      "segment_id": "seg_0012",
+      "split": "validation",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006644.jpg"
+    },
+    "meta": {
+      "image": "img_006644.jpg",
+      "elapsed_s": 6644,
+      "phase": "Launching",
+      "segment_id": "seg_0012",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006704.jpg"
+    },
+    "meta": {
+      "image": "img_006704.jpg",
+      "elapsed_s": 6704,
+      "phase": "Launching",
+      "segment_id": "seg_0012",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006764.jpg"
+    },
+    "meta": {
+      "image": "img_006764.jpg",
+      "elapsed_s": 6764,
+      "phase": "Launching",
+      "segment_id": "seg_0012",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_006824.jpg"
+    },
+    "meta": {
+      "image": "img_006824.jpg",
+      "elapsed_s": 6824,
+      "phase": "Floating",
+      "segment_id": "seg_0013",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_006884.jpg"
+    },
+    "meta": {
+      "image": "img_006884.jpg",
+      "elapsed_s": 6884,
+      "phase": "Floating",
+      "segment_id": "seg_0013",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_006944.jpg"
+    },
+    "meta": {
+      "image": "img_006944.jpg",
+      "elapsed_s": 6944,
+      "phase": "Floating",
+      "segment_id": "seg_0013",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007004.jpg"
+    },
+    "meta": {
+      "image": "img_007004.jpg",
+      "elapsed_s": 7004,
+      "phase": "Floating",
+      "segment_id": "seg_0013",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007064.jpg"
+    },
+    "meta": {
+      "image": "img_007064.jpg",
+      "elapsed_s": 7064,
+      "phase": "Floating",
+      "segment_id": "seg_0013",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007124.jpg"
+    },
+    "meta": {
+      "image": "img_007124.jpg",
+      "elapsed_s": 7124,
+      "phase": "Floating",
+      "segment_id": "seg_0013",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007184.jpg"
+    },
+    "meta": {
+      "image": "img_007184.jpg",
+      "elapsed_s": 7184,
+      "phase": "Floating",
+      "segment_id": "seg_0013",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007244.jpg"
+    },
+    "meta": {
+      "image": "img_007244.jpg",
+      "elapsed_s": 7244,
+      "phase": "Floating",
+      "segment_id": "seg_0013",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007304.jpg"
+    },
+    "meta": {
+      "image": "img_007304.jpg",
+      "elapsed_s": 7304,
+      "phase": "Floating",
+      "segment_id": "seg_0013",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007364.jpg"
+    },
+    "meta": {
+      "image": "img_007364.jpg",
+      "elapsed_s": 7364,
+      "phase": "Floating",
+      "segment_id": "seg_0013",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007424.jpg"
+    },
+    "meta": {
+      "image": "img_007424.jpg",
+      "elapsed_s": 7424,
+      "phase": "Floating",
+      "segment_id": "seg_0014",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007484.jpg"
+    },
+    "meta": {
+      "image": "img_007484.jpg",
+      "elapsed_s": 7484,
+      "phase": "Floating",
+      "segment_id": "seg_0015",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007544.jpg"
+    },
+    "meta": {
+      "image": "img_007544.jpg",
+      "elapsed_s": 7544,
+      "phase": "Floating",
+      "segment_id": "seg_0015",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007604.jpg"
+    },
+    "meta": {
+      "image": "img_007604.jpg",
+      "elapsed_s": 7604,
+      "phase": "Floating",
+      "segment_id": "seg_0015",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007664.jpg"
+    },
+    "meta": {
+      "image": "img_007664.jpg",
+      "elapsed_s": 7664,
+      "phase": "Floating",
+      "segment_id": "seg_0015",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007724.jpg"
+    },
+    "meta": {
+      "image": "img_007724.jpg",
+      "elapsed_s": 7724,
+      "phase": "Floating",
+      "segment_id": "seg_0015",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007784.jpg"
+    },
+    "meta": {
+      "image": "img_007784.jpg",
+      "elapsed_s": 7784,
+      "phase": "Floating",
+      "segment_id": "seg_0015",
+      "split": "test",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007844.jpg"
+    },
+    "meta": {
+      "image": "img_007844.jpg",
+      "elapsed_s": 7844,
+      "phase": "Floating",
+      "segment_id": "seg_0016",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007904.jpg"
+    },
+    "meta": {
+      "image": "img_007904.jpg",
+      "elapsed_s": 7904,
+      "phase": "Floating",
+      "segment_id": "seg_0016",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_007964.jpg"
+    },
+    "meta": {
+      "image": "img_007964.jpg",
+      "elapsed_s": 7964,
+      "phase": "Floating",
+      "segment_id": "seg_0016",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008024.jpg"
+    },
+    "meta": {
+      "image": "img_008024.jpg",
+      "elapsed_s": 8024,
+      "phase": "Floating",
+      "segment_id": "seg_0017",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008084.jpg"
+    },
+    "meta": {
+      "image": "img_008084.jpg",
+      "elapsed_s": 8084,
+      "phase": "Floating",
+      "segment_id": "seg_0017",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008144.jpg"
+    },
+    "meta": {
+      "image": "img_008144.jpg",
+      "elapsed_s": 8144,
+      "phase": "Floating",
+      "segment_id": "seg_0017",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008204.jpg"
+    },
+    "meta": {
+      "image": "img_008204.jpg",
+      "elapsed_s": 8204,
+      "phase": "Floating",
+      "segment_id": "seg_0018",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008264.jpg"
+    },
+    "meta": {
+      "image": "img_008264.jpg",
+      "elapsed_s": 8264,
+      "phase": "Floating",
+      "segment_id": "seg_0018",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008324.jpg"
+    },
+    "meta": {
+      "image": "img_008324.jpg",
+      "elapsed_s": 8324,
+      "phase": "Floating",
+      "segment_id": "seg_0018",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008384.jpg"
+    },
+    "meta": {
+      "image": "img_008384.jpg",
+      "elapsed_s": 8384,
+      "phase": "Floating",
+      "segment_id": "seg_0018",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008444.jpg"
+    },
+    "meta": {
+      "image": "img_008444.jpg",
+      "elapsed_s": 8444,
+      "phase": "Floating",
+      "segment_id": "seg_0018",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008504.jpg"
+    },
+    "meta": {
+      "image": "img_008504.jpg",
+      "elapsed_s": 8504,
+      "phase": "Floating",
+      "segment_id": "seg_0018",
+      "split": "validation",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008564.jpg"
+    },
+    "meta": {
+      "image": "img_008564.jpg",
+      "elapsed_s": 8564,
+      "phase": "Floating",
+      "segment_id": "seg_0018",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008624.jpg"
+    },
+    "meta": {
+      "image": "img_008624.jpg",
+      "elapsed_s": 8624,
+      "phase": "Floating",
+      "segment_id": "seg_0019",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008684.jpg"
+    },
+    "meta": {
+      "image": "img_008684.jpg",
+      "elapsed_s": 8684,
+      "phase": "Floating",
+      "segment_id": "seg_0019",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008744.jpg"
+    },
+    "meta": {
+      "image": "img_008744.jpg",
+      "elapsed_s": 8744,
+      "phase": "Floating",
+      "segment_id": "seg_0019",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008805.jpg"
+    },
+    "meta": {
+      "image": "img_008805.jpg",
+      "elapsed_s": 8805,
+      "phase": "Floating",
+      "segment_id": "seg_0019",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008865.jpg"
+    },
+    "meta": {
+      "image": "img_008865.jpg",
+      "elapsed_s": 8865,
+      "phase": "Floating",
+      "segment_id": "seg_0020",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008925.jpg"
+    },
+    "meta": {
+      "image": "img_008925.jpg",
+      "elapsed_s": 8925,
+      "phase": "Floating",
+      "segment_id": "seg_0020",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_008986.jpg"
+    },
+    "meta": {
+      "image": "img_008986.jpg",
+      "elapsed_s": 8986,
+      "phase": "Floating",
+      "segment_id": "seg_0020",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009046.jpg"
+    },
+    "meta": {
+      "image": "img_009046.jpg",
+      "elapsed_s": 9046,
+      "phase": "Floating",
+      "segment_id": "seg_0020",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009106.jpg"
+    },
+    "meta": {
+      "image": "img_009106.jpg",
+      "elapsed_s": 9106,
+      "phase": "Floating",
+      "segment_id": "seg_0020",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009166.jpg"
+    },
+    "meta": {
+      "image": "img_009166.jpg",
+      "elapsed_s": 9166,
+      "phase": "Floating",
+      "segment_id": "seg_0021",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009226.jpg"
+    },
+    "meta": {
+      "image": "img_009226.jpg",
+      "elapsed_s": 9226,
+      "phase": "Floating",
+      "segment_id": "seg_0022",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009287.jpg"
+    },
+    "meta": {
+      "image": "img_009287.jpg",
+      "elapsed_s": 9287,
+      "phase": "Floating",
+      "segment_id": "seg_0022",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009347.jpg"
+    },
+    "meta": {
+      "image": "img_009347.jpg",
+      "elapsed_s": 9347,
+      "phase": "Floating",
+      "segment_id": "seg_0022",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009407.jpg"
+    },
+    "meta": {
+      "image": "img_009407.jpg",
+      "elapsed_s": 9407,
+      "phase": "Floating",
+      "segment_id": "seg_0022",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009469.jpg"
+    },
+    "meta": {
+      "image": "img_009469.jpg",
+      "elapsed_s": 9469,
+      "phase": "Floating",
+      "segment_id": "seg_0022",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009529.jpg"
+    },
+    "meta": {
+      "image": "img_009529.jpg",
+      "elapsed_s": 9529,
+      "phase": "Floating",
+      "segment_id": "seg_0022",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009589.jpg"
+    },
+    "meta": {
+      "image": "img_009589.jpg",
+      "elapsed_s": 9589,
+      "phase": "Floating",
+      "segment_id": "seg_0022",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009650.jpg"
+    },
+    "meta": {
+      "image": "img_009650.jpg",
+      "elapsed_s": 9650,
+      "phase": "Floating",
+      "segment_id": "seg_0022",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009710.jpg"
+    },
+    "meta": {
+      "image": "img_009710.jpg",
+      "elapsed_s": 9710,
+      "phase": "Floating",
+      "segment_id": "seg_0022",
+      "split": "train",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009770.jpg"
+    },
+    "meta": {
+      "image": "img_009770.jpg",
+      "elapsed_s": 9770,
+      "phase": "Floating",
+      "segment_id": "seg_0022",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009832.jpg"
+    },
+    "meta": {
+      "image": "img_009832.jpg",
+      "elapsed_s": 9832,
+      "phase": "Floating",
+      "segment_id": "seg_0023",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009892.jpg"
+    },
+    "meta": {
+      "image": "img_009892.jpg",
+      "elapsed_s": 9892,
+      "phase": "Floating",
+      "segment_id": "seg_0023",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009952.jpg"
+    },
+    "meta": {
+      "image": "img_009952.jpg",
+      "elapsed_s": 9952,
+      "phase": "Floating",
+      "segment_id": "seg_0023",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010014.jpg"
+    },
+    "meta": {
+      "image": "img_010014.jpg",
+      "elapsed_s": 10014,
+      "phase": "Floating",
+      "segment_id": "seg_0023",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010074.jpg"
+    },
+    "meta": {
+      "image": "img_010074.jpg",
+      "elapsed_s": 10074,
+      "phase": "Floating",
+      "segment_id": "seg_0023",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010134.jpg"
+    },
+    "meta": {
+      "image": "img_010134.jpg",
+      "elapsed_s": 10134,
+      "phase": "Floating",
+      "segment_id": "seg_0023",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010196.jpg"
+    },
+    "meta": {
+      "image": "img_010196.jpg",
+      "elapsed_s": 10196,
+      "phase": "Floating",
+      "segment_id": "seg_0024",
+      "split": "test",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010256.jpg"
+    },
+    "meta": {
+      "image": "img_010256.jpg",
+      "elapsed_s": 10256,
+      "phase": "Floating",
+      "segment_id": "seg_0024",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010316.jpg"
+    },
+    "meta": {
+      "image": "img_010316.jpg",
+      "elapsed_s": 10316,
+      "phase": "Floating",
+      "segment_id": "seg_0024",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010378.jpg"
+    },
+    "meta": {
+      "image": "img_010378.jpg",
+      "elapsed_s": 10378,
+      "phase": "Floating",
+      "segment_id": "seg_0024",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010438.jpg"
+    },
+    "meta": {
+      "image": "img_010438.jpg",
+      "elapsed_s": 10438,
+      "phase": "Floating",
+      "segment_id": "seg_0025",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010498.jpg"
+    },
+    "meta": {
+      "image": "img_010498.jpg",
+      "elapsed_s": 10498,
+      "phase": "Floating",
+      "segment_id": "seg_0025",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010560.jpg"
+    },
+    "meta": {
+      "image": "img_010560.jpg",
+      "elapsed_s": 10560,
+      "phase": "Floating",
+      "segment_id": "seg_0025",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010620.jpg"
+    },
+    "meta": {
+      "image": "img_010620.jpg",
+      "elapsed_s": 10620,
+      "phase": "Floating",
+      "segment_id": "seg_0025",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010680.jpg"
+    },
+    "meta": {
+      "image": "img_010680.jpg",
+      "elapsed_s": 10680,
+      "phase": "Floating",
+      "segment_id": "seg_0025",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010741.jpg"
+    },
+    "meta": {
+      "image": "img_010741.jpg",
+      "elapsed_s": 10741,
+      "phase": "Floating",
+      "segment_id": "seg_0026",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010801.jpg"
+    },
+    "meta": {
+      "image": "img_010801.jpg",
+      "elapsed_s": 10801,
+      "phase": "Floating",
+      "segment_id": "seg_0026",
+      "split": "test",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010861.jpg"
+    },
+    "meta": {
+      "image": "img_010861.jpg",
+      "elapsed_s": 10861,
+      "phase": "Floating",
+      "segment_id": "seg_0026",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010923.jpg"
+    },
+    "meta": {
+      "image": "img_010923.jpg",
+      "elapsed_s": 10923,
+      "phase": "Floating",
+      "segment_id": "seg_0026",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010983.jpg"
+    },
+    "meta": {
+      "image": "img_010983.jpg",
+      "elapsed_s": 10983,
+      "phase": "Floating",
+      "segment_id": "seg_0027",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011043.jpg"
+    },
+    "meta": {
+      "image": "img_011043.jpg",
+      "elapsed_s": 11043,
+      "phase": "Floating",
+      "segment_id": "seg_0028",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011104.jpg"
+    },
+    "meta": {
+      "image": "img_011104.jpg",
+      "elapsed_s": 11104,
+      "phase": "Floating",
+      "segment_id": "seg_0028",
+      "split": "validation",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011164.jpg"
+    },
+    "meta": {
+      "image": "img_011164.jpg",
+      "elapsed_s": 11164,
+      "phase": "Floating",
+      "segment_id": "seg_0028",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011224.jpg"
+    },
+    "meta": {
+      "image": "img_011224.jpg",
+      "elapsed_s": 11224,
+      "phase": "Floating",
+      "segment_id": "seg_0029",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011284.jpg"
+    },
+    "meta": {
+      "image": "img_011284.jpg",
+      "elapsed_s": 11284,
+      "phase": "Floating",
+      "segment_id": "seg_0029",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011344.jpg"
+    },
+    "meta": {
+      "image": "img_011344.jpg",
+      "elapsed_s": 11344,
+      "phase": "Floating",
+      "segment_id": "seg_0029",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011404.jpg"
+    },
+    "meta": {
+      "image": "img_011404.jpg",
+      "elapsed_s": 11404,
+      "phase": "Floating",
+      "segment_id": "seg_0029",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011464.jpg"
+    },
+    "meta": {
+      "image": "img_011464.jpg",
+      "elapsed_s": 11464,
+      "phase": "Floating",
+      "segment_id": "seg_0030",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011524.jpg"
+    },
+    "meta": {
+      "image": "img_011524.jpg",
+      "elapsed_s": 11524,
+      "phase": "Floating",
+      "segment_id": "seg_0030",
+      "split": "validation",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011585.jpg"
+    },
+    "meta": {
+      "image": "img_011585.jpg",
+      "elapsed_s": 11585,
+      "phase": "Floating",
+      "segment_id": "seg_0030",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011645.jpg"
+    },
+    "meta": {
+      "image": "img_011645.jpg",
+      "elapsed_s": 11645,
+      "phase": "Floating",
+      "segment_id": "seg_0031",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011705.jpg"
+    },
+    "meta": {
+      "image": "img_011705.jpg",
+      "elapsed_s": 11705,
+      "phase": "Floating",
+      "segment_id": "seg_0032",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011765.jpg"
+    },
+    "meta": {
+      "image": "img_011765.jpg",
+      "elapsed_s": 11765,
+      "phase": "Floating",
+      "segment_id": "seg_0032",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011825.jpg"
+    },
+    "meta": {
+      "image": "img_011825.jpg",
+      "elapsed_s": 11825,
+      "phase": "Floating",
+      "segment_id": "seg_0032",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011885.jpg"
+    },
+    "meta": {
+      "image": "img_011885.jpg",
+      "elapsed_s": 11885,
+      "phase": "Floating",
+      "segment_id": "seg_0032",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011945.jpg"
+    },
+    "meta": {
+      "image": "img_011945.jpg",
+      "elapsed_s": 11945,
+      "phase": "Floating",
+      "segment_id": "seg_0032",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012005.jpg"
+    },
+    "meta": {
+      "image": "img_012005.jpg",
+      "elapsed_s": 12005,
+      "phase": "Floating",
+      "segment_id": "seg_0033",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012065.jpg"
+    },
+    "meta": {
+      "image": "img_012065.jpg",
+      "elapsed_s": 12065,
+      "phase": "Floating",
+      "segment_id": "seg_0033",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012125.jpg"
+    },
+    "meta": {
+      "image": "img_012125.jpg",
+      "elapsed_s": 12125,
+      "phase": "Floating",
+      "segment_id": "seg_0033",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012185.jpg"
+    },
+    "meta": {
+      "image": "img_012185.jpg",
+      "elapsed_s": 12185,
+      "phase": "Floating",
+      "segment_id": "seg_0034",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012245.jpg"
+    },
+    "meta": {
+      "image": "img_012245.jpg",
+      "elapsed_s": 12245,
+      "phase": "Floating",
+      "segment_id": "seg_0035",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012305.jpg"
+    },
+    "meta": {
+      "image": "img_012305.jpg",
+      "elapsed_s": 12305,
+      "phase": "Floating",
+      "segment_id": "seg_0035",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012365.jpg"
+    },
+    "meta": {
+      "image": "img_012365.jpg",
+      "elapsed_s": 12365,
+      "phase": "Floating",
+      "segment_id": "seg_0035",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012425.jpg"
+    },
+    "meta": {
+      "image": "img_012425.jpg",
+      "elapsed_s": 12425,
+      "phase": "Floating",
+      "segment_id": "seg_0035",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012485.jpg"
+    },
+    "meta": {
+      "image": "img_012485.jpg",
+      "elapsed_s": 12485,
+      "phase": "Floating",
+      "segment_id": "seg_0035",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012545.jpg"
+    },
+    "meta": {
+      "image": "img_012545.jpg",
+      "elapsed_s": 12545,
+      "phase": "Floating",
+      "segment_id": "seg_0035",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012605.jpg"
+    },
+    "meta": {
+      "image": "img_012605.jpg",
+      "elapsed_s": 12605,
+      "phase": "Floating",
+      "segment_id": "seg_0035",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012665.jpg"
+    },
+    "meta": {
+      "image": "img_012665.jpg",
+      "elapsed_s": 12665,
+      "phase": "Floating",
+      "segment_id": "seg_0035",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012725.jpg"
+    },
+    "meta": {
+      "image": "img_012725.jpg",
+      "elapsed_s": 12725,
+      "phase": "Floating",
+      "segment_id": "seg_0036",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012785.jpg"
+    },
+    "meta": {
+      "image": "img_012785.jpg",
+      "elapsed_s": 12785,
+      "phase": "Floating",
+      "segment_id": "seg_0036",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012845.jpg"
+    },
+    "meta": {
+      "image": "img_012845.jpg",
+      "elapsed_s": 12845,
+      "phase": "Floating",
+      "segment_id": "seg_0037",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012905.jpg"
+    },
+    "meta": {
+      "image": "img_012905.jpg",
+      "elapsed_s": 12905,
+      "phase": "Floating",
+      "segment_id": "seg_0037",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_012965.jpg"
+    },
+    "meta": {
+      "image": "img_012965.jpg",
+      "elapsed_s": 12965,
+      "phase": "Floating",
+      "segment_id": "seg_0037",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013025.jpg"
+    },
+    "meta": {
+      "image": "img_013025.jpg",
+      "elapsed_s": 13025,
+      "phase": "Floating",
+      "segment_id": "seg_0037",
+      "split": "validation",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013085.jpg"
+    },
+    "meta": {
+      "image": "img_013085.jpg",
+      "elapsed_s": 13085,
+      "phase": "Floating",
+      "segment_id": "seg_0037",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013145.jpg"
+    },
+    "meta": {
+      "image": "img_013145.jpg",
+      "elapsed_s": 13145,
+      "phase": "Floating",
+      "segment_id": "seg_0037",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013205.jpg"
+    },
+    "meta": {
+      "image": "img_013205.jpg",
+      "elapsed_s": 13205,
+      "phase": "Floating",
+      "segment_id": "seg_0037",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013265.jpg"
+    },
+    "meta": {
+      "image": "img_013265.jpg",
+      "elapsed_s": 13265,
+      "phase": "Floating",
+      "segment_id": "seg_0038",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013325.jpg"
+    },
+    "meta": {
+      "image": "img_013325.jpg",
+      "elapsed_s": 13325,
+      "phase": "Floating",
+      "segment_id": "seg_0038",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013385.jpg"
+    },
+    "meta": {
+      "image": "img_013385.jpg",
+      "elapsed_s": 13385,
+      "phase": "Floating",
+      "segment_id": "seg_0038",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013445.jpg"
+    },
+    "meta": {
+      "image": "img_013445.jpg",
+      "elapsed_s": 13445,
+      "phase": "Floating",
+      "segment_id": "seg_0039",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013505.jpg"
+    },
+    "meta": {
+      "image": "img_013505.jpg",
+      "elapsed_s": 13505,
+      "phase": "Floating",
+      "segment_id": "seg_0039",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013565.jpg"
+    },
+    "meta": {
+      "image": "img_013565.jpg",
+      "elapsed_s": 13565,
+      "phase": "Floating",
+      "segment_id": "seg_0039",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013625.jpg"
+    },
+    "meta": {
+      "image": "img_013625.jpg",
+      "elapsed_s": 13625,
+      "phase": "Floating",
+      "segment_id": "seg_0039",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013685.jpg"
+    },
+    "meta": {
+      "image": "img_013685.jpg",
+      "elapsed_s": 13685,
+      "phase": "Floating",
+      "segment_id": "seg_0039",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013745.jpg"
+    },
+    "meta": {
+      "image": "img_013745.jpg",
+      "elapsed_s": 13745,
+      "phase": "Floating",
+      "segment_id": "seg_0039",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013805.jpg"
+    },
+    "meta": {
+      "image": "img_013805.jpg",
+      "elapsed_s": 13805,
+      "phase": "Floating",
+      "segment_id": "seg_0040",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013865.jpg"
+    },
+    "meta": {
+      "image": "img_013865.jpg",
+      "elapsed_s": 13865,
+      "phase": "Floating",
+      "segment_id": "seg_0040",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013925.jpg"
+    },
+    "meta": {
+      "image": "img_013925.jpg",
+      "elapsed_s": 13925,
+      "phase": "Floating",
+      "segment_id": "seg_0040",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_013985.jpg"
+    },
+    "meta": {
+      "image": "img_013985.jpg",
+      "elapsed_s": 13985,
+      "phase": "Floating",
+      "segment_id": "seg_0040",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014045.jpg"
+    },
+    "meta": {
+      "image": "img_014045.jpg",
+      "elapsed_s": 14045,
+      "phase": "Floating",
+      "segment_id": "seg_0041",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014105.jpg"
+    },
+    "meta": {
+      "image": "img_014105.jpg",
+      "elapsed_s": 14105,
+      "phase": "Floating",
+      "segment_id": "seg_0041",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014165.jpg"
+    },
+    "meta": {
+      "image": "img_014165.jpg",
+      "elapsed_s": 14165,
+      "phase": "Floating",
+      "segment_id": "seg_0041",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014225.jpg"
+    },
+    "meta": {
+      "image": "img_014225.jpg",
+      "elapsed_s": 14225,
+      "phase": "Floating",
+      "segment_id": "seg_0041",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014285.jpg"
+    },
+    "meta": {
+      "image": "img_014285.jpg",
+      "elapsed_s": 14285,
+      "phase": "Floating",
+      "segment_id": "seg_0042",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014345.jpg"
+    },
+    "meta": {
+      "image": "img_014345.jpg",
+      "elapsed_s": 14345,
+      "phase": "Floating",
+      "segment_id": "seg_0042",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014406.jpg"
+    },
+    "meta": {
+      "image": "img_014406.jpg",
+      "elapsed_s": 14406,
+      "phase": "Floating",
+      "segment_id": "seg_0042",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014466.jpg"
+    },
+    "meta": {
+      "image": "img_014466.jpg",
+      "elapsed_s": 14466,
+      "phase": "Floating",
+      "segment_id": "seg_0042",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014528.jpg"
+    },
+    "meta": {
+      "image": "img_014528.jpg",
+      "elapsed_s": 14528,
+      "phase": "Floating",
+      "segment_id": "seg_0042",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014588.jpg"
+    },
+    "meta": {
+      "image": "img_014588.jpg",
+      "elapsed_s": 14588,
+      "phase": "Floating",
+      "segment_id": "seg_0042",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014648.jpg"
+    },
+    "meta": {
+      "image": "img_014648.jpg",
+      "elapsed_s": 14648,
+      "phase": "Floating",
+      "segment_id": "seg_0043",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014708.jpg"
+    },
+    "meta": {
+      "image": "img_014708.jpg",
+      "elapsed_s": 14708,
+      "phase": "Floating",
+      "segment_id": "seg_0043",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014768.jpg"
+    },
+    "meta": {
+      "image": "img_014768.jpg",
+      "elapsed_s": 14768,
+      "phase": "Floating",
+      "segment_id": "seg_0043",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014829.jpg"
+    },
+    "meta": {
+      "image": "img_014829.jpg",
+      "elapsed_s": 14829,
+      "phase": "Floating",
+      "segment_id": "seg_0043",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014891.jpg"
+    },
+    "meta": {
+      "image": "img_014891.jpg",
+      "elapsed_s": 14891,
+      "phase": "Floating",
+      "segment_id": "seg_0043",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_014952.jpg"
+    },
+    "meta": {
+      "image": "img_014952.jpg",
+      "elapsed_s": 14952,
+      "phase": "Floating",
+      "segment_id": "seg_0043",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015013.jpg"
+    },
+    "meta": {
+      "image": "img_015013.jpg",
+      "elapsed_s": 15013,
+      "phase": "Floating",
+      "segment_id": "seg_0043",
+      "split": "train",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015080.jpg"
+    },
+    "meta": {
+      "image": "img_015080.jpg",
+      "elapsed_s": 15080,
+      "phase": "Floating",
+      "segment_id": "seg_0043",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015143.jpg"
+    },
+    "meta": {
+      "image": "img_015143.jpg",
+      "elapsed_s": 15143,
+      "phase": "Floating",
+      "segment_id": "seg_0043",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015203.jpg"
+    },
+    "meta": {
+      "image": "img_015203.jpg",
+      "elapsed_s": 15203,
+      "phase": "Floating",
+      "segment_id": "seg_0043",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015263.jpg"
+    },
+    "meta": {
+      "image": "img_015263.jpg",
+      "elapsed_s": 15263,
+      "phase": "Floating",
+      "segment_id": "seg_0044",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015323.jpg"
+    },
+    "meta": {
+      "image": "img_015323.jpg",
+      "elapsed_s": 15323,
+      "phase": "Floating",
+      "segment_id": "seg_0044",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015383.jpg"
+    },
+    "meta": {
+      "image": "img_015383.jpg",
+      "elapsed_s": 15383,
+      "phase": "Floating",
+      "segment_id": "seg_0044",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015443.jpg"
+    },
+    "meta": {
+      "image": "img_015443.jpg",
+      "elapsed_s": 15443,
+      "phase": "Floating",
+      "segment_id": "seg_0044",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015504.jpg"
+    },
+    "meta": {
+      "image": "img_015504.jpg",
+      "elapsed_s": 15504,
+      "phase": "Floating",
+      "segment_id": "seg_0044",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015564.jpg"
+    },
+    "meta": {
+      "image": "img_015564.jpg",
+      "elapsed_s": 15564,
+      "phase": "Floating",
+      "segment_id": "seg_0044",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015624.jpg"
+    },
+    "meta": {
+      "image": "img_015624.jpg",
+      "elapsed_s": 15624,
+      "phase": "Floating",
+      "segment_id": "seg_0044",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015684.jpg"
+    },
+    "meta": {
+      "image": "img_015684.jpg",
+      "elapsed_s": 15684,
+      "phase": "Floating",
+      "segment_id": "seg_0044",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015744.jpg"
+    },
+    "meta": {
+      "image": "img_015744.jpg",
+      "elapsed_s": 15744,
+      "phase": "Floating",
+      "segment_id": "seg_0044",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015804.jpg"
+    },
+    "meta": {
+      "image": "img_015804.jpg",
+      "elapsed_s": 15804,
+      "phase": "Floating",
+      "segment_id": "seg_0044",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015884.jpg"
+    },
+    "meta": {
+      "image": "img_015884.jpg",
+      "elapsed_s": 15884,
+      "phase": "Floating",
+      "segment_id": "seg_0045",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015955.jpg"
+    },
+    "meta": {
+      "image": "img_015955.jpg",
+      "elapsed_s": 15955,
+      "phase": "Floating",
+      "segment_id": "seg_0045",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016023.jpg"
+    },
+    "meta": {
+      "image": "img_016023.jpg",
+      "elapsed_s": 16023,
+      "phase": "Floating",
+      "segment_id": "seg_0045",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016083.jpg"
+    },
+    "meta": {
+      "image": "img_016083.jpg",
+      "elapsed_s": 16083,
+      "phase": "Floating",
+      "segment_id": "seg_0045",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016143.jpg"
+    },
+    "meta": {
+      "image": "img_016143.jpg",
+      "elapsed_s": 16143,
+      "phase": "Floating",
+      "segment_id": "seg_0045",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016203.jpg"
+    },
+    "meta": {
+      "image": "img_016203.jpg",
+      "elapsed_s": 16203,
+      "phase": "Floating",
+      "segment_id": "seg_0045",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016263.jpg"
+    },
+    "meta": {
+      "image": "img_016263.jpg",
+      "elapsed_s": 16263,
+      "phase": "Floating",
+      "segment_id": "seg_0045",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016343.jpg"
+    },
+    "meta": {
+      "image": "img_016343.jpg",
+      "elapsed_s": 16343,
+      "phase": "Floating",
+      "segment_id": "seg_0045",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016403.jpg"
+    },
+    "meta": {
+      "image": "img_016403.jpg",
+      "elapsed_s": 16403,
+      "phase": "Floating",
+      "segment_id": "seg_0045",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016463.jpg"
+    },
+    "meta": {
+      "image": "img_016463.jpg",
+      "elapsed_s": 16463,
+      "phase": "Floating",
+      "segment_id": "seg_0045",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016523.jpg"
+    },
+    "meta": {
+      "image": "img_016523.jpg",
+      "elapsed_s": 16523,
+      "phase": "Floating",
+      "segment_id": "seg_0046",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016583.jpg"
+    },
+    "meta": {
+      "image": "img_016583.jpg",
+      "elapsed_s": 16583,
+      "phase": "Floating",
+      "segment_id": "seg_0046",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016643.jpg"
+    },
+    "meta": {
+      "image": "img_016643.jpg",
+      "elapsed_s": 16643,
+      "phase": "Floating",
+      "segment_id": "seg_0046",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016704.jpg"
+    },
+    "meta": {
+      "image": "img_016704.jpg",
+      "elapsed_s": 16704,
+      "phase": "Floating",
+      "segment_id": "seg_0046",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016764.jpg"
+    },
+    "meta": {
+      "image": "img_016764.jpg",
+      "elapsed_s": 16764,
+      "phase": "Floating",
+      "segment_id": "seg_0046",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016824.jpg"
+    },
+    "meta": {
+      "image": "img_016824.jpg",
+      "elapsed_s": 16824,
+      "phase": "Floating",
+      "segment_id": "seg_0046",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016884.jpg"
+    },
+    "meta": {
+      "image": "img_016884.jpg",
+      "elapsed_s": 16884,
+      "phase": "Floating",
+      "segment_id": "seg_0046",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_016944.jpg"
+    },
+    "meta": {
+      "image": "img_016944.jpg",
+      "elapsed_s": 16944,
+      "phase": "Floating",
+      "segment_id": "seg_0046",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017004.jpg"
+    },
+    "meta": {
+      "image": "img_017004.jpg",
+      "elapsed_s": 17004,
+      "phase": "Floating",
+      "segment_id": "seg_0046",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017064.jpg"
+    },
+    "meta": {
+      "image": "img_017064.jpg",
+      "elapsed_s": 17064,
+      "phase": "Floating",
+      "segment_id": "seg_0046",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017124.jpg"
+    },
+    "meta": {
+      "image": "img_017124.jpg",
+      "elapsed_s": 17124,
+      "phase": "Floating",
+      "segment_id": "seg_0047",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017184.jpg"
+    },
+    "meta": {
+      "image": "img_017184.jpg",
+      "elapsed_s": 17184,
+      "phase": "Floating",
+      "segment_id": "seg_0047",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017244.jpg"
+    },
+    "meta": {
+      "image": "img_017244.jpg",
+      "elapsed_s": 17244,
+      "phase": "Floating",
+      "segment_id": "seg_0047",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017304.jpg"
+    },
+    "meta": {
+      "image": "img_017304.jpg",
+      "elapsed_s": 17304,
+      "phase": "Floating",
+      "segment_id": "seg_0047",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017364.jpg"
+    },
+    "meta": {
+      "image": "img_017364.jpg",
+      "elapsed_s": 17364,
+      "phase": "Floating",
+      "segment_id": "seg_0047",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017424.jpg"
+    },
+    "meta": {
+      "image": "img_017424.jpg",
+      "elapsed_s": 17424,
+      "phase": "Floating",
+      "segment_id": "seg_0047",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017484.jpg"
+    },
+    "meta": {
+      "image": "img_017484.jpg",
+      "elapsed_s": 17484,
+      "phase": "Floating",
+      "segment_id": "seg_0047",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017544.jpg"
+    },
+    "meta": {
+      "image": "img_017544.jpg",
+      "elapsed_s": 17544,
+      "phase": "Floating",
+      "segment_id": "seg_0047",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017604.jpg"
+    },
+    "meta": {
+      "image": "img_017604.jpg",
+      "elapsed_s": 17604,
+      "phase": "Floating",
+      "segment_id": "seg_0047",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017664.jpg"
+    },
+    "meta": {
+      "image": "img_017664.jpg",
+      "elapsed_s": 17664,
+      "phase": "Floating",
+      "segment_id": "seg_0047",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017724.jpg"
+    },
+    "meta": {
+      "image": "img_017724.jpg",
+      "elapsed_s": 17724,
+      "phase": "Floating",
+      "segment_id": "seg_0048",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017784.jpg"
+    },
+    "meta": {
+      "image": "img_017784.jpg",
+      "elapsed_s": 17784,
+      "phase": "Floating",
+      "segment_id": "seg_0048",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017844.jpg"
+    },
+    "meta": {
+      "image": "img_017844.jpg",
+      "elapsed_s": 17844,
+      "phase": "Floating",
+      "segment_id": "seg_0048",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017904.jpg"
+    },
+    "meta": {
+      "image": "img_017904.jpg",
+      "elapsed_s": 17904,
+      "phase": "Floating",
+      "segment_id": "seg_0048",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_017965.jpg"
+    },
+    "meta": {
+      "image": "img_017965.jpg",
+      "elapsed_s": 17965,
+      "phase": "Floating",
+      "segment_id": "seg_0048",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018046.jpg"
+    },
+    "meta": {
+      "image": "img_018046.jpg",
+      "elapsed_s": 18046,
+      "phase": "Floating",
+      "segment_id": "seg_0048",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018106.jpg"
+    },
+    "meta": {
+      "image": "img_018106.jpg",
+      "elapsed_s": 18106,
+      "phase": "Floating",
+      "segment_id": "seg_0048",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018166.jpg"
+    },
+    "meta": {
+      "image": "img_018166.jpg",
+      "elapsed_s": 18166,
+      "phase": "Floating",
+      "segment_id": "seg_0048",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018226.jpg"
+    },
+    "meta": {
+      "image": "img_018226.jpg",
+      "elapsed_s": 18226,
+      "phase": "Floating",
+      "segment_id": "seg_0048",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018287.jpg"
+    },
+    "meta": {
+      "image": "img_018287.jpg",
+      "elapsed_s": 18287,
+      "phase": "Floating",
+      "segment_id": "seg_0048",
+      "split": "train",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018347.jpg"
+    },
+    "meta": {
+      "image": "img_018347.jpg",
+      "elapsed_s": 18347,
+      "phase": "Floating",
+      "segment_id": "seg_0049",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018407.jpg"
+    },
+    "meta": {
+      "image": "img_018407.jpg",
+      "elapsed_s": 18407,
+      "phase": "Floating",
+      "segment_id": "seg_0049",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018467.jpg"
+    },
+    "meta": {
+      "image": "img_018467.jpg",
+      "elapsed_s": 18467,
+      "phase": "Floating",
+      "segment_id": "seg_0049",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018528.jpg"
+    },
+    "meta": {
+      "image": "img_018528.jpg",
+      "elapsed_s": 18528,
+      "phase": "Floating",
+      "segment_id": "seg_0049",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018588.jpg"
+    },
+    "meta": {
+      "image": "img_018588.jpg",
+      "elapsed_s": 18588,
+      "phase": "Floating",
+      "segment_id": "seg_0049",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018648.jpg"
+    },
+    "meta": {
+      "image": "img_018648.jpg",
+      "elapsed_s": 18648,
+      "phase": "Floating",
+      "segment_id": "seg_0049",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018708.jpg"
+    },
+    "meta": {
+      "image": "img_018708.jpg",
+      "elapsed_s": 18708,
+      "phase": "Floating",
+      "segment_id": "seg_0049",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018768.jpg"
+    },
+    "meta": {
+      "image": "img_018768.jpg",
+      "elapsed_s": 18768,
+      "phase": "Floating",
+      "segment_id": "seg_0049",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018828.jpg"
+    },
+    "meta": {
+      "image": "img_018828.jpg",
+      "elapsed_s": 18828,
+      "phase": "Floating",
+      "segment_id": "seg_0049",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018888.jpg"
+    },
+    "meta": {
+      "image": "img_018888.jpg",
+      "elapsed_s": 18888,
+      "phase": "Floating",
+      "segment_id": "seg_0049",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018948.jpg"
+    },
+    "meta": {
+      "image": "img_018948.jpg",
+      "elapsed_s": 18948,
+      "phase": "Floating",
+      "segment_id": "seg_0050",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019008.jpg"
+    },
+    "meta": {
+      "image": "img_019008.jpg",
+      "elapsed_s": 19008,
+      "phase": "Floating",
+      "segment_id": "seg_0050",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019068.jpg"
+    },
+    "meta": {
+      "image": "img_019068.jpg",
+      "elapsed_s": 19068,
+      "phase": "Floating",
+      "segment_id": "seg_0050",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019128.jpg"
+    },
+    "meta": {
+      "image": "img_019128.jpg",
+      "elapsed_s": 19128,
+      "phase": "Floating",
+      "segment_id": "seg_0050",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019188.jpg"
+    },
+    "meta": {
+      "image": "img_019188.jpg",
+      "elapsed_s": 19188,
+      "phase": "Floating",
+      "segment_id": "seg_0050",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019249.jpg"
+    },
+    "meta": {
+      "image": "img_019249.jpg",
+      "elapsed_s": 19249,
+      "phase": "Floating",
+      "segment_id": "seg_0050",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019313.jpg"
+    },
+    "meta": {
+      "image": "img_019313.jpg",
+      "elapsed_s": 19313,
+      "phase": "Floating",
+      "segment_id": "seg_0050",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019373.jpg"
+    },
+    "meta": {
+      "image": "img_019373.jpg",
+      "elapsed_s": 19373,
+      "phase": "Floating",
+      "segment_id": "seg_0050",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019433.jpg"
+    },
+    "meta": {
+      "image": "img_019433.jpg",
+      "elapsed_s": 19433,
+      "phase": "Floating",
+      "segment_id": "seg_0050",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019493.jpg"
+    },
+    "meta": {
+      "image": "img_019493.jpg",
+      "elapsed_s": 19493,
+      "phase": "Floating",
+      "segment_id": "seg_0050",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019553.jpg"
+    },
+    "meta": {
+      "image": "img_019553.jpg",
+      "elapsed_s": 19553,
+      "phase": "Floating",
+      "segment_id": "seg_0051",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019613.jpg"
+    },
+    "meta": {
+      "image": "img_019613.jpg",
+      "elapsed_s": 19613,
+      "phase": "Floating",
+      "segment_id": "seg_0051",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019693.jpg"
+    },
+    "meta": {
+      "image": "img_019693.jpg",
+      "elapsed_s": 19693,
+      "phase": "Floating",
+      "segment_id": "seg_0051",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019753.jpg"
+    },
+    "meta": {
+      "image": "img_019753.jpg",
+      "elapsed_s": 19753,
+      "phase": "Floating",
+      "segment_id": "seg_0051",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019813.jpg"
+    },
+    "meta": {
+      "image": "img_019813.jpg",
+      "elapsed_s": 19813,
+      "phase": "Floating",
+      "segment_id": "seg_0051",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_019939.jpg"
+    },
+    "meta": {
+      "image": "img_019939.jpg",
+      "elapsed_s": 19939,
+      "phase": "Floating",
+      "segment_id": "seg_0051",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020000.jpg"
+    },
+    "meta": {
+      "image": "img_020000.jpg",
+      "elapsed_s": 20000,
+      "phase": "Floating",
+      "segment_id": "seg_0051",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020060.jpg"
+    },
+    "meta": {
+      "image": "img_020060.jpg",
+      "elapsed_s": 20060,
+      "phase": "Floating",
+      "segment_id": "seg_0051",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020121.jpg"
+    },
+    "meta": {
+      "image": "img_020121.jpg",
+      "elapsed_s": 20121,
+      "phase": "Floating",
+      "segment_id": "seg_0051",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020192.jpg"
+    },
+    "meta": {
+      "image": "img_020192.jpg",
+      "elapsed_s": 20192,
+      "phase": "Floating",
+      "segment_id": "seg_0052",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020252.jpg"
+    },
+    "meta": {
+      "image": "img_020252.jpg",
+      "elapsed_s": 20252,
+      "phase": "Floating",
+      "segment_id": "seg_0052",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020312.jpg"
+    },
+    "meta": {
+      "image": "img_020312.jpg",
+      "elapsed_s": 20312,
+      "phase": "Floating",
+      "segment_id": "seg_0052",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020372.jpg"
+    },
+    "meta": {
+      "image": "img_020372.jpg",
+      "elapsed_s": 20372,
+      "phase": "Floating",
+      "segment_id": "seg_0052",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020432.jpg"
+    },
+    "meta": {
+      "image": "img_020432.jpg",
+      "elapsed_s": 20432,
+      "phase": "Floating",
+      "segment_id": "seg_0052",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020492.jpg"
+    },
+    "meta": {
+      "image": "img_020492.jpg",
+      "elapsed_s": 20492,
+      "phase": "Floating",
+      "segment_id": "seg_0052",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020552.jpg"
+    },
+    "meta": {
+      "image": "img_020552.jpg",
+      "elapsed_s": 20552,
+      "phase": "Floating",
+      "segment_id": "seg_0052",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020612.jpg"
+    },
+    "meta": {
+      "image": "img_020612.jpg",
+      "elapsed_s": 20612,
+      "phase": "Floating",
+      "segment_id": "seg_0052",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020672.jpg"
+    },
+    "meta": {
+      "image": "img_020672.jpg",
+      "elapsed_s": 20672,
+      "phase": "Floating",
+      "segment_id": "seg_0052",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020732.jpg"
+    },
+    "meta": {
+      "image": "img_020732.jpg",
+      "elapsed_s": 20732,
+      "phase": "Floating",
+      "segment_id": "seg_0052",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020792.jpg"
+    },
+    "meta": {
+      "image": "img_020792.jpg",
+      "elapsed_s": 20792,
+      "phase": "Floating",
+      "segment_id": "seg_0053",
+      "split": "test",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020852.jpg"
+    },
+    "meta": {
+      "image": "img_020852.jpg",
+      "elapsed_s": 20852,
+      "phase": "Floating",
+      "segment_id": "seg_0053",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020912.jpg"
+    },
+    "meta": {
+      "image": "img_020912.jpg",
+      "elapsed_s": 20912,
+      "phase": "Floating",
+      "segment_id": "seg_0053",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_020972.jpg"
+    },
+    "meta": {
+      "image": "img_020972.jpg",
+      "elapsed_s": 20972,
+      "phase": "Floating",
+      "segment_id": "seg_0053",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021032.jpg"
+    },
+    "meta": {
+      "image": "img_021032.jpg",
+      "elapsed_s": 21032,
+      "phase": "Floating",
+      "segment_id": "seg_0053",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021092.jpg"
+    },
+    "meta": {
+      "image": "img_021092.jpg",
+      "elapsed_s": 21092,
+      "phase": "Floating",
+      "segment_id": "seg_0053",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021152.jpg"
+    },
+    "meta": {
+      "image": "img_021152.jpg",
+      "elapsed_s": 21152,
+      "phase": "Floating",
+      "segment_id": "seg_0053",
+      "split": "test",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021228.jpg"
+    },
+    "meta": {
+      "image": "img_021228.jpg",
+      "elapsed_s": 21228,
+      "phase": "Floating",
+      "segment_id": "seg_0053",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021288.jpg"
+    },
+    "meta": {
+      "image": "img_021288.jpg",
+      "elapsed_s": 21288,
+      "phase": "Floating",
+      "segment_id": "seg_0053",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021348.jpg"
+    },
+    "meta": {
+      "image": "img_021348.jpg",
+      "elapsed_s": 21348,
+      "phase": "Floating",
+      "segment_id": "seg_0053",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021408.jpg"
+    },
+    "meta": {
+      "image": "img_021408.jpg",
+      "elapsed_s": 21408,
+      "phase": "Floating",
+      "segment_id": "seg_0054",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021501.jpg"
+    },
+    "meta": {
+      "image": "img_021501.jpg",
+      "elapsed_s": 21501,
+      "phase": "Floating",
+      "segment_id": "seg_0055",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021561.jpg"
+    },
+    "meta": {
+      "image": "img_021561.jpg",
+      "elapsed_s": 21561,
+      "phase": "Floating",
+      "segment_id": "seg_0055",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021622.jpg"
+    },
+    "meta": {
+      "image": "img_021622.jpg",
+      "elapsed_s": 21622,
+      "phase": "Floating",
+      "segment_id": "seg_0055",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021682.jpg"
+    },
+    "meta": {
+      "image": "img_021682.jpg",
+      "elapsed_s": 21682,
+      "phase": "Floating",
+      "segment_id": "seg_0055",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021742.jpg"
+    },
+    "meta": {
+      "image": "img_021742.jpg",
+      "elapsed_s": 21742,
+      "phase": "Floating",
+      "segment_id": "seg_0055",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021812.jpg"
+    },
+    "meta": {
+      "image": "img_021812.jpg",
+      "elapsed_s": 21812,
+      "phase": "Floating",
+      "segment_id": "seg_0055",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021872.jpg"
+    },
+    "meta": {
+      "image": "img_021872.jpg",
+      "elapsed_s": 21872,
+      "phase": "Floating",
+      "segment_id": "seg_0055",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021938.jpg"
+    },
+    "meta": {
+      "image": "img_021938.jpg",
+      "elapsed_s": 21938,
+      "phase": "Floating",
+      "segment_id": "seg_0055",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021998.jpg"
+    },
+    "meta": {
+      "image": "img_021998.jpg",
+      "elapsed_s": 21998,
+      "phase": "Floating",
+      "segment_id": "seg_0055",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022058.jpg"
+    },
+    "meta": {
+      "image": "img_022058.jpg",
+      "elapsed_s": 22058,
+      "phase": "Floating",
+      "segment_id": "seg_0056",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022125.jpg"
+    },
+    "meta": {
+      "image": "img_022125.jpg",
+      "elapsed_s": 22125,
+      "phase": "Floating",
+      "segment_id": "seg_0056",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022192.jpg"
+    },
+    "meta": {
+      "image": "img_022192.jpg",
+      "elapsed_s": 22192,
+      "phase": "Floating",
+      "segment_id": "seg_0056",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022256.jpg"
+    },
+    "meta": {
+      "image": "img_022256.jpg",
+      "elapsed_s": 22256,
+      "phase": "Floating",
+      "segment_id": "seg_0056",
+      "split": "train",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022319.jpg"
+    },
+    "meta": {
+      "image": "img_022319.jpg",
+      "elapsed_s": 22319,
+      "phase": "Floating",
+      "segment_id": "seg_0056",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022379.jpg"
+    },
+    "meta": {
+      "image": "img_022379.jpg",
+      "elapsed_s": 22379,
+      "phase": "Floating",
+      "segment_id": "seg_0056",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022439.jpg"
+    },
+    "meta": {
+      "image": "img_022439.jpg",
+      "elapsed_s": 22439,
+      "phase": "Floating",
+      "segment_id": "seg_0056",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022501.jpg"
+    },
+    "meta": {
+      "image": "img_022501.jpg",
+      "elapsed_s": 22501,
+      "phase": "Floating",
+      "segment_id": "seg_0056",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022562.jpg"
+    },
+    "meta": {
+      "image": "img_022562.jpg",
+      "elapsed_s": 22562,
+      "phase": "Floating",
+      "segment_id": "seg_0056",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022622.jpg"
+    },
+    "meta": {
+      "image": "img_022622.jpg",
+      "elapsed_s": 22622,
+      "phase": "Floating",
+      "segment_id": "seg_0056",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022682.jpg"
+    },
+    "meta": {
+      "image": "img_022682.jpg",
+      "elapsed_s": 22682,
+      "phase": "Floating",
+      "segment_id": "seg_0057",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022742.jpg"
+    },
+    "meta": {
+      "image": "img_022742.jpg",
+      "elapsed_s": 22742,
+      "phase": "Floating",
+      "segment_id": "seg_0057",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022806.jpg"
+    },
+    "meta": {
+      "image": "img_022806.jpg",
+      "elapsed_s": 22806,
+      "phase": "Floating",
+      "segment_id": "seg_0057",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022872.jpg"
+    },
+    "meta": {
+      "image": "img_022872.jpg",
+      "elapsed_s": 22872,
+      "phase": "Floating",
+      "segment_id": "seg_0057",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022933.jpg"
+    },
+    "meta": {
+      "image": "img_022933.jpg",
+      "elapsed_s": 22933,
+      "phase": "Floating",
+      "segment_id": "seg_0057",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022993.jpg"
+    },
+    "meta": {
+      "image": "img_022993.jpg",
+      "elapsed_s": 22993,
+      "phase": "Floating",
+      "segment_id": "seg_0057",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023053.jpg"
+    },
+    "meta": {
+      "image": "img_023053.jpg",
+      "elapsed_s": 23053,
+      "phase": "Floating",
+      "segment_id": "seg_0057",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023119.jpg"
+    },
+    "meta": {
+      "image": "img_023119.jpg",
+      "elapsed_s": 23119,
+      "phase": "Floating",
+      "segment_id": "seg_0057",
+      "split": "validation",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023190.jpg"
+    },
+    "meta": {
+      "image": "img_023190.jpg",
+      "elapsed_s": 23190,
+      "phase": "Floating",
+      "segment_id": "seg_0057",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023254.jpg"
+    },
+    "meta": {
+      "image": "img_023254.jpg",
+      "elapsed_s": 23254,
+      "phase": "Floating",
+      "segment_id": "seg_0057",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023314.jpg"
+    },
+    "meta": {
+      "image": "img_023314.jpg",
+      "elapsed_s": 23314,
+      "phase": "Floating",
+      "segment_id": "seg_0058",
+      "split": "validation",
+      "assignment_type": "qualification"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023379.jpg"
+    },
+    "meta": {
+      "image": "img_023379.jpg",
+      "elapsed_s": 23379,
+      "phase": "Floating",
+      "segment_id": "seg_0058",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023439.jpg"
+    },
+    "meta": {
+      "image": "img_023439.jpg",
+      "elapsed_s": 23439,
+      "phase": "Floating",
+      "segment_id": "seg_0058",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023500.jpg"
+    },
+    "meta": {
+      "image": "img_023500.jpg",
+      "elapsed_s": 23500,
+      "phase": "Floating",
+      "segment_id": "seg_0058",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023566.jpg"
+    },
+    "meta": {
+      "image": "img_023566.jpg",
+      "elapsed_s": 23566,
+      "phase": "Floating",
+      "segment_id": "seg_0059",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023626.jpg"
+    },
+    "meta": {
+      "image": "img_023626.jpg",
+      "elapsed_s": 23626,
+      "phase": "Floating",
+      "segment_id": "seg_0059",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023686.jpg"
+    },
+    "meta": {
+      "image": "img_023686.jpg",
+      "elapsed_s": 23686,
+      "phase": "Floating",
+      "segment_id": "seg_0059",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023746.jpg"
+    },
+    "meta": {
+      "image": "img_023746.jpg",
+      "elapsed_s": 23746,
+      "phase": "Floating",
+      "segment_id": "seg_0059",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023809.jpg"
+    },
+    "meta": {
+      "image": "img_023809.jpg",
+      "elapsed_s": 23809,
+      "phase": "Floating",
+      "segment_id": "seg_0059",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023869.jpg"
+    },
+    "meta": {
+      "image": "img_023869.jpg",
+      "elapsed_s": 23869,
+      "phase": "Floating",
+      "segment_id": "seg_0059",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023929.jpg"
+    },
+    "meta": {
+      "image": "img_023929.jpg",
+      "elapsed_s": 23929,
+      "phase": "Floating",
+      "segment_id": "seg_0060",
+      "split": "test",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023991.jpg"
+    },
+    "meta": {
+      "image": "img_023991.jpg",
+      "elapsed_s": 23991,
+      "phase": "Floating",
+      "segment_id": "seg_0060",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024054.jpg"
+    },
+    "meta": {
+      "image": "img_024054.jpg",
+      "elapsed_s": 24054,
+      "phase": "Floating",
+      "segment_id": "seg_0060",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024114.jpg"
+    },
+    "meta": {
+      "image": "img_024114.jpg",
+      "elapsed_s": 24114,
+      "phase": "Floating",
+      "segment_id": "seg_0060",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024174.jpg"
+    },
+    "meta": {
+      "image": "img_024174.jpg",
+      "elapsed_s": 24174,
+      "phase": "Floating",
+      "segment_id": "seg_0060",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024235.jpg"
+    },
+    "meta": {
+      "image": "img_024235.jpg",
+      "elapsed_s": 24235,
+      "phase": "Floating",
+      "segment_id": "seg_0060",
+      "split": "test",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024295.jpg"
+    },
+    "meta": {
+      "image": "img_024295.jpg",
+      "elapsed_s": 24295,
+      "phase": "Floating",
+      "segment_id": "seg_0061",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024355.jpg"
+    },
+    "meta": {
+      "image": "img_024355.jpg",
+      "elapsed_s": 24355,
+      "phase": "Floating",
+      "segment_id": "seg_0061",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024415.jpg"
+    },
+    "meta": {
+      "image": "img_024415.jpg",
+      "elapsed_s": 24415,
+      "phase": "Floating",
+      "segment_id": "seg_0061",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024475.jpg"
+    },
+    "meta": {
+      "image": "img_024475.jpg",
+      "elapsed_s": 24475,
+      "phase": "Floating",
+      "segment_id": "seg_0061",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024535.jpg"
+    },
+    "meta": {
+      "image": "img_024535.jpg",
+      "elapsed_s": 24535,
+      "phase": "Floating",
+      "segment_id": "seg_0062",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024595.jpg"
+    },
+    "meta": {
+      "image": "img_024595.jpg",
+      "elapsed_s": 24595,
+      "phase": "Floating",
+      "segment_id": "seg_0062",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024656.jpg"
+    },
+    "meta": {
+      "image": "img_024656.jpg",
+      "elapsed_s": 24656,
+      "phase": "Floating",
+      "segment_id": "seg_0063",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024716.jpg"
+    },
+    "meta": {
+      "image": "img_024716.jpg",
+      "elapsed_s": 24716,
+      "phase": "Floating",
+      "segment_id": "seg_0063",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024776.jpg"
+    },
+    "meta": {
+      "image": "img_024776.jpg",
+      "elapsed_s": 24776,
+      "phase": "Floating",
+      "segment_id": "seg_0063",
+      "split": "train",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024836.jpg"
+    },
+    "meta": {
+      "image": "img_024836.jpg",
+      "elapsed_s": 24836,
+      "phase": "Floating",
+      "segment_id": "seg_0063",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024896.jpg"
+    },
+    "meta": {
+      "image": "img_024896.jpg",
+      "elapsed_s": 24896,
+      "phase": "Floating",
+      "segment_id": "seg_0063",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_024956.jpg"
+    },
+    "meta": {
+      "image": "img_024956.jpg",
+      "elapsed_s": 24956,
+      "phase": "Floating",
+      "segment_id": "seg_0064",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025016.jpg"
+    },
+    "meta": {
+      "image": "img_025016.jpg",
+      "elapsed_s": 25016,
+      "phase": "Floating",
+      "segment_id": "seg_0064",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025076.jpg"
+    },
+    "meta": {
+      "image": "img_025076.jpg",
+      "elapsed_s": 25076,
+      "phase": "Floating",
+      "segment_id": "seg_0064",
+      "split": "validation",
+      "assignment_type": "calibration"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025136.jpg"
+    },
+    "meta": {
+      "image": "img_025136.jpg",
+      "elapsed_s": 25136,
+      "phase": "Floating",
+      "segment_id": "seg_0065",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025196.jpg"
+    },
+    "meta": {
+      "image": "img_025196.jpg",
+      "elapsed_s": 25196,
+      "phase": "Floating",
+      "segment_id": "seg_0065",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025256.jpg"
+    },
+    "meta": {
+      "image": "img_025256.jpg",
+      "elapsed_s": 25256,
+      "phase": "Floating",
+      "segment_id": "seg_0065",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025316.jpg"
+    },
+    "meta": {
+      "image": "img_025316.jpg",
+      "elapsed_s": 25316,
+      "phase": "Floating",
+      "segment_id": "seg_0066",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025376.jpg"
+    },
+    "meta": {
+      "image": "img_025376.jpg",
+      "elapsed_s": 25376,
+      "phase": "Floating",
+      "segment_id": "seg_0066",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025436.jpg"
+    },
+    "meta": {
+      "image": "img_025436.jpg",
+      "elapsed_s": 25436,
+      "phase": "Floating",
+      "segment_id": "seg_0066",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025496.jpg"
+    },
+    "meta": {
+      "image": "img_025496.jpg",
+      "elapsed_s": 25496,
+      "phase": "Floating",
+      "segment_id": "seg_0066",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025556.jpg"
+    },
+    "meta": {
+      "image": "img_025556.jpg",
+      "elapsed_s": 25556,
+      "phase": "Floating",
+      "segment_id": "seg_0066",
+      "split": "train",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025616.jpg"
+    },
+    "meta": {
+      "image": "img_025616.jpg",
+      "elapsed_s": 25616,
+      "phase": "Floating",
+      "segment_id": "seg_0067",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  },
+  {
+    "data": {
+      "image": "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_025676.jpg"
+    },
+    "meta": {
+      "image": "img_025676.jpg",
+      "elapsed_s": 25676,
+      "phase": "Floating",
+      "segment_id": "seg_0067",
+      "split": "validation",
+      "assignment_type": "production"
+    }
+  }
+]

@@ -1,7 +1,8 @@
 # World-10 curation status
 
-Automated curation is complete. This record does not claim that annotation,
-registration, licensing, privacy review, or release validation is complete.
+Automated curation and the public annotation handoff are complete. This record
+does not claim that annotation, registration, final license designation, full
+release audit, or release validation is complete.
 
 ## Completed
 
@@ -26,21 +27,32 @@ registration, licensing, privacy review, or release validation is complete.
 - Built an ignored private handoff with 377 Label Studio tasks, a shared
   30-frame calibration set, 12 qualification candidates, two-annotator segment
   assignments, and 377 registration candidates.
+- Published all 377 curated Launching/Floating JPEGs without publishing the raw
+  footage or private flight logs.
+- Published public-URL Label Studio task files, a deterministic balanced A1-A4
+  segment assignment, 30-frame shared calibration set, 12-frame qualification
+  set, workload audit, and exact project plan.
+- Confirmed that ordinary production images have exactly two assignees and that
+  each coauthor has 167 or 168 production frames.
+- Recorded the capture owner's 2026-07-26 confirmation of redistribution rights
+  for the public annotation handoff.
 - Recorded raw-log, source-video-manifest, sampled-manifest, configuration, and
   split hashes in `metadata/provenance.yaml`.
 
 ## Human or external gates remaining
 
-- Confirm source-video redistribution rights.
-- Complete full-frame privacy review.
+- Map the four coauthors to stable A1-A4 ids.
 - Create adjudicated gold answers for the 12 qualification candidates.
+- Qualify all four coauthors, complete the shared calibration set, and begin
+  production using `docs/START_ANNOTATING.md`.
+- Complete and document the full-frame frozen-release privacy review.
+- Record the final image-data license designation.
 - Obtain two independent annotation passes, adjudicate, and report agreement.
 - Acquire and document licensed reference imagery.
 - Place and check registration control points; publish held-out metric errors.
 - Calibrate VARI only on the designated calibration population.
 - Build and validate the frozen release.
-- Publish approved imagery, Hugging Face artifacts, Zenodo DOI, and final
-  citation metadata.
+- Publish Hugging Face artifacts, Zenodo DOI, and final citation metadata.
 
-No raw telemetry, raw footage, reference imagery, or private frame file is
-committed to this repository.
+No raw telemetry, raw footage, or reference imagery is committed to this
+repository. The 377 derived annotation JPEGs are public.

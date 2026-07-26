@@ -1,0 +1,5 @@
+annotator_id,production_frames,calibration_frames,qualification_frames,total_unique_frames,mask_submissions,presence_submissions,quality_submissions,total_submissions
+A1,168,30,12,210,210,210,210,630
+A2,167,30,12,209,209,209,209,627
+A3,167,30,12,209,209,209,209,627
+A4,168,30,12,210,210,210,210,630

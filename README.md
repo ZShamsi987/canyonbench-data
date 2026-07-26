@@ -2,16 +2,28 @@
 
 This is the schema, annotation, and release repository for CanyonBench, a geospatially registered benchmark for hallucination and spatial grounding in vision-language models on high-altitude aerial imagery. The separate [CanyonBench code repository](https://github.com/ZShamsi987/canyonbench) contains derivation, registration, inference, and scoring software.
 
-The repository intentionally contains no private flight logs, raw video, source tiles, or image files. Automated curation is complete for 377 sampled frames (68 Launching and 309 Floating) across 68 trajectory segments and 67 geographic blocks. The frozen split manifest contains 263 train, 68 validation, and 46 test frames with no block or segment leakage. Images remain in an ignored private curation package until source-license and full privacy review are complete; real annotations and registration outputs remain pending. Small example records document every contract without pretending placeholder labels are ground truth.
+The repository contains no private flight logs, raw video, or source tiles. It
+does contain the complete 377-frame public annotation set: 68 Launching and 309
+Floating images across 68 trajectory segments and 67 geographic blocks. The
+frozen split manifest contains 263 train, 68 validation, and 46 test frames with
+no block or segment leakage. Four-coauthor task assignments and public Label
+Studio imports are ready; real annotations and registration outputs remain
+pending. The capture owner confirmed redistribution rights for annotation
+release on 2026-07-26. Final image-license designation and licensed reference
+imagery remain release gates.
 
-Build the ignored local handoff from the code repository's sampled manifest:
+Annotators start with the
+**[complete lead and annotator guide](docs/START_ANNOTATING.md)**. They do not
+need the raw Google Drive footage: Label Studio reads the curated frames from
+public GitHub URLs.
+
+Rebuild the public handoff from the code repository's sampled manifest:
 
 ```bash
-python scripts/prepare_curation_package.py \
+python3 scripts/prepare_annotation_release.py \
   /path/to/frames_sampled.csv \
   /path/to/frames_named \
-  private/curation/world10 \
-  splits/splits.csv
+  --output .
 ```
 
 ## Release contents
@@ -51,7 +63,12 @@ Public releases may store imagery in a Hugging Face Dataset and metadata here. A
 - Reliability requires at least six control points, two held out, and held-out RMSE no greater than one quarter of a grid-cell ground width.
 - Two coauthors label masks, presence, and quality independently. Conflicts go through adjudication and the append-only decision log.
 
-See [ANNOTATION.md](ANNOTATION.md), the [full numbered manual](docs/annotation-manual.md), [registration contract](docs/registration.md), [current curation status](docs/curation-status.md), and machine-readable [schemas](schemas).
+See the [start guide](docs/START_ANNOTATING.md),
+[ANNOTATION.md](ANNOTATION.md), the
+[full numbered manual](docs/annotation-manual.md),
+[registration contract](docs/registration.md),
+[current curation status](docs/curation-status.md), and machine-readable
+[schemas](schemas).
 
 ## Validate before release
 
@@ -73,4 +90,7 @@ Data versions use semantic versioning for schemas and release tags. A label-defi
 
 ## License and citation
 
-Repository documentation, schemas, and original annotations are licensed as described in [LICENSE-DATA.md](LICENSE-DATA.md). Future image files retain the terms recorded for their source; no image is released until that audit is complete. Citation placeholders are in `CITATION.cff` and will be replaced by the frozen DOI and paper record.
+Repository documentation, schemas, original annotations, and public annotation
+images are governed as described in [LICENSE-DATA.md](LICENSE-DATA.md). Public
+access does not imply an unrecorded license grant. Citation placeholders are in
+`CITATION.cff` and will be replaced by the frozen DOI and paper record.

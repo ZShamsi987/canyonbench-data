@@ -1,9 +1,13 @@
 <View>
   <Header value="Mask only resolvable living green vegetation at 100% zoom. Follow rules A-1 through A-10."/>
-  <Image name="image" value="$image" zoom="true"/>
+  <Image name="image" value="$image" zoom="true" zoomControl="true"/>
   <BrushLabels name="mask" toName="image">
     <Label value="green_visible_vegetation" background="#2E7D32"/>
+    <Label value="background" background="#C62828"/>
   </BrushLabels>
+  <KeyPointLabels name="sam_points" toName="image" smart="true">
+    <Label value="green_visible_vegetation" smart="true" background="#2E7D32"/>
+    <Label value="background" smart="true" background="#C62828"/>
+  </KeyPointLabels>
   <Choices name="uncertain_region" toName="image" choice="single"><Choice value="none"/><Choice value="present"/></Choices>
 </View>
-

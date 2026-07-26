@@ -3,7 +3,6 @@ __pycache__/
 *.py[cod]
 .venv/
 raw/**
-frames/**/*.jpg
 frames/**/*.jpeg
 frames/**/*.png
 reference/**
@@ -11,4 +10,3 @@ private/**
 exports/**
 !raw/README.md
 !frames/**/README.md
-

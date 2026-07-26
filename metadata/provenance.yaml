@@ -1,12 +1,15 @@
 schema_version: "1.0.0"
-release_version: null
-status: curation
+release_version: 0.2.0-annotation
+status: annotation
 created_at: "2026-07-21"
 code:
   repository: https://github.com/ZShamsi987/canyonbench
   commit: ddf102bfcb81c7558a3aef0a62392c046aec95e0
 capture:
   platform: high-altitude balloon
+  owner_redistribution_rights_confirmed: true
+  rights_confirmation_scope: 377 derived Launching/Floating annotation JPEGs
+  rights_confirmation_date: "2026-07-26"
   camera_model: null
   lens_model: null
   horizontal_fov_degrees: null
@@ -62,12 +65,24 @@ processing:
   vari_calibration_sha256: null
 annotation:
   manual_revision: 2
-  annotators: null
+  annotator_slots: [A1, A2, A3, A4]
+  annotator_roster_status: pending_name_mapping
   qualification_passed: null
+  qualification_frames: 12
   shared_calibration_frames: 30
+  ordinary_production_frames: 335
+  independent_passes_per_production_frame: 2
   decision_log_sha256: null
 release:
+  public_annotation_images: true
+  public_annotation_image_count: 377
+  public_annotation_manifest_sha256: a3bb7b9ea34e9ec6de288cd1959e930bcf174a162b2c638983e33481fe02f236
+  frame_checksum_manifest_sha256: b85d6c5adb09e577097841c996dc9034f80fd690120a3dd933773fdc1ac9fad6
+  segment_assignment_sha256: 37131e63ed671751d11fe223d0867c6c46038d04b82b2b1a452b48d70b5f6555
+  label_studio_project_plan_sha256: 90a3223d6d8f2b62baa9368276c512df631c28770e53877029712db4ef90b5b0
+  final_image_license_designation: null
+  full_privacy_audit_complete: false
+  reference_imagery_license_recorded: false
   huggingface_url: null
   zenodo_doi: null
-  frames_sha256: null
   splits_sha256: a407bdad42b44b5ad59ee7afba39398863f23335d9d2378c8a2101e4da3cf7fc

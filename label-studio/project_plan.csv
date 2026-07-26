@@ -1,0 +1,37 @@
+annotator_id,stage,task,project_name,label_config,task_file,image_count,start_after
+A1,QUALIFICATION,MASK,CB-A1-QUAL-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A1,QUALIFICATION,PRESENCE,CB-A1-QUAL-PRESENCE,label-studio/presence.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A1,QUALIFICATION,QUALITY,CB-A1-QUAL-QUALITY,label-studio/quality.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A1,CALIBRATION,MASK,CB-A1-CALI-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A1,CALIBRATION,PRESENCE,CB-A1-CALI-PRESENCE,label-studio/presence.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A1,CALIBRATION,QUALITY,CB-A1-CALI-QUALITY,label-studio/quality.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A1,PRODUCTION,MASK,CB-A1-PROD-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/A1_production.json,168,qualification passed and calibration reviewed
+A1,PRODUCTION,PRESENCE,CB-A1-PROD-PRESENCE,label-studio/presence.xml,label-studio/tasks/A1_production.json,168,qualification passed and calibration reviewed
+A1,PRODUCTION,QUALITY,CB-A1-PROD-QUALITY,label-studio/quality.xml,label-studio/tasks/A1_production.json,168,qualification passed and calibration reviewed
+A2,QUALIFICATION,MASK,CB-A2-QUAL-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A2,QUALIFICATION,PRESENCE,CB-A2-QUAL-PRESENCE,label-studio/presence.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A2,QUALIFICATION,QUALITY,CB-A2-QUAL-QUALITY,label-studio/quality.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A2,CALIBRATION,MASK,CB-A2-CALI-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A2,CALIBRATION,PRESENCE,CB-A2-CALI-PRESENCE,label-studio/presence.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A2,CALIBRATION,QUALITY,CB-A2-CALI-QUALITY,label-studio/quality.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A2,PRODUCTION,MASK,CB-A2-PROD-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/A2_production.json,167,qualification passed and calibration reviewed
+A2,PRODUCTION,PRESENCE,CB-A2-PROD-PRESENCE,label-studio/presence.xml,label-studio/tasks/A2_production.json,167,qualification passed and calibration reviewed
+A2,PRODUCTION,QUALITY,CB-A2-PROD-QUALITY,label-studio/quality.xml,label-studio/tasks/A2_production.json,167,qualification passed and calibration reviewed
+A3,QUALIFICATION,MASK,CB-A3-QUAL-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A3,QUALIFICATION,PRESENCE,CB-A3-QUAL-PRESENCE,label-studio/presence.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A3,QUALIFICATION,QUALITY,CB-A3-QUAL-QUALITY,label-studio/quality.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A3,CALIBRATION,MASK,CB-A3-CALI-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A3,CALIBRATION,PRESENCE,CB-A3-CALI-PRESENCE,label-studio/presence.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A3,CALIBRATION,QUALITY,CB-A3-CALI-QUALITY,label-studio/quality.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A3,PRODUCTION,MASK,CB-A3-PROD-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/A3_production.json,167,qualification passed and calibration reviewed
+A3,PRODUCTION,PRESENCE,CB-A3-PROD-PRESENCE,label-studio/presence.xml,label-studio/tasks/A3_production.json,167,qualification passed and calibration reviewed
+A3,PRODUCTION,QUALITY,CB-A3-PROD-QUALITY,label-studio/quality.xml,label-studio/tasks/A3_production.json,167,qualification passed and calibration reviewed
+A4,QUALIFICATION,MASK,CB-A4-QUAL-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A4,QUALIFICATION,PRESENCE,CB-A4-QUAL-PRESENCE,label-studio/presence.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A4,QUALIFICATION,QUALITY,CB-A4-QUAL-QUALITY,label-studio/quality.xml,label-studio/tasks/qualification_12.json,12,lead marks pass in annotation/annotator_roster.csv
+A4,CALIBRATION,MASK,CB-A4-CALI-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A4,CALIBRATION,PRESENCE,CB-A4-CALI-PRESENCE,label-studio/presence.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A4,CALIBRATION,QUALITY,CB-A4-CALI-QUALITY,label-studio/quality.xml,label-studio/tasks/shared_calibration_30.json,30,qualification passed
+A4,PRODUCTION,MASK,CB-A4-PROD-MASK,label-studio/vegetation-mask.xml,label-studio/tasks/A4_production.json,168,qualification passed and calibration reviewed
+A4,PRODUCTION,PRESENCE,CB-A4-PROD-PRESENCE,label-studio/presence.xml,label-studio/tasks/A4_production.json,168,qualification passed and calibration reviewed
+A4,PRODUCTION,QUALITY,CB-A4-PROD-QUALITY,label-studio/quality.xml,label-studio/tasks/A4_production.json,168,qualification passed and calibration reviewed

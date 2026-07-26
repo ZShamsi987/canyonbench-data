@@ -8,6 +8,16 @@
   synchronization anchor.
 - Kept the MLX thermal log explicitly excluded from benchmark inputs.
 - Added a reproducible private curation-package builder for sampled frames, Label Studio tasks, calibration and qualification candidates, registration candidates, and two-annotator segment assignments.
+- Published the 377-frame annotation set after the capture owner confirmed
+  redistribution rights for the annotation handoff.
+- Added deterministic balanced A1-A4 segment assignments: 335 ordinary frames
+  receive two passes, while 30 calibration and 12 qualification frames go to
+  all four coauthors.
+- Added public-URL Label Studio tasks, a 36-project gated plan, automatic local
+  project creation, categorical-export conversion, checksums, and comprehensive
+  lead/annotator instructions.
+- Kept raw footage, flight logs, reference imagery, qualification gold answers,
+  and raw annotation exports out of the public repository.
 
 ## 0.1.0-predata - 2026-07-21
 

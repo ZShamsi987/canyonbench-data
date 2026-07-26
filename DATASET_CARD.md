@@ -20,7 +20,13 @@ license: other
 
 CanyonBench evaluates whether vision-language models faithfully describe visible content in high-altitude balloon imagery. Primary tasks are six-feature presence classification, green-visible-vegetation percentage estimation, 4x4 vegetation grounding on registration-reliable frames, and false-premise correction. Free description is secondary.
 
-This repository is in curation. Automated preprocessing retained 377 sampled frames: 68 Launching and 309 Floating, grouped into 68 bounded trajectory segments and 67 geographic blocks. The frozen split manifest contains 263 train, 68 validation, and 46 test frames with no block or segment leakage. The imagery is not yet public, and annotator agreement, registration success, source-license clearance, full privacy review, and DOI remain unset until the human and release gates pass.
+This repository is in annotation. Automated preprocessing retained 377 sampled
+frames: 68 Launching and 309 Floating, grouped into 68 bounded trajectory
+segments and 67 geographic blocks. The frozen split manifest contains 263
+train, 68 validation, and 46 test frames with no block or segment leakage. The
+curated imagery and four-coauthor worklists are public. Annotator agreement,
+registration success, final image-license designation, full release audit, and
+DOI remain unset until the human and external gates pass.
 
 ## Dataset structure
 
@@ -30,7 +36,14 @@ The core scored population is Floating. Launching supports the ascent-trajectory
 
 ## Annotation
 
-Two coauthors independently label each gold frame. Green-visible-vegetation masks are binary, full-resolution PNGs. Presence and condition values are constrained categorical JSONL records. A 30-frame shared set monitors agreement and a 12-frame gold qualification set gates production. Ambiguities enter an append-only decision log; new rulings are numbered and applied retrospectively at adjudication.
+Two coauthors independently label each ordinary production frame. All four
+label the shared 30-frame calibration set and the separate 12-frame gold
+qualification set. Shared frames are excluded from ordinary worklists. The
+remaining 335 frames are assigned by whole trajectory segment with balanced
+production loads of 167 or 168 images per coauthor. Green-visible-vegetation
+masks are binary, full-resolution PNGs. Presence and condition values are
+constrained categorical JSONL records. Ambiguities enter an append-only decision
+log; new rulings are numbered and applied retrospectively at adjudication.
 
 Target agreement is Dice >= 0.75 for masks and kappa >= 0.6 for presence and quality. Actual measurements will be published per release.
 
@@ -57,11 +70,20 @@ Altitude covaries with location, flight stage, footprint, haze, exposure, and sc
 
 ## Personal and sensitive information
 
-Ground and Initializing frames are excluded. Before release, sampled frames are reviewed for identifiable people, vehicles, private information, and source-license constraints. Annotator ids in public records are stable pseudonymous initials, not contact details.
+Ground and Initializing frames are excluded. The public images are high-altitude
+Launching/Floating crops; the frozen release audit still requires a documented
+full-frame check for identifiable people, vehicles, private information, and
+source-license constraints. Annotator ids in public records are stable
+pseudonymous ids, not contact details.
 
 ## Provenance and licensing
 
-Each release publishes capture and processing provenance, hashes, code commit, public-layer versions/dates, and per-source licensing. Public layers do not define per-frame truth. See `metadata/provenance.yaml` and `LICENSE-DATA.md`.
+The capture owner confirmed redistribution rights for the public annotation set
+on 2026-07-26. The final image-license designation and reference imagery license
+are not yet recorded. Each frozen release will publish capture and processing
+provenance, hashes, code commit, public-layer versions/dates, and per-source
+licensing. Public layers do not define per-frame truth. See
+`metadata/provenance.yaml` and `LICENSE-DATA.md`.
 
 ## Citation
 

@@ -1,0 +1,13 @@
+image,image_url,elapsed_s,phase,segment_id,spatial_block,split,assignment_type,gold_status
+img_003522.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_003522.jpg,3522,Launching,seg_0001,822:-1983,train,qualification,pending_lead_adjudication
+img_004422.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_004422.jpg,4422,Launching,seg_0003,822:-1979,test,qualification,pending_lead_adjudication
+img_005564.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_005564.jpg,5564,Launching,seg_0009,822:-1972,train,qualification,pending_lead_adjudication
+img_006404.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/launching/img_006404.jpg,6404,Launching,seg_0012,822:-1973,validation,qualification,pending_lead_adjudication
+img_009710.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_009710.jpg,9710,Floating,seg_0022,819:-1983,train,qualification,pending_lead_adjudication
+img_010196.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_010196.jpg,10196,Floating,seg_0024,818:-1985,test,qualification,pending_lead_adjudication
+img_011104.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_011104.jpg,11104,Floating,seg_0028,817:-1988,validation,qualification,pending_lead_adjudication
+img_015013.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_015013.jpg,15013,Floating,seg_0043,816:-1995,train,qualification,pending_lead_adjudication
+img_018287.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_018287.jpg,18287,Floating,seg_0048,819:-1994,train,qualification,pending_lead_adjudication
+img_021152.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_021152.jpg,21152,Floating,seg_0053,819:-1997,test,qualification,pending_lead_adjudication
+img_022256.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_022256.jpg,22256,Floating,seg_0056,818:-1999,train,qualification,pending_lead_adjudication
+img_023314.jpg,https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/floating/img_023314.jpg,23314,Floating,seg_0058,817:-2002,validation,qualification,pending_lead_adjudication
