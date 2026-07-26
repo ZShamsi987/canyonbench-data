@@ -36,9 +36,10 @@ Do these steps in order.
 8. At exactly 84 completed tasks in every production project, collect the fresh
    midpoint exports and send **RESUME PRODUCTION** after review.
 
-Do not start registration yet. Visible-image masks, presence, and quality can
-proceed now. Registration remains blocked until the reference imagery product
-and its redistribution/use terms are recorded.
+The registration source is now resolved: 2023 public-domain USGS NAIP streamed
+through QGIS in `EPSG:26912`. Visible-image masks, presence, and quality should
+proceed immediately. Registration is a separate, lead-assigned QGIS task; A1-A4
+should not add it to their workload unless Zafir explicitly assigns it.
 
 ## Exact workload
 
@@ -339,7 +340,6 @@ Each week:
 Before the first frozen release, the lead still must:
 
 - document the final image-data license designation;
-- obtain and record the reference imagery license;
 - assign and complete registration with independent checking;
 - publish registration residuals and exclude unreliable frames from grounding;
 - complete the full release audit in `docs/release-audit.md`;

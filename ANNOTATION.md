@@ -95,7 +95,7 @@ under `label-studio/tasks/`.
 4. Midpoint repeat
 5. Production final
 6. Adjudication
-7. Registration and grounding after licensed reference imagery is available
+7. Lead-assigned registration and grounding with the frozen 2023 USGS NAIP source
 
 Do not skip a gate.
 

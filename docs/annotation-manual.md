@@ -13,7 +13,9 @@ Operational rules accompanying project specification revision 2. Cite rule ids w
 ## Tools and setup
 
 - **T-1** Use one Label Studio project per task. Masks use a Segment Anything click-to-segment backend on an Adroit GPU.
-- **T-2** Place control points in QGIS Georeferencer with the frame as source and the reference tile/layer as target.
+- **T-2** Place control points in QGIS Georeferencer with the frame as source
+  and the frozen 2023 USGS NAIP ImageServer as target. Set the project and
+  target CRS to `EPSG:26912`; follow `docs/registration.md`.
 - **T-3** Export masks as same-size, single-channel 8-bit PNGs: 255 vegetation, 0 background.
 - **T-4** Use one stable annotator id in every record and filename.
 
@@ -50,6 +52,9 @@ For every feature choose `yes`, `no`, or `uncertain`.
 
 ## Task C: registration control points
 
+- **C-0** Stream the official source recorded in
+  `registration/reference/source.yaml`. Do not download the 189 full source
+  tiles or use an unrecorded basemap.
 - **C-1** Place at least six pairs and aim for eight: at least one per quadrant and one near the center. Do not cluster or make them collinear.
 - **C-2** Use point-like, unambiguous, temporally stable landmarks: confluences/sharp bends, road junctions, building corners, distinctive rock spires/notches, or stable shoreline points.
 - **C-3** Do not use shadow edges, moving water lines/shorelines, cloud edges, vehicles, or ambiguous smooth curves.

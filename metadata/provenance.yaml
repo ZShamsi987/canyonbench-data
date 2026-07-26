@@ -37,7 +37,16 @@ private_sources:
         reason: zero-filled camera placeholder with no AVI header
     usable_timeline_duration_s: 23313.0
     checksum_manifest_sha256: 101c9798d94d6094caa67c18558e51193af78c5e2ba01194764727c2a1f9542a
-public_reference_sources: []
+public_reference_sources:
+  - source_id: usgs-naip-2023-arizona
+    product: USGS NAIP Imagery
+    provider: U.S. Geological Survey, National Geospatial Program
+    service_url: https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer
+    acquisition_year: 2023
+    nominal_resolution_m: 0.3
+    registration_crs: EPSG:26912
+    usage_status: public_domain
+    source_record: registration/reference/source.yaml
 processing:
   sync_anchor_event: first_visible_release_motion_matched_to_sustained_ascent
   sync_anchor_clip: MOVA0081.avi
@@ -66,8 +75,15 @@ processing:
 annotation:
   manual_revision: 2
   annotator_slots: [A1, A2, A3, A4]
-  annotator_roster_status: pending_name_mapping
-  qualification_passed: null
+  annotator_roster:
+    GOLD: Sammy
+    A1: Atharva
+    A2: Pranav G.
+    A3: Kunsh
+    A4: Prabhav
+  annotator_roster_status: frozen
+  qualification_passed: waived_after_prior_testing
+  qualification_waiver_date: "2026-07-26"
   qualification_frames: 12
   shared_calibration_frames: 30
   ordinary_production_frames: 335
@@ -82,7 +98,7 @@ release:
   label_studio_project_plan_sha256: 90a3223d6d8f2b62baa9368276c512df631c28770e53877029712db4ef90b5b0
   final_image_license_designation: null
   full_privacy_audit_complete: false
-  reference_imagery_license_recorded: false
+  reference_imagery_license_recorded: true
   huggingface_url: null
   zenodo_doi: null
   splits_sha256: a407bdad42b44b5ad59ee7afba39398863f23335d9d2378c8a2101e4da3cf7fc

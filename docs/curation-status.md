@@ -38,21 +38,24 @@ release audit, or release validation is complete.
   for the public annotation handoff.
 - Recorded raw-log, source-video-manifest, sampled-manifest, configuration, and
   split hashes in `metadata/provenance.yaml`.
+- Selected and audited the official 2023 USGS NAIP reference: 189 primary
+  Arizona tiles cover the full flight bbox at 0.3 metre nominal resolution.
+- Recorded the public-domain terms, requested acknowledgment, exact ImageServer,
+  catalog query, metric registration CRS, and remote-first bounded-cache policy.
 
 ## Human or external gates remaining
 
-- Map the four coauthors to stable A1-A4 ids.
-- Create adjudicated gold answers for the 12 qualification candidates.
-- Qualify all four coauthors, complete the shared calibration set, and begin
-  production using `docs/START_ANNOTATING.md`.
+- Complete Sammy's private 12-frame gold answers.
+- Complete the shared calibration set and begin production using
+  `docs/START_ANNOTATING.md`; A1-A4 qualification is waived after prior testing.
 - Complete and document the full-frame frozen-release privacy review.
 - Record the final image-data license designation.
 - Obtain two independent annotation passes, adjudicate, and report agreement.
-- Acquire and document licensed reference imagery.
 - Place and check registration control points; publish held-out metric errors.
 - Calibrate VARI only on the designated calibration population.
 - Build and validate the frozen release.
 - Publish Hugging Face artifacts, Zenodo DOI, and final citation metadata.
 
-No raw telemetry, raw footage, or reference imagery is committed to this
-repository. The 377 derived annotation JPEGs are public.
+No raw telemetry, raw footage, or large reference raster is committed to this
+repository. The reproducible USGS service contract is committed, and the 377
+derived annotation JPEGs are public.

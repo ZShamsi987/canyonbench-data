@@ -1,0 +1,51 @@
+schema_version: "1.0.0"
+source_id: usgs-naip-2023-arizona
+provider: U.S. Geological Survey, National Geospatial Program
+upstream_agency: USDA Farm Service Agency
+product: USGS NAIP Imagery
+service_type: ArcGIS ImageServer
+service_url: https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer
+catalog_query_endpoint: https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/query
+terms_url: https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map
+archive_description_url: https://www.usgs.gov/centers/eros/science/usgs-eros-archive-aerial-photography-national-agriculture-imagery-program-naip
+usage_status: public_domain
+acknowledgment: Map services and data available from U.S. Geological Survey, National Geospatial Program.
+accessed_utc: "2026-07-26"
+acquisition:
+  state: AZ
+  year: 2023
+  primary_catalog_items_intersecting_flight_bbox: 189
+  nominal_resolution_m: 0.3
+  band_count: 4
+  natural_color_band_ids: [0, 1, 2]
+  sensor_type: CNIR
+  projection_name: UTM
+catalog_audit:
+  where: Category = 1
+  spatial_relation: esriSpatialRelIntersects
+  geometry_type: esriGeometryEnvelope
+  input_crs: EPSG:4326
+  flight_bbox_wgs84:
+    west: -112.375
+    south: 36.5667
+    east: -110.804
+    north: 36.9516
+sampled_frame_bbox_wgs84:
+  west: -112.343
+  south: 36.5847
+  east: -110.804
+  north: 36.9514
+registration:
+  coordinate_reference_system: EPSG:26912
+  coordinate_reference_system_name: NAD83 / UTM zone 12N
+  service_coordinate_reference_system: EPSG:3857
+  export_year_filter: Category = 1 AND Year = 2023
+  maximum_export_width_px: 4000
+  maximum_export_height_px: 4000
+storage:
+  policy: remote_first_bounded_cache
+  canonical_raster_host: USGS
+  local_cache_directory: work/reference
+  commit_full_source_tiles: false
+  commit_bounded_raster_chips: false
+  commit_request_sidecars_and_checksums: true

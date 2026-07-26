@@ -9,8 +9,9 @@ frozen split manifest contains 263 train, 68 validation, and 46 test frames with
 no block or segment leakage. Four-coauthor task assignments and public Label
 Studio imports are ready; real annotations and registration outputs remain
 pending. The capture owner confirmed redistribution rights for annotation
-release on 2026-07-26. Final image-license designation and licensed reference
-imagery remain release gates.
+release on 2026-07-26. The official public-domain USGS NAIP reference source is
+now frozen and available as a remote QGIS layer plus bounded, checksummed
+exports; the final annotation-image license designation remains a release gate.
 
 **First-time annotators start with the
 [step-by-step annotator README](annotation/README.md).** It assumes no GitHub,
@@ -48,6 +49,7 @@ labels/
   annotator/{presence,quality,grid,judge_validation}.jsonl
   adjudicated/{presence,quality,grid}.jsonl
 registration/
+  reference/                    frozen USGS source and remote-first instructions
   points/                       QGIS/canonical control points
   homographies/                 frame-to-reference matrices
   residuals.csv                 held-out metric RMSE and reliability
@@ -74,6 +76,7 @@ See the [start guide](docs/START_ANNOTATING.md),
 [ANNOTATION.md](ANNOTATION.md), the
 [full numbered manual](docs/annotation-manual.md),
 [registration contract](docs/registration.md),
+[reference-imagery record](registration/reference/README.md),
 [current curation status](docs/curation-status.md), and machine-readable
 [schemas](schemas).
 

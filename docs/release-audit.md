@@ -14,7 +14,7 @@ Complete this document for each frozen release.
 
 - [ ] Private source checksums recorded
 - [ ] Camera/video redistribution rights confirmed
-- [ ] Reference imagery product, date, and license recorded
+- [x] Reference imagery product, date, and public-domain terms recorded
 - [ ] Geographic layer product, vintage, resolution, and license recorded
 - [ ] No source is implicitly relicensed
 
