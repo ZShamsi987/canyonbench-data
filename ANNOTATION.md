@@ -4,7 +4,9 @@ The full CanyonBench Annotation Manual is authoritative. This page routes files 
 
 ## Start here
 
-The complete lead and annotator handoff is
+New annotators use
+[`annotation/README.md`](annotation/README.md), which assumes no GitHub, Python,
+Docker, or Label Studio experience. The project lead uses
 [`docs/START_ANNOTATING.md`](docs/START_ANNOTATING.md). The public task files
 load the 377 curated JPEGs directly from GitHub; annotators do not need the raw
 Google Drive footage.

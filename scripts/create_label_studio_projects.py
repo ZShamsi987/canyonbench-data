@@ -15,22 +15,27 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 VALID_ANNOTATORS = ("A1", "A2", "A3", "A4")
-VALID_STAGES = ("QUALIFICATION", "CALIBRATION", "PRODUCTION")
+VALID_STAGES = ("QUALIFICATION", "CALIBRATION", "PRODUCTION", "MIDPOINT")
 
 
 class LabelStudio:
     def __init__(self, base_url: str, api_key: str) -> None:
         self.base_url = base_url.rstrip("/")
         self.api_key = api_key
+        self.authorization = f"Token {api_key}"
+        self.personal_token_checked = False
 
-    def request(
+    def _send(
         self,
         method: str,
         path: str,
         payload: object | None = None,
+        authorization: str | None = None,
     ) -> Any:
         body = None
-        headers = {"Authorization": f"Token {self.api_key}"}
+        headers = {}
+        if authorization:
+            headers["Authorization"] = authorization
         if payload is not None:
             body = json.dumps(payload).encode()
             headers["Content-Type"] = "application/json"
@@ -40,11 +45,52 @@ class LabelStudio:
             headers=headers,
             method=method,
         )
+        with urllib.request.urlopen(request, timeout=60) as response:
+            content = response.read()
+        return json.loads(content) if content else None
+
+    def _activate_personal_access_token(self) -> bool:
+        """Exchange a Label Studio PAT for a short-lived bearer token."""
+        if self.personal_token_checked:
+            return False
+        self.personal_token_checked = True
         try:
-            with urllib.request.urlopen(request, timeout=60) as response:
-                content = response.read()
+            response = self._send(
+                "POST",
+                "/api/token/refresh",
+                {"refresh": self.api_key},
+            )
+        except (urllib.error.HTTPError, urllib.error.URLError):
+            return False
+        if not isinstance(response, dict) or not response.get("access"):
+            return False
+        self.authorization = f"Bearer {response['access']}"
+        return True
+
+    def request(
+        self,
+        method: str,
+        path: str,
+        payload: object | None = None,
+    ) -> Any:
+        try:
+            return self._send(method, path, payload, self.authorization)
         except urllib.error.HTTPError as error:
             detail = error.read().decode(errors="replace")
+            if error.code in (401, 403) and self._activate_personal_access_token():
+                try:
+                    return self._send(method, path, payload, self.authorization)
+                except urllib.error.HTTPError as retry_error:
+                    retry_detail = retry_error.read().decode(errors="replace")
+                    raise RuntimeError(
+                        "Label Studio returned HTTP "
+                        f"{retry_error.code} for {path}: {retry_detail}"
+                    ) from retry_error
+                except urllib.error.URLError as retry_error:
+                    raise RuntimeError(
+                        f"Cannot reach Label Studio at {self.base_url}: "
+                        f"{retry_error.reason}"
+                    ) from retry_error
             raise RuntimeError(
                 f"Label Studio returned HTTP {error.code} for {path}: {detail}"
             ) from error
@@ -52,7 +98,6 @@ class LabelStudio:
             raise RuntimeError(
                 f"Cannot reach Label Studio at {self.base_url}: {error.reason}"
             ) from error
-        return json.loads(content) if content else None
 
     def project_titles(self) -> set[str]:
         response = self.request("GET", "/api/projects/?page_size=100")
@@ -96,11 +141,22 @@ def plan_rows(annotator: str, stage: str) -> list[dict[str, str]]:
         encoding="utf-8",
     ) as stream:
         rows = list(csv.DictReader(stream))
+    source_stage = "QUALIFICATION" if stage == "MIDPOINT" else stage
     selected = [
         row
         for row in rows
-        if row["annotator_id"] == annotator and row["stage"] == stage
+        if row["annotator_id"] == annotator and row["stage"] == source_stage
     ]
+    if stage == "MIDPOINT":
+        selected = [
+            {
+                **row,
+                "stage": "MIDPOINT",
+                "project_name": row["project_name"].replace("-QUAL-", "-MID-"),
+                "start_after": "lead pauses production for the midpoint repeat",
+            }
+            for row in selected
+        ]
     if len(selected) != 3:
         raise ValueError(
             f"Expected three {stage} projects for {annotator}, found {len(selected)}"
@@ -201,7 +257,7 @@ def main() -> None:
             )
         description = (
             f"CanyonBench {stage.lower()} {row['task'].lower()} work "
-            f"for {annotator}. Follow docs/START_ANNOTATING.md and "
+            f"for {annotator}. Follow annotation/README.md and "
             "docs/annotation-manual.md. Do not view another coauthor's work."
         )
         project_id = client.create_project(title, label_config, description)

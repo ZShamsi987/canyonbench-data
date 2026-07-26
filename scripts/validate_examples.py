@@ -5,19 +5,98 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import io
 import json
 import re
+import urllib.error
+import urllib.request
 import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
+from unittest.mock import patch
 from urllib.parse import urlparse
 
 from jsonschema import Draft202012Validator
+
+from create_label_studio_projects import LabelStudio, plan_rows
 
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE = re.compile(r"^img_\d{6,}\.jpg$")
 FEATURES = ("water", "road", "building", "forest", "snow", "field")
 ANNOTATORS = ("A1", "A2", "A3", "A4")
+
+
+class MockResponse:
+    def __init__(self, payload: object) -> None:
+        self.content = json.dumps(payload).encode()
+
+    def __enter__(self) -> MockResponse:
+        return self
+
+    def __exit__(self, *_args: object) -> bool:
+        return False
+
+    def read(self) -> bytes:
+        return self.content
+
+
+def validate_label_studio_authentication() -> None:
+    """Keep both supported Label Studio token paths working."""
+
+    def legacy_urlopen(
+        request: urllib.request.Request,
+        timeout: int,
+    ) -> MockResponse:
+        assert timeout == 60
+        assert request.get_header("Authorization") == "Token legacy-secret"
+        return MockResponse({"results": [{"title": "legacy-ok"}]})
+
+    with patch("urllib.request.urlopen", legacy_urlopen):
+        assert LabelStudio(
+            "http://label-studio",
+            "legacy-secret",
+        ).project_titles() == {"legacy-ok"}
+
+    personal_calls: list[tuple[str, str | None]] = []
+
+    def personal_urlopen(
+        request: urllib.request.Request,
+        timeout: int,
+    ) -> MockResponse:
+        assert timeout == 60
+        authorization = request.get_header("Authorization")
+        personal_calls.append((request.full_url, authorization))
+        if request.full_url.endswith("/api/token/refresh"):
+            assert authorization is None
+            assert json.loads(request.data) == {"refresh": "personal-secret"}
+            return MockResponse({"access": "short-lived-access"})
+        if authorization == "Token personal-secret":
+            raise urllib.error.HTTPError(
+                request.full_url,
+                401,
+                "Unauthorized",
+                {},
+                io.BytesIO(b"invalid legacy token"),
+            )
+        assert authorization == "Bearer short-lived-access"
+        return MockResponse({"results": [{"title": "personal-ok"}]})
+
+    with patch("urllib.request.urlopen", personal_urlopen):
+        assert LabelStudio(
+            "http://label-studio",
+            "personal-secret",
+        ).project_titles() == {"personal-ok"}
+    assert len(personal_calls) == 3
+
+
+def validate_midpoint_projects() -> None:
+    for annotator in ANNOTATORS:
+        rows = plan_rows(annotator, "MIDPOINT")
+        assert {row["task"] for row in rows} == {"MASK", "PRESENCE", "QUALITY"}
+        assert {row["image_count"] for row in rows} == {"12"}
+        assert all(
+            row["project_name"].startswith(f"CB-{annotator}-MID-") for row in rows
+        )
 
 
 def records(path: Path) -> list[dict[str, object]]:
@@ -175,6 +254,8 @@ def validate_annotation_release() -> None:
 
 
 def main() -> None:
+    validate_label_studio_authentication()
+    validate_midpoint_projects()
     presence = records(ROOT / "examples/labels/presence.jsonl")
     quality = records(ROOT / "examples/labels/quality.jsonl")
     grids = records(ROOT / "examples/labels/grid.jsonl")
@@ -216,6 +297,25 @@ def main() -> None:
         )
     for project_path in (ROOT / "label-studio").glob("*.xml"):
         ET.parse(project_path)
+    mask_config = ET.parse(ROOT / "label-studio" / "vegetation-mask.xml")
+    uncertainty = mask_config.find(".//Choices[@name='uncertain_region']")
+    assert uncertainty is not None
+    assert uncertainty.get("required") == "true"
+    annotator_readme = ROOT / "annotation" / "README.md"
+    assert annotator_readme.is_file()
+    readme_text = annotator_readme.read_text(encoding="utf-8")
+    for required_section in (
+        "Mac installation",
+        "Windows installation",
+        "qualification projects",
+        "how to label vegetation masks",
+        "how to label feature presence",
+        "how to label image quality",
+        "pausing and resuming safely",
+        "export qualification results",
+        "Troubleshooting",
+    ):
+        assert required_section.casefold() in readme_text.casefold()
     validate_annotation_release()
     print("All example contracts passed")
 

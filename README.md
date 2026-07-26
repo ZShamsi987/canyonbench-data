@@ -12,10 +12,12 @@ pending. The capture owner confirmed redistribution rights for annotation
 release on 2026-07-26. Final image-license designation and licensed reference
 imagery remain release gates.
 
-Annotators start with the
-**[complete lead and annotator guide](docs/START_ANNOTATING.md)**. They do not
-need the raw Google Drive footage: Label Studio reads the curated frames from
-public GitHub URLs.
+**First-time annotators start with the
+[step-by-step annotator README](annotation/README.md).** It assumes no GitHub,
+Python, Docker, or Label Studio experience. Project leads use the
+[lead and operations guide](docs/START_ANNOTATING.md). Nobody needs the raw
+Google Drive footage: Label Studio reads the curated frames from public GitHub
+URLs.
 
 Rebuild the public handoff from the code repository's sampled manifest:
 

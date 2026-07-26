@@ -16,6 +16,9 @@
 - Added public-URL Label Studio tasks, a 36-project gated plan, automatic local
   project creation, categorical-export conversion, checksums, and comprehensive
   lead/annotator instructions.
+- Added a first-time annotator README with no-account ZIP download, separate
+  macOS and Windows setup, per-task decisions, exports, pause/resume, stage
+  gates, and troubleshooting.
 - Kept raw footage, flight logs, reference imagery, qualification gold answers,
   and raw annotation exports out of the public repository.
 

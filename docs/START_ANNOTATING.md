@@ -5,6 +5,11 @@ annotators. It is deliberately explicit. The numbered
 [annotation manual](annotation-manual.md) remains authoritative whenever this
 guide and a labeling decision seem to conflict.
 
+Coauthors who are new to GitHub, Python, Docker, or Label Studio should receive
+the separate [first-time annotator README](../annotation/README.md). That guide
+contains platform-specific installation, labeling, export, resume, and
+troubleshooting steps. This document remains the lead's operational checklist.
+
 The 377 annotation images are public GitHub files. Nobody needs the 71 GB raw
 Google Drive folder, the flight logs, or a repository clone to label them.
 Label Studio reads each JPEG directly from the URL embedded in the task file.
@@ -69,7 +74,8 @@ docker run --name canyonbench-label-studio -it \
 ```
 
 Keep that terminal open. Open `http://localhost:8080`, create the local account,
-then open **Account & Settings** and copy the API key.
+then open **Account & Settings** and copy either a personal access token or a
+legacy token. The project script detects both token types automatically.
 
 For later sessions, restart the same saved instance with:
 
@@ -129,7 +135,9 @@ After the lead reviews calibration, run it once more with:
 ```
 
 Do not create or enter a later stage early. The complete 36-project audit plan
-is in `label-studio/project_plan.csv`.
+is in `label-studio/project_plan.csv`. The 12 fresh midpoint projects are
+generated on demand with `--stage MIDPOINT` after the lead pauses production;
+they are intentionally separate from the initial plan.
 
 ### Lead-only gold project command
 
@@ -186,7 +194,10 @@ coauthor, resets the qualification projects, and asks for one clean repeat.
 Never alter a submitted result to manufacture a pass.
 
 Repeat the same 12-frame qualification check midway through production as the
-manual requires. Pause a drifting annotator until they re-align.
+manual requires. Pause production and have each annotator create fresh
+`CB-A1-MID-*` projects with `--stage MIDPOINT`; do not reopen or overwrite the
+original qualification pass. Collect `A1_midpoint_*` exports, score them against
+the same private gold, and pause a drifting annotator until they re-align.
 
 ## Calibration procedure
 
