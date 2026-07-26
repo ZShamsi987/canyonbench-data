@@ -32,6 +32,9 @@ After starting a local Label Studio instance and copying its API key:
 
 ```bash
 export LABEL_STUDIO_API_KEY='paste-token'
+python3 scripts/create_label_studio_projects.py --lead-gold
+
+# Each coauthor runs this with their own id:
 python3 scripts/create_label_studio_projects.py \
   --annotator A1 \
   --stage QUALIFICATION

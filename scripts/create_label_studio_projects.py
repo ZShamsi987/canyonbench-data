@@ -108,16 +108,38 @@ def plan_rows(annotator: str, stage: str) -> list[dict[str, str]]:
     return selected
 
 
+def lead_gold_rows() -> list[dict[str, str]]:
+    rows = plan_rows("A1", "QUALIFICATION")
+    return [
+        {
+            **row,
+            "annotator_id": "LEAD",
+            "stage": "LEAD_GOLD",
+            "project_name": row["project_name"].replace(
+                "CB-A1-QUAL-",
+                "CB-LEAD-GOLD-",
+            ),
+            "start_after": "none; complete before coauthor scoring",
+        }
+        for row in rows
+    ]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
             "Create the mask, presence, and quality projects for one gated stage"
         )
     )
-    parser.add_argument("--annotator", required=True, choices=VALID_ANNOTATORS)
+    target = parser.add_mutually_exclusive_group(required=True)
+    target.add_argument("--annotator", choices=VALID_ANNOTATORS)
+    target.add_argument(
+        "--lead-gold",
+        action="store_true",
+        help="Create the lead's three private 12-frame gold projects",
+    )
     parser.add_argument(
         "--stage",
-        required=True,
         type=str.upper,
         choices=VALID_STAGES,
     )
@@ -134,7 +156,19 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    rows = plan_rows(args.annotator, args.stage)
+    if args.lead_gold:
+        if args.stage:
+            parser.error("--lead-gold cannot be combined with --stage")
+        annotator = "LEAD"
+        stage = "LEAD_GOLD"
+        rows = lead_gold_rows()
+    else:
+        if not args.stage:
+            parser.error("--stage is required with --annotator")
+        annotator = args.annotator
+        stage = args.stage
+        rows = plan_rows(annotator, stage)
+
     if args.dry_run:
         for row in rows:
             print(
@@ -166,8 +200,8 @@ def main() -> None:
                 f"{row['task_file']} has {len(tasks)} tasks; expected {expected}"
             )
         description = (
-            f"CanyonBench {args.stage.lower()} {row['task'].lower()} work "
-            f"for {args.annotator}. Follow docs/START_ANNOTATING.md and "
+            f"CanyonBench {stage.lower()} {row['task'].lower()} work "
+            f"for {annotator}. Follow docs/START_ANNOTATING.md and "
             "docs/annotation-manual.md. Do not view another coauthor's work."
         )
         project_id = client.create_project(title, label_config, description)
@@ -183,7 +217,7 @@ def main() -> None:
         )
         created += 1
 
-    print(f"Created {created} project(s) for {args.annotator} {args.stage}.")
+    print(f"Created {created} project(s) for {annotator} {stage}.")
 
 
 if __name__ == "__main__":

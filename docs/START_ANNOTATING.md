@@ -17,8 +17,9 @@ Do these steps in order.
 2. Map each coauthor to exactly one permanent id: `A1`, `A2`, `A3`, or `A4`.
    Add the coauthor name and Label Studio email. Never change an id after work
    starts.
-3. Create the 12-frame lead-gold qualification labels described below. Keep the
-   answers private until every coauthor has submitted their qualification pass.
+3. Create the 12-frame lead-gold qualification projects with the one-command
+   setup below, label them, and keep the answers private until every coauthor
+   has submitted their qualification pass.
 4. Send each coauthor their id and the public URL of this guide.
 5. Tell them to create only the three **QUALIFICATION** projects first.
 6. Score qualification. Mark `passed` and the date in
@@ -130,6 +131,21 @@ After the lead reviews calibration, run it once more with:
 Do not create or enter a later stage early. The complete 36-project audit plan
 is in `label-studio/project_plan.csv`.
 
+### Lead-only gold project command
+
+The project lead uses the same local setup and API key, then runs:
+
+```bash
+export LABEL_STUDIO_API_KEY='paste-your-token-here'
+python3 scripts/create_label_studio_projects.py --lead-gold
+unset LABEL_STUDIO_API_KEY
+```
+
+This creates `CB-LEAD-GOLD-MASK`, `CB-LEAD-GOLD-PRESENCE`, and
+`CB-LEAD-GOLD-QUALITY`, each with the correct 12 qualification images. Do not
+invite coauthors into the lead instance or share these exports until all four
+qualification submissions are locked.
+
 ### Manual project setup if the script cannot be used
 
 For each applicable row in `label-studio/project_plan.csv`:
@@ -147,9 +163,8 @@ Stop and notify the lead if the count is wrong or an image does not load.
 
 ## Qualification procedure
 
-The lead creates three private lead-gold projects from
-`label-studio/tasks/qualification_12.json`, using the same three XML configs.
-The lead labels all 12 images and exports:
+The lead labels all 12 images in the three automatically created gold projects
+and exports:
 
 - original Label Studio JSON for all three projects;
 - **Brush labels to NumPy and PNG** for the mask project.
