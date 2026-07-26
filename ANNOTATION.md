@@ -4,12 +4,29 @@ The full CanyonBench Annotation Manual is authoritative. This page routes files 
 
 ## Production workflow
 
-1. Set a stable annotator id. Complete the 12-frame qualification set and meet the agreement targets.
-2. Label assigned whole trajectory segments plus the shared 30-frame calibration set.
-3. At 100% zoom, pan left-to-right and top-to-bottom. Mark unresolved cases `uncertain` and add them to `metadata/decision_log.csv`.
-4. Create the vegetation mask first, then presence and quality. Registration points are placed separately and checked by a second coauthor.
-5. Compute the 4x4 grid from the final mask only for reliable registrations; review the overlay and log any override.
-6. Keep per-annotator files. The lead creates adjudicated records without overwriting source passes.
+1. Build the private handoff with `scripts/prepare_curation_package.py`, then have the lead adjudicate gold labels for the 12 qualification candidates.
+2. Set a stable annotator id. Complete the 12-frame qualification set and meet the agreement targets.
+3. Label assigned whole trajectory segments plus the shared 30-frame calibration set.
+4. At 100% zoom, pan left-to-right and top-to-bottom. Mark unresolved cases `uncertain` and add them to `metadata/decision_log.csv`.
+5. Create the vegetation mask first, then presence and quality. Registration points are placed separately and checked by a second coauthor.
+6. Compute the 4x4 grid from the final mask only for reliable registrations; review the overlay and log any override.
+7. Keep per-annotator files. The lead creates adjudicated records without overwriting source passes.
+
+## Build the private handoff
+
+From the data repository:
+
+```bash
+python scripts/prepare_curation_package.py \
+  /path/to/work/world10/frames_sampled.csv \
+  /path/to/work/world10/frames_named \
+  private/curation/world10 \
+  splits/splits.csv
+```
+
+The private output contains hardlinked phase directories, Label Studio tasks,
+registration candidates, the shared calibration set, qualification candidates,
+and a two-annotator segment assignment sheet. It is ignored by Git.
 
 ## Visible green vegetation
 
@@ -41,4 +58,3 @@ labels/adjudicated/grid.jsonl
 registration/points/img_SSSSSS.points
 registration/residuals.csv
 ```
-

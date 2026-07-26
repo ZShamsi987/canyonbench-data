@@ -6,8 +6,9 @@ frames:
   lat: {type: number, unit: degree_north}
   lon: {type: number, unit: degree_east}
   alt_m: {type: number, unit: m}
-  speed: {type: number, unit: "source-log unit; resolve before release"}
+  speed: {type: number, nullable: true, description: "unavailable; WV Speed is constant zero in the operational source segment"}
   heading: {type: number, unit: degree}
+  velocity_down: {type: number, nullable: true, description: "unavailable; WV Velocity Down is constant zero in the operational source segment"}
   segment_id: {type: string, description: contiguous trajectory cluster}
   spatial_block: {type: string, description: geographic anti-leakage block}
   split: {type: enum, values: [train, validation, test]}
@@ -21,4 +22,3 @@ frames:
   forest: *presence
   snow: *presence
   field: *presence
-

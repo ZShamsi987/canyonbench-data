@@ -2,7 +2,17 @@
 
 This is the schema, annotation, and release repository for CanyonBench, a geospatially registered benchmark for hallucination and spatial grounding in vision-language models on high-altitude aerial imagery. The separate [CanyonBench code repository](https://github.com/ZShamsi987/canyonbench) contains derivation, registration, inference, and scoring software.
 
-The repository intentionally contains no recovered flight logs, raw video, extracted frames, reference tiles, or real annotations yet. Those inputs will be added only after source checks, annotation, registration validation, privacy review, and release validation. Small example records document every contract without pretending placeholder labels are ground truth.
+The repository intentionally contains no private flight logs, raw video, source tiles, or image files. Automated curation is complete for 377 sampled frames (68 Launching and 309 Floating) across 68 trajectory segments and 67 geographic blocks. The frozen split manifest contains 263 train, 68 validation, and 46 test frames with no block or segment leakage. Images remain in an ignored private curation package until source-license and full privacy review are complete; real annotations and registration outputs remain pending. Small example records document every contract without pretending placeholder labels are ground truth.
+
+Build the ignored local handoff from the code repository's sampled manifest:
+
+```bash
+python scripts/prepare_curation_package.py \
+  /path/to/frames_sampled.csv \
+  /path/to/frames_named \
+  private/curation/world10 \
+  splits/splits.csv
+```
 
 ## Release contents
 
@@ -41,7 +51,7 @@ Public releases may store imagery in a Hugging Face Dataset and metadata here. A
 - Reliability requires at least six control points, two held out, and held-out RMSE no greater than one quarter of a grid-cell ground width.
 - Two coauthors label masks, presence, and quality independently. Conflicts go through adjudication and the append-only decision log.
 
-See [ANNOTATION.md](ANNOTATION.md), the [full numbered manual](docs/annotation-manual.md), [registration contract](docs/registration.md), and machine-readable [schemas](schemas).
+See [ANNOTATION.md](ANNOTATION.md), the [full numbered manual](docs/annotation-manual.md), [registration contract](docs/registration.md), [current curation status](docs/curation-status.md), and machine-readable [schemas](schemas).
 
 ## Validate before release
 

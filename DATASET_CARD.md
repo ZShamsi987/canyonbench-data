@@ -20,7 +20,7 @@ license: other
 
 CanyonBench evaluates whether vision-language models faithfully describe visible content in high-altitude balloon imagery. Primary tasks are six-feature presence classification, green-visible-vegetation percentage estimation, 4x4 vegetation grounding on registration-reliable frames, and false-premise correction. Free description is secondary.
 
-This repository is currently a pre-data schema release. Counts, dates, geographic coverage, annotator agreement, registration success, and DOI remain intentionally unset until real data passes validation.
+This repository is in curation. Automated preprocessing retained 377 sampled frames: 68 Launching and 309 Floating, grouped into 68 bounded trajectory segments and 67 geographic blocks. The frozen split manifest contains 263 train, 68 validation, and 46 test frames with no block or segment leakage. The imagery is not yet public, and annotator agreement, registration success, source-license clearance, full privacy review, and DOI remain unset until the human and release gates pass.
 
 ## Dataset structure
 
@@ -40,7 +40,7 @@ Frame-to-reference homographies use stable point correspondences and a metric re
 
 ## Splits and correlation
 
-The one-frame-per-second archive is not the evaluation population. Frames are deduplicated with a minimum time interval plus movement/perceptual-change thresholds. Whole trajectory segments and geographic blocks are assigned to one split. Statistical intervals resample segments, never individual frames.
+The one-frame-per-second archive is not the evaluation population. Frames are deduplicated with a 60-second minimum interval plus 500-metre movement and perceptual-change thresholds. Trajectory segments are bounded to ten minutes and refined at geographic split boundaries. Each geographic block and resulting segment belongs to exactly one split. Statistical intervals resample segments, never individual frames.
 
 ## Intended uses
 
@@ -66,4 +66,3 @@ Each release publishes capture and processing provenance, hashes, code commit, p
 ## Citation
 
 Use the DOI and paper citation after the first frozen release. Until then, cite the software and versioned repository commit; do not cite this pre-data repository as a completed benchmark dataset.
-

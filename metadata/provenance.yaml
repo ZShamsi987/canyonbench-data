@@ -1,10 +1,10 @@
 schema_version: "1.0.0"
 release_version: null
-status: pre-data
+status: curation
 created_at: "2026-07-21"
 code:
   repository: https://github.com/ZShamsi987/canyonbench
-  commit: null
+  commit: ddf102bfcb81c7558a3aef0a62392c046aec95e0
 capture:
   platform: high-altitude balloon
   camera_model: null
@@ -12,26 +12,53 @@ capture:
   horizontal_fov_degrees: null
   vertical_fov_degrees: null
   flight_date: null
+  camera_clock_absolute_valid: false
+  camera_clock_relative_timing_verified: true
+  clip_order_source: filename_relative_sequence
+  clip_timeline_source: relative_mtime_end
   geographic_summary: Glen and Marble Canyon corridor near Page and Lake Powell
 private_sources:
   flight_log:
     filename: WORLD10.txt
-    sha256: null
+    sha256: 3c4d1372e0ff7ac5f6bec3bd705f7fc1010421b92113887540c3cc2d59ce9c63
   thermal_log:
     filename: W10_MLX.txt
     used_in_benchmark: false
-    sha256: null
+    sha256: a304cbc7e15f3614854b7f6dbbae7d38a99787460da68291957d95f476629e14
   video:
-    file_count: null
-    checksum_manifest_sha256: null
+    file_count: 406
+    decodable_file_count: 405
+    excluded_files:
+      - filename: MOVA0486.avi
+        sha256: f7086eb70b42167764abdb2bd0bcca9a5dfce6f2ba0fa59fbebafb66c735eaf4
+        reason: zero-filled camera placeholder with no AVI header
+    usable_timeline_duration_s: 23313.0
+    checksum_manifest_sha256: 101c9798d94d6094caa67c18558e51193af78c5e2ba01194764727c2a1f9542a
 public_reference_sources: []
 processing:
-  sync_anchor_event: null
-  sync_anchor_flight_elapsed_s: null
-  sync_offset_s: null
+  sync_anchor_event: first_visible_release_motion_matched_to_sustained_ascent
+  sync_anchor_clip: MOVA0081.avi
+  sync_anchor_clip_offset_s: 37.0
+  sync_anchor_flight_elapsed_s: 2721
+  sync_offset_s: 2684.0
+  telemetry_end_video_elapsed_s: 23303
+  video_tail_after_telemetry_s: 10.0
   crop: remove left third
   archive_fps: 1
-  sampling_config_sha256: null
+  extracted_frame_count: 23239
+  unique_named_frame_count: 23062
+  unmatched_telemetry_frame_count: 1500
+  joined_candidate_frame_count: 21216
+  sampled_frame_count: 377
+  trajectory_segment_count: 68
+  spatial_block_count: 67
+  split_counts:
+    train: 263
+    validation: 68
+    test: 46
+  unavailable_motion_fields: [speed, velocity_down]
+  sampled_manifest_sha256: 478da77d9108056fda6299085023647306c3f3443cf3c6f0f75cc703925e0141
+  sampling_config_sha256: fd9d546df9b90111e0bdb298d5c0080f7036ebb55b817a5b4ec71c9ae49a3d81
   vari_calibration_sha256: null
 annotation:
   manual_revision: 2
@@ -43,4 +70,4 @@ release:
   huggingface_url: null
   zenodo_doi: null
   frames_sha256: null
-  splits_sha256: null
+  splits_sha256: a407bdad42b44b5ad59ee7afba39398863f23335d9d2378c8a2101e4da3cf7fc
