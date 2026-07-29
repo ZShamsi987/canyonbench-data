@@ -1,132 +1,176 @@
-# Calibration Checkpoint 5 — Review, Answer Key, and Retraining
+# Checkpoint 5 Review — corrected frames, new vegetation rules, answer key
 
-> # 🛑 CORRECTION — the mask answer key below is WITHDRAWN
->
-> **Parts 1, 2, and the Task A row of Part 3 are wrong. Rules A-11 and A-12 are
-> withdrawn. Do not act on them.**
->
-> The original review measured "green" on the **raw** frames. That was the wrong
-> test. The footage has a strong blue/violet cast, and correcting it — by
-> normalising each frame's terrain against properly balanced USGS NAIP imagery of
-> the same ground — changes the answer completely:
->
-> | Frame | green pixels, raw | green pixels, colour-corrected | largest connected patch |
-> |---|---:|---:|---:|
-> | `img_003102` | 0.027% | 0.063% | 34 px |
-> | `img_003882` | 0.025% | 0.459% | 637 px |
-> | `img_004482` | 0.023% | 0.865% | 212 px |
-> | `img_004842` | 0.007% | 1.056% | 810 px |
-> | `img_005324` | 0.001% | **1.498%** | 804 px |
->
-> On `img_005324`, 99% of those pixels are bright vegetation candidates rather
-> than water edges, in **582 separate patches** of 4 px or more. Those pass A-5
-> and are resolvable. **The correct mask on these frames is not empty.**
->
-> Corrected low-altitude frames settle it beyond argument: `img_002862` at 2 km
-> renders as an ordinary aerial photo of Page, Arizona — hangars, parked
-> aircraft, houses, swimming pools, and plainly green lawns and street trees.
-> Across the sampled set, 126 of 377 frames carry more than 0.5% green once the
-> cast is corrected.
->
-> **What this means for you:** the vegetation task was not answerable on the
-> images you were given. Anyone who masked terrain that looked darker or greener
-> than its surroundings was responding to something real. Atharva and Kunsh in
-> particular were tracking genuine variation, even though the raw pixels could
-> not support it.
->
-> **Do not redo any masks yet.** The lead is producing colour-corrected frames.
-> The mask task restarts on those, with a rewritten rule A-1.
->
-> **What still stands:** everything about presence and quality that does not
-> depend on greenness — the water, road and field calls, the exposure and clarity
-> findings, the shadow-versus-water test (Figure 4), the road-versus-field
-> worked example (Figure 3), and the export-format and protocol notes in Part 6.
-> The `forest` calls are on hold with the masks.
+**Revision 2, supersedes everything published before it.** Revision 1 of this
+page contained a wrong vegetation answer key. It has been replaced. If you read
+the earlier version, discard what it said about masks; everything it said about
+presence and quality still holds.
 
-**Read this completely before you label image 6.** All four annotators submitted checkpoint 5 on
-time and in the correct format. Nobody is in trouble. But the review found one problem that affects
-everyone and several rule misreadings that are easy to fix, so calibration is paused until we have
-all worked through this page together.
+Read this completely before you label anything else.
 
-This document is the authority for the five checkpoint frames. Where it conflicts with your memory
-of the meeting, this page wins. Every new rule here is numbered so it can be cited during
-adjudication, exactly like the rules in the annotation manual.
+---
 
-| | |
+## Part 0 — What changed, in one table
+
+| | Revision 1 (wrong) | Revision 2 (this page) |
+|---|---|---|
+| Which images you label | `frames/` | **`frames_corrected/`** — colour-corrected |
+| Correct mask on the 5 checkpoint frames | "empty" | **small but real**, 0.03–0.38% of the frame |
+| Rules A-11, A-12 | introduced | **withdrawn** |
+| New vegetation rules | — | **A-13 … A-17** below |
+| Presence / quality findings | — | **unchanged, still stand** |
+
+### Why revision 1 was wrong
+
+The original review measured greenness on the raw frames. The camera recorded
+with an uncorrected white balance, so the whole scene is pushed toward blue and
+real vegetation reads grey-olive. Measuring "is it green" on imagery in that
+state answers the wrong question. Corrected, these frames do contain vegetation.
+
+Anyone who masked areas that looked different from their surroundings was
+responding to something real. The task was not answerable on the images you were
+given, and that is not on you.
+
+---
+
+## Part 1 — You now label colour-corrected images
+
+![Figure 1](figures/fig1_colour_correction.png)
+
+Every Label Studio task file now points at `frames_corrected/`. You do not have
+to download anything or change any setting — when you recreate your projects the
+new images load automatically.
+
+**What the correction does:** removes the blue/violet colour cast, by scaling
+each frame's colour channels so that its bare terrain matches properly balanced
+USGS NAIP satellite imagery of the same ground.
+
+**What the correction does NOT do:** it does not remove haze. This is
+deliberate and it matters for your quality labels.
+
+### Haze — read this carefully, it is two different things
+
+Haze does two separate things to these images, and only one of them has been
+fixed.
+
+| | What it is | Fixed? | Which of your labels it affects |
+|---|---|---|---|
+| **Colour cast** | Everything shifted toward blue/violet | **Yes, removed** | Vegetation masks. This is what broke them. |
+| **Veiling / contrast loss** | A white haze layer washing out local contrast | **No, left in place** | `clarity`. It still has to be judged. |
+
+The colour cast was an artefact of the camera. The veiling is real atmosphere
+between the balloon and the ground, and it genuinely limits what can be seen —
+so it stays in the imagery and you keep labelling it.
+
+**The one thing to remember:** haze can *hide* vegetation, but haze can never
+*create* vegetation. If a hazy frame shows no green, the correct answer is that
+there is no visible vegetation — not that there is vegetation you cannot quite
+see. Mark `clarity` accordingly and move on.
+
+---
+
+## Part 2 — What is and is not vegetation
+
+![Figure 2](figures/fig2_vegetation_reference.png)
+
+Print this figure or keep it open in a second window while you work.
+
+### The single test
+
+> **A region is vegetation only if GREEN is its strongest colour channel.**
+> Not "darker than its surroundings". Not "greyer". Not "different". Green.
+
+On the corrected frames, real vegetation here looks like a lawn or a tree
+looks — a definite green, usually dark, typically RGB near (45–75, 70–100,
+45–75). Bare desert is orange-brown, with red clearly the strongest channel.
+
+### The four things that are NOT vegetation
+
+These are the four traps. Three of the four annotators fell into at least one.
+
+1. **Darker brown rock.** Different rock units differ in brightness. A darker
+   patch of ground is still rock if red beats green. This is the single most
+   common error in checkpoint 5.
+2. **Shadow.** Canyon shadows are dark and, before correction, looked blue.
+   They follow topography and branch like a tree. Never vegetation. (A-8)
+3. **Water.** Excluded always, whatever colour it appears — including the
+   turquoise ponds near Page. (A-8)
+4. **Olive tint with no boundary.** At high altitude, sparse desert scrub blurs
+   into a faint olive wash across a whole slope. If you cannot draw a boundary
+   around a patch, it is not maskable. (A-6)
+
+### How much vegetation is actually out there
+
+This is measured across all 377 frames after correction, and it tells you what
+a normal answer looks like:
+
+| Vegetation in a frame | How many frames |
 |---|---|
-| Frames covered | `img_003102`, `img_003882`, `img_004482`, `img_004842`, `img_005324` |
-| Submitted by | Atharva (A1), Pranav G. (A2), Kunsh (A3), Prabhav (A4) |
-| Status | Calibration **paused**. Do not label image 6 until the lead says `CONTINUE`. |
+| Under 0.1% | 295 of 377 |
+| 0.1% – 0.5% | 60 of 377 |
+| Over 0.5% | 22 of 377 |
+| Over 1% | 7 of 377 |
+
+**The most vegetated frame in the entire dataset is 2.4%.** Median is 0.009%.
+
+So if you find yourself masking 10%, 20% or 50% of a frame, you have made a
+mistake — that is 50 to 1000 times more vegetation than exists anywhere in this
+dataset. Most frames will have a handful of small patches or none at all. A
+mostly-empty mask is the normal, correct outcome.
 
 ---
 
-## Part 1 — The big one: there is no green vegetation in these frames
+## Part 3 — New rules
 
-![Figure 1](figures/fig1_no_green.png)
+Rules **A-11** and **A-12** from revision 1 are withdrawn. These replace them.
 
-The camera has a strong blue/violet colour cast. The whole scene is shifted toward blue, so hazy
-terrain, shadowed slopes, and dark rock all *look* like they could be dark vegetation. They are not.
+**A-13 — Label only from `frames_corrected/`.**
+Never label from the raw `frames/` directory. If your project shows a
+blue/violet image, stop and tell the lead — you have the wrong task file.
 
-Measuring the actual pixels, using rule **A-1**'s definition of green (hue 65–170°, saturation ≥ 0.12):
+**A-14 — Green must be the dominant channel.**
+A region qualifies only if green is visibly its strongest colour. Darker,
+greyer, or merely different from its surroundings is not enough. When torn, ask:
+"if I saw this patch on its own, would I call it green?" If no, do not mask.
 
-| Frame | Pixels that are actually green | Share of frame |
+**A-15 — Brightness difference is not hue difference.**
+A darker rock unit, a shaded slope and a damp wash all differ from their
+surroundings in brightness. None is vegetation unless it is also green.
+
+**A-16 — Haze hides vegetation, it never creates it.**
+On a hazy frame, mask only what you can actually see. Do not infer vegetation
+from a general olive cast, and do not compensate for haze by masking more
+generously. Record the haze in `clarity`.
+
+**A-17 — Expect small masks.**
+Typical correct coverage is under 0.5% of the frame. If your mask is over ~2%,
+re-check it against Figure 2 before submitting. This is a prompt to look again,
+not a hard limit.
+
+Rules **B-9, B-10, E-2, E-3** from revision 1 are unchanged and still apply.
+
+---
+
+## Part 4 — Answer key for the five checkpoint frames
+
+### Vegetation masks
+
+Measured on the corrected frames, pre-compression:
+
+| Frame | Vegetation present | Largest single patch |
 |---|---:|---:|
-| `img_003102` | 375 | 0.027% |
-| `img_003882` | 350 | 0.025% |
-| `img_004482` | 311 | 0.022% |
-| `img_004842` | 96 | 0.007% |
-| `img_005324` | 7 | 0.0005% |
+| `img_003102` | 0.027% | 25 px |
+| `img_003882` | 0.165% | 574 px |
+| `img_004482` | 0.371% | 240 px |
+| `img_004842` | 0.381% | 559 px |
+| `img_005324` | 0.106% | 56 px |
 
-Those few pixels are scattered single dots spread across the whole frame — the bottom row of
-Figure 1. They fail **A-5** (a region needs ≥ 4 connected pixels) and **A-6** (only resolvable
-patches are masked; diffuse tint is not).
+All five contain some vegetation. All five are small. There is no frame here
+where a double-digit-percentage mask is defensible.
 
-> ### The correct vegetation mask for all five checkpoint frames is **empty**.
+These are measurements, not a hand-drawn key — treat them as the expected scale
+of your answer, not as pixels to reproduce exactly.
 
-This is not a trick and it is not a trap. It is what the rules produce on this footage. An empty
-mask is a valid, complete answer, and the mask export archive will be nearly empty — that is
-expected and correct.
-
----
-
-## Part 2 — What actually got masked
-
-![Figure 2](figures/fig2_what_was_masked.png)
-
-Red shows the pixels each person marked as `green_visible_vegetation`.
-
-| Person | `img_003102` | `img_005324` | Median hue of masked pixels |
-|---|---:|---:|---|
-| Atharva (A1) | 3.2% | 22.2% | 230–251° (blue) |
-| Pranav G. (A2) | 0% | 0% | — (correctly empty) |
-| Kunsh (A3) | 19.1% | 15.6% | 226–251° (blue) |
-| Prabhav (A4) | 1.0% | 5.2% | 225–230° (blue) |
-
-Across every masked region from all three, **0.00%** of the masked pixels fell in the green hue
-band. The mean colour of the masked pixels is something like RGB (81, 92, 144) — a blue-grey slate.
-Blue is the dominant channel in every case.
-
-Two specific things to notice in Figure 2:
-
-- In `img_003102`, Kunsh's mask runs along the **lake shoreline and into the water itself**. Rule
-  **A-8** excludes water from the mask without exception.
-- In `img_005324`, Atharva's mask covers a large block of open hazy plateau. There is no distinct
-  patch boundary there — this is exactly the "diffuse tint" that **A-6** says not to mask.
-
-**Pairwise mask agreement was 0.15 Dice against a target of 0.75.** That number is not a reflection
-of anyone's care or effort; three people applied the same wrong interpretation, which is a
-documentation failure, not an annotator failure.
-
----
-
-## Part 3 — Complete answer key for the five frames
-
-### Task A — vegetation masks
-
-Empty for all five frames. No brush regions. `uncertain_region` = `none` unless you saw a specific
-green-looking region you excluded under A-3, in which case set it to `present` and log the frame.
-
-### Task B — feature presence
+### Feature presence — unchanged from revision 1
 
 | Frame | water | road | building | forest | snow | field |
 |---|---|---|---|---|---|---|
@@ -136,7 +180,10 @@ green-looking region you excluded under A-3, in which case set it to `present` a
 | `img_004842` | **yes** | no | no | no | no | **no** |
 | `img_005324` | **yes** | **yes** | no | no | no | **no** |
 
-### Task E — quality flags
+`forest` is `no` on all five: forest needs continuous canopy larger than a grid
+cell, and the largest vegetation patch in any of these frames is 574 px.
+
+### Quality flags — unchanged from revision 1
 
 | Frame | cloud | clarity | balloon | sharpness | exposure | glare |
 |---|---|---|---|---|---|---|
@@ -146,206 +193,168 @@ green-looking region you excluded under A-3, in which case set it to `present` a
 | `img_004842` | none | clear | none | sharp | ok | none |
 | `img_005324` | none | **moderate** | none | sharp | ok | none |
 
-Exposure is `ok` on all five and this is measured, not opinion. The manual's threshold for `over` is
-clipped highlights on **more than 10%** of the frame. The worst frame of the five clips 4.2% of
-pixels, and no frame crushes more than 0.06% of shadows. Nothing here is over- or under-exposed.
+Exposure is `ok` on all five and this is measured. `over` requires clipped
+highlights on more than 10% of the frame; the worst of these five clips 4.2%.
 
 ---
 
-## Part 4 — Worked examples
+## Part 5 — Worked examples (unchanged and still correct)
 
-### 4.1 Road-bounded desert is not a cultivated field
+These three did not depend on colour and are unaffected by the correction.
+
+### Road-bounded desert is not a cultivated field
 
 ![Figure 3](figures/fig3_003102_road_not_field.png)
 
-The polygons at the top-left of `img_003102` are graded tracks enclosing bare desert. Zoom in and the
-ground inside a polygon has exactly the same rock texture as the ground outside it. There is no crop
-colour, no plough pattern, no centre-pivot circle.
-
-- **Road = yes.** Consistent width along its length, hard straight edges, visible junctions. That is
-  3 engineered cues; **B-2** needs 2.
-- **Field = no.** **B-6** requires geometric *agricultural* parcels. A road network that happens to
-  enclose an area is not a field.
-- This is also **B-8** in action: do not infer one feature from another. A road being present is not
-  evidence of farmland.
-
-### 4.2 The blue-cast shadow trap
+### The shadow-versus-water test
 
 ![Figure 4](figures/fig4_004482_shadow_not_water.png)
 
-This is the single most important new confuser on this dataset, and it is the water-flag equivalent
-of the road-versus-wash test.
+Shadow branches and follows topography; water sits in a basin with a level
+shoreline. On the corrected frames this is easier than it was, but the shape
+test remains the reliable one.
 
-Because everything is shifted blue, shadowed canyon floors read as deep blue water. Tell them apart
-by **shape**, never by colour:
-
-| Shadow (not water) | Water |
-|---|---|
-| Branching, dendritic, tree-like | Smooth continuous body, or one channel |
-| Follows the topography, narrows uphill | Sits in a basin, has a level shoreline |
-| Same rough texture as the slope beside it | Smooth, sometimes with a specular sheen |
-| Hugs one side of a ridge | Fills the low point symmetrically |
-
-**B-1** already says water must be on a channel or a basin, "not a shaded slope". On this footage that
-clause is doing most of the work.
-
-For contrast, `img_004842` and `img_003102` contain real water — large, smooth, basin-filling
-lobes of Lake Powell with clear shorelines. Those are unambiguous `yes`.
-
-### 4.3 Road present, and the contrast trap
+### Road present, and the contrast trap
 
 ![Figure 5](figures/fig5_005324_road_and_clarity.png)
-
-The bright linear feature in `img_005324` has consistent width, hard straight edges, and cuts across
-the terrain rather than following a drainage. Three cues. **Road = yes.**
-
-All four annotators marked this frame `clarity = clear`. It is in fact the *least* clear frame of
-the five. The blue veiling is heaviest here and the measured contrast is the lowest in the set.
-
----
-
-## Part 5 — New rules, effective immediately
-
-These are additions to the decision log. Cite them by number.
-
-**A-11 — Blue cast does not create vegetation.**
-On this flight the imagery has a global blue/violet cast. A region only qualifies under A-1 if it
-reads green *relative to the frame it sits in*. If a region's blue channel is visibly the strongest,
-it is not vegetation, regardless of how dark or "vegetated" it looks. When in doubt, compare the
-candidate region against a patch of open plateau in the same frame — if they differ only in
-brightness and not in hue, it is terrain.
-
-**A-12 — An empty mask is a complete answer.**
-Do not go looking for something to mask. Most frames on this flight will have no vegetation at all.
-Submitting a frame with zero brush regions is normal and correct; the exported archive being small
-or empty is not an error.
-
-**B-9 — Shadow versus water on blue-cast imagery.**
-Use the shape test in section 4.2. Colour alone is never sufficient evidence for `water = yes` on
-this dataset. A branching pattern that follows topography is `no`, not `uncertain`.
-
-**B-10 — Road networks enclosing bare ground are not fields.**
-`field = yes` requires visible agricultural surface — crop colour, tillage texture, or a
-centre-pivot circle. Enclosure by tracks is not enough.
-
-**E-2 — Clarity is judged against this flight, not against a clean aerial photo.**
-Every frame on this flight is hazy compared with normal satellite imagery. `clear` means clear *for
-this dataset*: ground texture and small drainages are crisp. Use `moderate` when the veiling is
-heavy enough that fine texture flattens out and the scene loses local contrast, as in `img_005324`.
-Reserve `heavy` for frames where you genuinely cannot identify features.
-
-**E-3 — `cloud` means discrete cloud, not the global haze.**
-The whole flight sits under a uniform atmospheric veil. That belongs in `clarity`, not `cloud`. Set
-`cloud` above `none` only when you can see actual cloud or a distinct obscuring bank over part of
-the ground. All four annotators already labelled this correctly; this rule just makes it explicit so
-it stays consistent.
 
 ---
 
 ## Part 6 — Individual results
 
-Scores are a strict match against the Part 3 key, out of 30 presence answers and 30 quality answers.
+Scores are a strict match against the Part 4 presence and quality key, out of 30
+each. **Mask scores are withdrawn** and nobody is being marked on them.
 
-An `uncertain` that should have been a definite `yes`/`no` counts as a miss here, but it is **not a
-rule violation** — B-0 explicitly permits `uncertain`. It just carries less information, so the
-lower-information answers are listed separately below.
+An `uncertain` where a definite answer was available counts as a miss here but is
+**not a rule violation** — B-0 permits it.
 
-| Person | Presence | Quality | Total | Masks |
-|---|---:|---:|---:|---|
-| Kunsh (A3) | 28/30 | 27/30 | **55/60** | 3 of 5 wrong |
-| Pranav G. (A2) | 26/30 | 27/30 | **53/60** | **5 of 5 correct** |
-| Prabhav (A4) | 22/30 | 25/30 | **47/60** | 3 of 5 wrong, plus 19 extra frames |
-| Atharva (A1) | 23/30 | 21/30 | **44/60** | 4 of 5 wrong |
+| Person | Presence | Quality | Total |
+|---|---:|---:|---:|
+| Kunsh (A3) | 28/30 | 27/30 | **55/60** |
+| Pranav G. (A2) | 26/30 | 27/30 | **53/60** |
+| Prabhav (A4) | 22/30 | 25/30 | **47/60** |
+| Atharva (A1) | 23/30 | 21/30 | **44/60** |
 
 ### Atharva (A1)
 
-Strongest instinct on roads — you were one of only two people to catch the `img_005324` road. The
-issues are a consistent tendency to over-call:
+You masked the most, and on the corrected frames some of what you were reacting
+to was real — but the scale was far off, 22.2% on `img_005324` where the true
+figure is 0.106%. Work from Figure 2 and expect small patches.
 
-- `field = yes` on four of five frames. Correct answer is `no` on all five. See 4.1 and new rule B-10.
-- `building = yes` on `img_003882` and `img_004842`; no other annotator saw a structure and none is
-  visible. **B-3** needs regular man-made geometry — straight edges, right angles, a roof.
-- `exposure = over` on three frames. Measured clipping never exceeds 4.2% against a 10% threshold.
-  Please treat the numeric thresholds in Task E as hard rules, not impressions.
+Still to fix, all unchanged by the correction:
+
+- `field = yes` on four of five frames; correct answer is `no` on all five (B-10).
+- `building = yes` on `img_003882` and `img_004842`; no structure is visible.
+- `exposure = over` on three frames; measured clipping never exceeds 4.2%.
 - `glare = present` on two frames, alone in doing so.
-- Largest mask over-call in the group: 22.2% of `img_005324`.
-- `water = uncertain` on `img_005324`, where large lake arms are clearly visible.
-
-**To fix:** re-export your mask archive as **PNG**. Your submission contained only `.npy` files.
-Manual rule **T-3** requires single-channel 8-bit PNG. On the Label Studio export screen choose
-*Brush labels to NumPy and PNG* and confirm the archive contains `.png` files before uploading.
+- `water = uncertain` on `img_005324`, where lake arms are clearly visible.
+- **Export format:** your archive contained only `.npy`. Manual rule T-3 requires
+  single-channel 8-bit PNG. On the export screen choose *Brush labels to NumPy
+  and PNG* and confirm `.png` files are present before uploading.
 
 ### Pranav G. (A2)
 
-**The only person who got the masks right** — all five correctly empty. Your 22-byte export archive
-was flagged during review and then cleared: an empty archive is the correct output when there are no
-brush regions. Nothing to redo there.
+Revision 1 credited you with the only correct masks. On the corrected frames
+that no longer holds — all five of your masks were empty and all five frames do
+contain some vegetation. Your empty archive was a valid export, not a broken
+one, but it was not the right answer.
 
-The concern is the opposite of Atharva's — under-calling:
+The under-calling pattern is the thing to work on:
 
-- `water = no` on `img_004842` and `img_005324`, where large smooth lake basins are plainly visible.
-  These are not close calls.
+- `water = no` on `img_004842` and `img_005324`, where large lake basins are
+  plainly visible. Not close calls.
 - `road = no` on `img_003102`, which has three engineered cues.
-- `building = yes` on `img_005324` — your one over-call, and no other annotator agreed.
-- 26 of your 30 presence answers were `no`, and you used `uncertain` zero times.
-
-Three of your five mask frames were completed in under 30 seconds. **G-2** requires panning the
-whole frame at 100% zoom. Your answers were right, but please make sure that is because you looked
-and found nothing, not because the frame was scanned at a glance — on production frames that do
-contain vegetation, the same approach will miss it.
+- `building = yes` on `img_005324` — your one over-call.
+- 26 of 30 presence answers were `no`, and you used `uncertain` zero times.
+- Three mask frames were completed in under 30 seconds. G-2 requires panning the
+  whole frame at 100% zoom. On the corrected frames the vegetation is visible but
+  small, so it will be missed at a glance.
 
 ### Kunsh (A3)
 
-Best categorical scores in the group, and the only person to get every `exposure` call right. Water
-calls were all correct. Your use of `uncertain` on `img_003102` field was reasonable given the
-ambiguity — new rule B-10 now settles it as `no`.
+Best categorical work in the group and the only person with every `exposure`
+call right. All water calls correct.
 
-- Largest single mask error in the group: 19.1% of `img_003102`. Part of that mask crosses the
-  shoreline into the lake, which **A-8** forbids outright.
-- `road = uncertain` on `img_005324`; the three cues in Figure 5 support a definite `yes`.
-
-**To fix:** masks only. Your file handling, formats, and categorical work were clean throughout.
+- Your `img_003102` mask ran across the lake shoreline into open water, which
+  A-8 forbids regardless of colour.
+- Scale was far off — 19.1% where the true figure is 0.027%.
+- `road = uncertain` on `img_005324`; the three cues in Figure 5 support `yes`.
 
 ### Prabhav (A4)
 
-Most disciplined use of `uncertain` — five times, always in genuinely ambiguous places. That is
-correct behaviour under **B-0** and **G-3**, and it is not counted against you as a rule violation.
+Most disciplined use of `uncertain`, always in genuinely ambiguous places. That
+is correct under B-0 and is not held against you.
 
-- **Protocol:** you completed **24 of 30** mask tasks instead of stopping at 5. The guide (Part 12,
-  step 4) says stop at exactly `5 of 30` and wait for `CONTINUE`. Because those 19 extra frames were
-  labelled under the pre-review interpretation, they all need redoing. Presence and quality correctly
-  stopped at 5.
-- You have 1 unsubmitted draft in the mask project and 2 in the quality project. Submit or discard
-  them so the counts are unambiguous.
-- `forest = yes` on `img_005324`. **B-4** needs continuous tree canopy larger than a grid cell, and
-  this frame has no green at all.
-- `field = yes` on `img_003102` and `img_004842`; see B-10.
+- **Protocol:** you labelled **24 of 30** mask tasks instead of stopping at 5.
+  Those extra frames were done under the old imagery and old rules, so they are
+  being discarded. Presence and quality correctly stopped at 5.
+- Clear 1 draft in the mask project and 2 in quality so the counts are clean.
+- `forest = yes` on `img_005324`; the largest patch there is 56 px, far below a
+  grid cell (B-4).
+- `field = yes` on `img_003102` and `img_004842` (B-10).
 - `exposure = under` on two frames; measured shadow-crush is 0.000%.
 - `water = uncertain` on `img_004842`, where the basin is large and unambiguous.
 
 ---
 
-## Part 7 — What happens now
+## Part 7 — What you do now
 
-1. Read this page in full, including the figures.
-2. Attend the re-alignment meeting. Bring any case you disagree with; disagreements get logged and
-   become numbered rules.
-3. **Atharva** re-exports the checkpoint mask archive as PNG.
-4. **Prabhav** submits or discards his open drafts and stands by — his 19 extra mask frames will be
-   redone after the meeting.
-5. Everyone re-does the five checkpoint mask tasks under rules A-11 and A-12. Presence and quality do
-   not need re-doing; the corrections in Part 6 will be applied at adjudication.
-6. Wait for the lead to send `CONTINUE` before touching image 6.
+| # | Who | Action |
+|---|---|---|
+| 1 | Everyone | Read this page and Figure 2 in full |
+| 2 | Everyone | Attend the re-alignment meeting |
+| 3 | Atharva | Re-export masks as PNG, not `.npy` |
+| 4 | Prabhav | Submit or discard your 3 open drafts |
+| 5 | Everyone | Delete your three calibration projects and recreate them (they must reload from `frames_corrected/`) |
+| 6 | Everyone | Redo the 5-image mask checkpoint on the corrected images |
+| 7 | Everyone | Wait for `CONTINUE` before image 6 |
 
-Do not compare your submissions with each other outside the meeting. Independence is what makes the
-agreement statistics meaningful.
+Presence and quality do **not** need redoing. The corrections in Part 6 will be
+applied at adjudication.
+
+### Recreating your projects
+
+Your old projects still point at the uncorrected images, so they have to be
+replaced. Your assignments, image lists and workload are all unchanged.
+
+```bash
+python3 scripts/create_label_studio_projects.py \
+  --annotator A1 \
+  --stage CALIBRATION \
+  --recreate
+```
+
+Replace `A1` with your own id. Nothing else changes.
+
+> **`--recreate` permanently deletes those three projects and any annotations in
+> them.** That is intended here — the checkpoint work is being redone on new
+> imagery. Make sure you have already uploaded your checkpoint 5 exports to Drive
+> before running it, so nothing is lost that the lead has not already received.
 
 ---
 
-## A note on why this happened
+## Part 8 — Revised schedule
 
-Three of four annotators, and the gold reference set as well, converged on the same wrong reading of
-rule A-1. When almost everyone makes the same mistake, the instructions are at fault, not the people.
-The original manual was written before anyone had seen how strong the colour cast on this footage is,
-and it never said what to do when an entire flight is shifted toward blue. Rules A-11, A-12, B-9,
-B-10, E-2, and E-3 exist to close that gap.
+The five-day annotation sprint restarts from the checkpoint. The August 20 freeze
+is unchanged; the lost days come out of buffer, not out of the deadline.
+
+| Date | Who | What must be done |
+|---|---|---|
+| **Jul 29** | Lead | Corrected frames published; this page sent to everyone |
+| **Jul 29** | Sammy | Read the gold review; redo all 12 gold frames on corrected images |
+| **Jul 29** | A1–A4 | Recreate calibration projects; redo the 5-image mask checkpoint; upload |
+| **Jul 30** | Everyone | Re-alignment meeting. Lead sends `CONTINUE` |
+| **Jul 30–31** | A1–A4 | Finish the remaining 25 calibration masks; upload `calibration_final` |
+| **Jul 31** | Lead | Score calibration agreement; send `START PRODUCTION` |
+| **Aug 1–3** | A1–A4 | First 84 production tasks in each of the three projects |
+| **Aug 3** | A1–A4 | Stop at 84. Complete the midpoint check; upload |
+| **Aug 4** | Lead + Sammy | Midpoint review; send `RESUME PRODUCTION` |
+| **Aug 4–7** | A1–A4 | Finish production; upload `production_final` |
+| **Aug 8–10** | Lead | Import validation, agreement, adjudication |
+| **Aug 11–12** | Lead | Freeze labels, masks, grounding inputs |
+| **Aug 13–17** | Lead | Benchmark evaluation |
+| **Aug 18–19** | Lead | Analysis, tables, figures |
+| **Aug 20** | Lead | Reproducibility run and release freeze |
+
+Deadlines that move if anything slips: tell the lead the same day, not at the
+end of the stage.

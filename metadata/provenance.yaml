@@ -102,3 +102,42 @@ release:
   huggingface_url: null
   zenodo_doi: null
   splits_sha256: a407bdad42b44b5ad59ee7afba39398863f23335d9d2378c8a2101e4da3cf7fc
+
+colour_correction:
+  added: 2026-07-29
+  reason: >-
+    The WORLD-10 camera recorded with an uncontrolled white balance. At altitude
+    the scene is shifted strongly toward blue/violet, which made manual rule A-1
+    ("hue reads green") unusable and produced four incompatible answers at the
+    first calibration checkpoint.
+  script: scripts/build_corrected_frames.py
+  output: frames_corrected/
+  manifest: metadata/colour_correction.csv
+  method: >-
+    Per-frame per-channel gain. The frame's bare-terrain population (excluding
+    dark, near-clipped and already green-dominant pixels) is scaled so its
+    per-channel median matches a fixed bare-desert reference.
+  target_rgb: [183, 136, 102]
+  target_source: >-
+    Median of bare desert (G-R < -20) in USGS NAIP 2023 imagery over the Page /
+    Glen Canyon corridor, public domain.
+  removes: white-balance colour cast only
+  preserves: >-
+    Atmospheric veiling, contrast, sharpness and exposure are deliberately
+    unchanged so the clarity/sharpness/exposure quality flags still measure the
+    real optical conditions.
+  status: >-
+    Annotation aid. frames/ remains the authoritative released imagery. The
+    correction normalises every frame's terrain to one global colour, which
+    discards real between-frame geology and illumination variation and must not
+    be used for radiometric analysis.
+  green_measurement:
+    definition: hue 70-150 deg, saturation >= 0.15, value 0.18-0.70
+    note: >-
+      Measured on the float image before JPEG encoding; re-encoding inflates the
+      figure by up to ~50%. The upper hue bound excludes swimming pools and lined
+      turquoise ponds, which otherwise roughly doubled the measurement on frames
+      containing the town of Page.
+    frames_over_0p5_percent: 22
+    max_frame_percent: 2.355
+    median_frame_percent: 0.009

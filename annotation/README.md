@@ -9,24 +9,22 @@ expected to write code or understand the software internally.
 If something does not look exactly as described, stop and send the project lead
 the error message or a screenshot. Do not guess how to fix a partial project.
 
-> ## ⛔ Calibration is paused — read the checkpoint review first
+> ## ⛔ Calibration is paused — checkpoint 5 was reviewed and the imagery changed
 >
-> Checkpoint 5 has been reviewed. It found a problem with the vegetation task
-> that affects everyone, plus several rule clarifications. **Do not label
-> calibration image 6 until you have read
-> [CHECKPOINT5_REVIEW.md](CHECKPOINT5_REVIEW.md) and the lead has sent
-> `CONTINUE`.**
+> **Read [CHECKPOINT5_REVIEW.md](CHECKPOINT5_REVIEW.md) before labelling
+> anything else.** Sammy: also read [GOLD_SET_REVIEW.md](GOLD_SET_REVIEW.md).
 >
-> That page contains the answer key for the five checkpoint frames, worked
-> examples with annotated figures, and new rules B-9, B-10, E-2, and E-3, which
-> override anything contradicting them here. Sammy: see
-> [GOLD_SET_REVIEW.md](GOLD_SET_REVIEW.md) for the gold set.
+> Two things changed:
 >
-> **Correction (important):** the vegetation-mask half of that review was wrong
-> and has been withdrawn, along with rules A-11 and A-12. The frames have a
-> colour cast that made the mask task unanswerable as given. **Do not redo any
-> masks** — colour-corrected frames are being prepared. Presence and quality
-> guidance is unaffected.
+> 1. **You now label colour-corrected images.** The camera recorded with a bad
+>    white balance that turned the whole scene blue and made vegetation
+>    impossible to judge. Every task file now points at `frames_corrected/`.
+>    **You must delete and recreate your projects** so they load the new images.
+> 2. **The vegetation rules are rewritten.** Rules A-13 to A-17 replace the
+>    withdrawn A-11 and A-12. Part 6 below has been updated to match.
+>
+> Presence and quality guidance is unchanged. Do not label calibration image 6
+> until the lead sends `CONTINUE`.
 
 ## Read this first: the exact team and current plan
 
@@ -63,29 +61,35 @@ Every stage has three separate projects:
 
 ## Fixed deadline
 
-The annotation sprint is designed to finish in four to five intensive days.
-The entire dataset, adjudication, training, evaluation, and freeze target is
-**August 20, 2026**.
+The annotation sprint restarts from the checkpoint on colour-corrected images.
+The **August 20, 2026** freeze is unchanged — the lost days come out of buffer.
 
-| Date | Required outcome |
-|---|---|
-| July 27 | Everyone installs and tests Label Studio; Sammy finishes gold; A1-A4 finish the 5-image checkpoint, attend alignment, and complete calibration |
-| July 28-29 | A1-A4 complete the first 84 production images in all three projects; midpoint is completed and uploaded on July 29 |
-| July 30-31 | A1-A4 finish production and upload all final exports |
-| August 1-4 | Zafir validates imports, measures agreement, and coordinates adjudication with Sammy and the annotators |
-| August 5-7 | Final labels, masks, registration/grounding inputs, and dataset audit are frozen |
-| August 8-14 | Training and benchmark evaluation |
-| August 15-18 | Error analysis, final reruns, tables, and figures |
-| August 19-20 | Final reproducibility run, documentation, and release freeze |
+| Date | Who | What must be done |
+|---|---|---|
+| **Jul 29** | Lead | Corrected frames published; reviews sent to everyone |
+| **Jul 29** | Sammy | Redo all 12 gold frames on corrected images |
+| **Jul 29** | A1–A4 | Recreate calibration projects; redo the 5-image mask checkpoint; upload |
+| **Jul 30** | Everyone | Re-alignment meeting. Lead sends `CONTINUE` |
+| **Jul 30–31** | A1–A4 | Finish the remaining 25 calibration masks; upload `calibration_final` |
+| **Jul 31** | Lead | Score calibration agreement; send `START PRODUCTION` |
+| **Aug 1–3** | A1–A4 | First 84 production tasks in each of the three projects |
+| **Aug 3** | A1–A4 | Stop at 84; complete the midpoint check; upload |
+| **Aug 4** | Lead + Sammy | Midpoint review; send `RESUME PRODUCTION` |
+| **Aug 4–7** | A1–A4 | Finish production; upload `production_final` |
+| **Aug 8–10** | Lead | Import validation, agreement, adjudication |
+| **Aug 11–12** | Lead | Freeze labels, masks, grounding inputs |
+| **Aug 13–17** | Lead | Benchmark evaluation |
+| **Aug 18–19** | Lead | Analysis, tables, figures |
+| **Aug 20** | Lead | Reproducibility run and release freeze |
 
-If the sprint begins on a later date, keep the same four-to-five-day annotation
-sequence. Tell Zafir immediately if anything threatens the August 20 deadline.
+Only the three authorisation messages move you between stages: `CONTINUE` after
+the 5-image checkpoint, `START PRODUCTION` after calibration, and
+`RESUME PRODUCTION` after the midpoint. If anything threatens a date, tell the
+lead the same day, not at the end of the stage.
 
-The separate registration-source dependency was resolved on July 26: the
-project now records public-domain 2023 USGS NAIP, streamed through QGIS in
-`EPSG:26912`. A1-A4 still do not need QGIS or reference imagery. Zafir and
-lead-assigned registration checkers complete that separate work after the
-visible-image annotations are locked.
+The reference-imagery dependency was resolved on July 26: the project uses
+public-domain 2023 USGS NAIP, streamed through QGIS in `EPSG:26912`. A1–A4 do
+not need QGIS or reference imagery.
 
 ## Shared Google Drive submission folder
 
@@ -669,71 +673,115 @@ projects.
 
 Open the project ending in `-MASK`.
 
-The target is **visible living green vegetation**. The target is not every plant
-and not every naturally colored area.
+> **Before you start, open the vegetation reference card:**
+> [figures/fig2_vegetation_reference.png](figures/fig2_vegetation_reference.png)
+> Keep it visible in a second window. It shows real examples of what to mask and
+> what not to mask, taken from these exact frames.
 
-The required tool is Label Studio's built-in brush and eraser. Segment Anything
-is optional. If no automatic proposal appears, continue manually with the brush;
-that is a valid and complete workflow.
+### The one test that decides everything
+
+> **A region is vegetation only if GREEN is its strongest colour channel.**
+
+Not "darker than its surroundings". Not "greyer". Not "different". **Green** —
+the way a lawn or a tree is green.
+
+On the corrected images, vegetation here is usually **dark green**, with a
+typical colour around RGB (45–75, 70–100, 45–75). Bare desert is orange-brown
+with red clearly strongest. If you are unsure about a patch, ask yourself: *if I
+saw this on its own with no surroundings, would I call it green?* If the answer
+is no, do not mask it.
+
+### The four traps — none of these is vegetation
+
+These caused every mask error at checkpoint 5. Learn them.
+
+| Trap | Why it fools you | How to tell | Rule |
+|---|---|---|---|
+| **Darker brown rock** | Different rock units differ in brightness, so a patch looks "different" | Red still beats green. Brightness is not hue | A-15 |
+| **Shadow** | Dark, and it was blue before correction | Branches and follows topography; no green hue | A-8 |
+| **Water** | Can appear green, teal or turquoise | Sits in a basin with a level shoreline | A-8 |
+| **Olive tint with no edge** | A faint wash across a whole slope at high altitude | You cannot draw a boundary around it | A-6 |
+
+### Haze: it hides vegetation, it never creates it
+
+The correction removed the camera's blue colour cast. It did **not** remove
+haze, on purpose, because `clarity` still has to measure it.
+
+So on a hazy frame: mask only what you can actually see. Do not infer vegetation
+from a general olive cast and do not mask more generously to compensate. If the
+haze is hiding things, that is what the `clarity` flag is for. (Rule A-16)
+
+### How much vegetation to expect
+
+Measured across all 377 frames after correction:
+
+| Vegetation in a frame | How many frames |
+|---|---|
+| Under 0.1% | 295 of 377 |
+| 0.1% – 0.5% | 60 of 377 |
+| Over 0.5% | 22 of 377 |
+| Over 1% | 7 of 377 |
+
+**The most vegetated frame in the whole dataset is 2.4%. The median is 0.009%.**
+
+If you are masking 10% or 20% of a frame, something has gone wrong — that is
+hundreds of times more vegetation than exists anywhere in this dataset. A few
+small patches, or none at all, is the normal correct answer. (Rule A-17)
 
 ### Include
 
 Include a region only when it is visibly:
 
-- green, olive-green, or dark-green;
+- green — green is the strongest channel, not merely a darker shade;
 - living vegetation;
-- resolved clearly enough to trace;
+- resolved clearly enough that you could trace its boundary;
 - at least four connected pixels.
 
-Examples include a resolvable green riverbank ribbon, tree canopy, shrubs, or a
-green field.
+Typical real examples in this dataset: a dark green ribbon along a wash, street
+trees and watered yards near Page, an irrigated field.
 
 ### Exclude
 
 Do not mask:
 
-- tan, straw-colored, dry, or brown grass;
+- darker or greyer rock that is not actually green;
+- shadow, including shadow that looked blue before correction;
+- water, whatever colour it appears — including turquoise ponds;
+- a faint olive wash you cannot resolve into distinct patches;
+- tan, straw-coloured, dry or brown grass;
 - bare rock, red rock, sand, or mineral tint;
-- water or an uncertain algae/water region;
 - cloud, haze, snow, ice, glare, or balloon material;
-- shadow unless the vegetation remains clearly identifiable;
 - roads, roofs, vehicles, or other man-made surfaces;
-- a vague green wash that cannot be resolved into patches;
 - isolated one-to-three-pixel green noise.
 
 ### Paint the mask
 
 1. Find the brush-label controls beside or below the image.
 2. Select the brush label named `green_visible_vegetation`.
-3. Move the pointer over the target region.
+3. Zoom to 100% and work through the frame left-to-right, top-to-bottom.
 4. Press and hold the primary mouse/trackpad button while moving to paint.
-5. Release the button at the end of the region.
-6. Change the brush size so narrow vegetation is not covered by an oversized
-   stroke.
-7. Select the eraser tool and erase every spill onto rock, water, cloud, or
-   another excluded surface.
-8. Zoom and pan; never assume a small preview is accurate.
-9. At a boundary, include a pixel only when vegetation occupies more than half
-   of that pixel.
-10. Do not make the mask larger merely to be safe.
-11. Inspect the entire image once with the overlay visible and, if the interface
-    provides an overlay toggle, once with it hidden.
-12. Choose an uncertain-region answer.
-13. Click **Submit** only after both the mask and uncertainty choice are final.
+5. Use a small brush so narrow vegetation is not covered by an oversized stroke.
+6. Select the eraser and remove every spill onto rock, water, or shadow.
+7. At a boundary, include a pixel only when vegetation occupies more than half
+   of it.
+8. Do not enlarge the mask "to be safe". An under-sized accurate mask is worth
+   more than a generous one.
+9. Inspect the whole image once with the overlay visible and once hidden.
+10. Choose an uncertain-region answer.
+11. Click **Submit** only when both the mask and the uncertainty choice are
+    final.
 
-If there is no qualifying green vegetation, leave the green mask empty, choose
-`uncertain_region=none` unless a genuine ambiguity remains, and submit.
+If there is no qualifying green vegetation, leave the mask empty, choose
+`uncertain_region=none`, and submit. **An empty mask is a complete, valid
+answer** and on this dataset it is often the correct one.
 
 ### About the red `background` option
 
-Do not use a red brush to paint the whole image. `background` under the smart
-point controls is only a negative correction prompt for an interactive Segment
-Anything setup. The final target mask must contain only
-`green_visible_vegetation`.
+Do not paint the whole image red. `background` under the smart point controls is
+only a negative correction prompt for an interactive Segment Anything setup. The
+final mask must contain only `green_visible_vegetation`.
 
 ### If Segment Anything is available
-
-Segment Anything may propose a mask after foreground/background clicks.
 
 - The proposal is not an answer.
 - Zoom in and correct every overrun and omission.
