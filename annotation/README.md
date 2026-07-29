@@ -19,7 +19,8 @@ the error message or a screenshot. Do not guess how to fix a partial project.
 >
 > That page contains the answer key for the five checkpoint frames, worked
 > examples with annotated figures, and new rules A-11, A-12, B-9, B-10, E-2, and
-> E-3, which override anything contradicting them here.
+> E-3, which override anything contradicting them here. Sammy: see
+> [GOLD_SET_REVIEW.md](GOLD_SET_REVIEW.md) for the gold set.
 
 ## Read this first: the exact team and current plan
 
