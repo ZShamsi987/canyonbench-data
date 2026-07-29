@@ -1,5 +1,48 @@
 # Calibration Checkpoint 5 — Review, Answer Key, and Retraining
 
+> # 🛑 CORRECTION — the mask answer key below is WITHDRAWN
+>
+> **Parts 1, 2, and the Task A row of Part 3 are wrong. Rules A-11 and A-12 are
+> withdrawn. Do not act on them.**
+>
+> The original review measured "green" on the **raw** frames. That was the wrong
+> test. The footage has a strong blue/violet cast, and correcting it — by
+> normalising each frame's terrain against properly balanced USGS NAIP imagery of
+> the same ground — changes the answer completely:
+>
+> | Frame | green pixels, raw | green pixels, colour-corrected | largest connected patch |
+> |---|---:|---:|---:|
+> | `img_003102` | 0.027% | 0.063% | 34 px |
+> | `img_003882` | 0.025% | 0.459% | 637 px |
+> | `img_004482` | 0.023% | 0.865% | 212 px |
+> | `img_004842` | 0.007% | 1.056% | 810 px |
+> | `img_005324` | 0.001% | **1.498%** | 804 px |
+>
+> On `img_005324`, 99% of those pixels are bright vegetation candidates rather
+> than water edges, in **582 separate patches** of 4 px or more. Those pass A-5
+> and are resolvable. **The correct mask on these frames is not empty.**
+>
+> Corrected low-altitude frames settle it beyond argument: `img_002862` at 2 km
+> renders as an ordinary aerial photo of Page, Arizona — hangars, parked
+> aircraft, houses, swimming pools, and plainly green lawns and street trees.
+> Across the sampled set, 126 of 377 frames carry more than 0.5% green once the
+> cast is corrected.
+>
+> **What this means for you:** the vegetation task was not answerable on the
+> images you were given. Anyone who masked terrain that looked darker or greener
+> than its surroundings was responding to something real. Atharva and Kunsh in
+> particular were tracking genuine variation, even though the raw pixels could
+> not support it.
+>
+> **Do not redo any masks yet.** The lead is producing colour-corrected frames.
+> The mask task restarts on those, with a rewritten rule A-1.
+>
+> **What still stands:** everything about presence and quality that does not
+> depend on greenness — the water, road and field calls, the exposure and clarity
+> findings, the shadow-versus-water test (Figure 4), the road-versus-field
+> worked example (Figure 3), and the export-format and protocol notes in Part 6.
+> The `forest` calls are on hold with the masks.
+
 **Read this completely before you label image 6.** All four annotators submitted checkpoint 5 on
 time and in the correct format. Nobody is in trouble. But the review found one problem that affects
 everyone and several rule misreadings that are easy to fix, so calibration is paused until we have

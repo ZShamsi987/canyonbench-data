@@ -18,9 +18,15 @@ the error message or a screenshot. Do not guess how to fix a partial project.
 > `CONTINUE`.**
 >
 > That page contains the answer key for the five checkpoint frames, worked
-> examples with annotated figures, and new rules A-11, A-12, B-9, B-10, E-2, and
-> E-3, which override anything contradicting them here. Sammy: see
+> examples with annotated figures, and new rules B-9, B-10, E-2, and E-3, which
+> override anything contradicting them here. Sammy: see
 > [GOLD_SET_REVIEW.md](GOLD_SET_REVIEW.md) for the gold set.
+>
+> **Correction (important):** the vegetation-mask half of that review was wrong
+> and has been withdrawn, along with rules A-11 and A-12. The frames have a
+> colour cast that made the mask task unanswerable as given. **Do not redo any
+> masks** — colour-corrected frames are being prepared. Presence and quality
+> guidance is unaffected.
 
 ## Read this first: the exact team and current plan
 

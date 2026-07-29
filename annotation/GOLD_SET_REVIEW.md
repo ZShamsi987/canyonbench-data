@@ -1,5 +1,25 @@
 # Gold Set Review — Sammy
 
+> # 🛑 CORRECTION — Section 1 (masks) is WITHDRAWN
+>
+> Section 1 measured greenness on the **raw** frames, which was the wrong test.
+> After correcting the blue/violet colour cast against properly balanced USGS
+> NAIP imagery, these frames do contain resolvable green vegetation, and the
+> claim that "the correct mask on all 12 gold frames is empty" is **wrong**.
+>
+> See the correction banner on
+> [CHECKPOINT5_REVIEW.md](CHECKPOINT5_REVIEW.md) for the measurements.
+>
+> **Sammy: do not redo the masks yet**, and do not treat the three frames you
+> left empty as the "correct" ones. The mask task restarts on colour-corrected
+> frames with a rewritten rule A-1.
+>
+> **Section 2 still stands, and it is the more important finding** — 38 of 72
+> presence answers being `uncertain` leaves the gold set unable to score
+> annotators on road, building or field, and that is independent of the colour
+> cast. The exposure finding in Section 4 also stands. The `forest` calls in
+> Section 3 are on hold with the masks; the `building` and `water` calls stand.
+
 > ### ⚠️ Read this before the midpoint check
 >
 > This page contains the reference answers for the 12 qualification images, and
