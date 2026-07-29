@@ -136,6 +136,25 @@ def validate_annotation_release() -> None:
     assert split_map == {row["image"]: row["split"] for row in manifest}
 
     frame_files = sorted((ROOT / "frames").glob("*/*.jpg"))
+    corrected_files = sorted((ROOT / "frames_corrected").glob("*/*.jpg"))
+    assert [p.name for p in corrected_files] == [p.name for p in frame_files], (
+        "frames_corrected/ must contain exactly the same image names as frames/"
+    )
+    correction = list(
+        csv.DictReader(
+            (ROOT / "metadata" / "colour_correction.csv").read_text(
+                encoding="utf-8"
+            ).splitlines()
+        )
+    )
+    assert len(correction) == len(frame_files)
+    assert {row["image"] for row in correction} == {p.name for p in frame_files}
+    assert all(
+        0.4 <= float(row["gain_r"]) <= 3.0
+        and 0.4 <= float(row["gain_g"]) <= 3.0
+        and 0.4 <= float(row["gain_b"]) <= 3.0
+        for row in correction
+    ), "colour-correction gains outside the permitted range"
     assert len(frame_files) == len(manifest)
     assert {path.name for path in frame_files} == images
     for path in frame_files:
@@ -211,8 +230,9 @@ def validate_annotation_release() -> None:
         url = item["data"]["image"]
         assert IMAGE.fullmatch(image)
         assert url.startswith(
-            "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main/frames/"
-        )
+            "https://raw.githubusercontent.com/ZShamsi987/canyonbench-data/main"
+            "/frames_corrected/"
+        ), "annotation tasks must point at the colour-corrected frames"
         assert Path(urlparse(url).path).name == image
         task_images.add(image)
     assert task_images == images

@@ -106,17 +106,25 @@ class LabelStudio:
                 f"Cannot reach Label Studio at {self.base_url}: {error.reason}"
             ) from error
 
-    def projects_by_title(self) -> dict[str, int]:
+    def _projects(self) -> list[dict[str, Any]]:
         response = self.request("GET", "/api/projects/?page_size=100")
         projects = (
             response.get("results", response)
             if isinstance(response, dict)
             else response
         )
-        return {str(project["title"]): int(project["id"]) for project in projects}
+        return list(projects)
+
+    def projects_by_title(self) -> dict[str, int]:
+        """Title -> id, for projects that expose an id."""
+        return {
+            str(project["title"]): int(project["id"])
+            for project in self._projects()
+            if "id" in project
+        }
 
     def project_titles(self) -> set[str]:
-        return set(self.projects_by_title())
+        return {str(project["title"]) for project in self._projects()}
 
     def delete_project(self, project_id: int) -> None:
         self.request("DELETE", f"/api/projects/{project_id}/")
@@ -278,16 +286,21 @@ def main() -> None:
             "Account & Settings, then run this command again."
         )
     client = LabelStudio(args.url, api_key)
-    existing = client.projects_by_title()
+    existing_titles = client.project_titles()
+    existing_ids = client.projects_by_title()
 
     created = 0
     for row in rows:
         title = row["project_name"]
-        if title in existing:
+        if title in existing_titles:
             if not args.recreate:
                 print(f"SKIP existing project: {title}", file=sys.stderr)
                 continue
-            client.delete_project(existing[title])
+            if title not in existing_ids:
+                raise RuntimeError(
+                    f"Cannot recreate {title}: Label Studio did not return its id"
+                )
+            client.delete_project(existing_ids[title])
             print(f"DELETED existing project: {title}", file=sys.stderr)
         label_config = (ROOT / row["label_config"]).read_text(encoding="utf-8")
         tasks = json.loads((ROOT / row["task_file"]).read_text(encoding="utf-8"))
