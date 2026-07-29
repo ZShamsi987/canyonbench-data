@@ -9,6 +9,18 @@ expected to write code or understand the software internally.
 If something does not look exactly as described, stop and send the project lead
 the error message or a screenshot. Do not guess how to fix a partial project.
 
+> ## ⛔ Calibration is paused — read the checkpoint review first
+>
+> Checkpoint 5 has been reviewed. It found a problem with the vegetation task
+> that affects everyone, plus several rule clarifications. **Do not label
+> calibration image 6 until you have read
+> [CHECKPOINT5_REVIEW.md](CHECKPOINT5_REVIEW.md) and the lead has sent
+> `CONTINUE`.**
+>
+> That page contains the answer key for the five checkpoint frames, worked
+> examples with annotated figures, and new rules A-11, A-12, B-9, B-10, E-2, and
+> E-3, which override anything contradicting them here.
+
 ## Read this first: the exact team and current plan
 
 These assignments are final. Never exchange ids or use somebody else's id in a
