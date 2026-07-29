@@ -101,10 +101,16 @@ Do not skip a gate.
 
 ## Visible green vegetation
 
-Include resolvable green, olive-green, or dark-green living vegetation. Exclude
-tan/dry grass, water or algae ambiguity, mineral tint, unconfirmed shadow,
-diffuse sub-resolution green tint, and connected specks under four pixels.
-Trace the >50% pixel boundary and do not pad segmenter proposals.
+Label from `frames_corrected/` only (A-13). Include resolvable living vegetation
+where **green is the dominant channel** judged in isolation, not merely darker or
+greyer than its surroundings (A-14, A-15). Exclude tan/dry grass, water or algae
+ambiguity, mineral tint, darker brown rock units, canyon shadow, diffuse
+sub-resolution green tint, and connected specks under four pixels. Trace the
+>50% pixel boundary and do not pad segmenter proposals.
+
+Haze hides vegetation and never creates it: mask only what is visible and record
+the haze in `clarity` (A-16). Expect small masks — median cover is 0.009% of a
+frame and the maximum anywhere in the sampled set is 2.4% (A-17).
 
 ## Feature minimums
 

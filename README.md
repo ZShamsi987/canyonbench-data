@@ -40,8 +40,11 @@ A frozen data release has this shape:
 
 ```text
 frames/
-  launching/                    sampled ascent images
+  launching/                    sampled ascent images (authoritative release)
   floating/                     core scored images
+frames_corrected/               colour-corrected copies used for annotation
+  launching/                    see metadata/colour_correction.csv
+  floating/
 masks/
   annotator/                    img_SSSSSS__ID.png
   adjudicated/                  img_SSSSSS.png
@@ -66,7 +69,7 @@ Public releases may store imagery in a Hugging Face Dataset and metadata here. A
 
 - Label only visible content in `img_SSSSSS.jpg`; never infer from flight location.
 - Human annotations are primary. Public geographic data and VARI are weak-label comparisons or annotation aids.
-- Green vegetation means visible living green cover, not all vegetation or land-cover class.
+- Green vegetation means visible living green cover, not all vegetation or land-cover class. It is annotated on `frames_corrected/`, where the camera colour cast has been removed; `frames/` remains the authoritative released imagery.
 - Feature presence uses exactly water, road/trail, building/structure, dense forest, snow/ice, and cultivated field.
 - Grounding is a human-verified 4x4 mask-derived grid and exists only for registration-reliable frames.
 - Reliability requires at least six control points, two held out, and held-out RMSE no greater than one quarter of a grid-cell ground width.

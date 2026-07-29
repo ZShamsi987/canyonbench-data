@@ -2,6 +2,21 @@
 
 Operational rules accompanying project specification revision 2. Cite rule ids when resolving disagreements. Anything not determined here is marked uncertain and entered in the append-only decision log; the adjudicated ruling becomes a new numbered rule.
 
+> **Imagery change, 2026-07-29.** All labelling now uses `frames_corrected/`,
+> not `frames/`. The camera recorded with an uncontrolled white balance that
+> shifted the scene toward blue/violet and made A-1 unusable as written; see
+> `metadata/colour_correction.csv` and `scripts/build_corrected_frames.py`. The
+> correction removes the colour cast only — atmospheric veiling, contrast,
+> sharpness and exposure are preserved, so Task E still measures real optical
+> conditions. `frames/` remains the authoritative released imagery.
+>
+> Rules **A-11** and **A-12** were issued 2026-07-28 and withdrawn 2026-07-29.
+> Those numbers are retired and must not be reused. **A-13** to **A-17**,
+> **B-9**, **B-10**, **E-2**, **E-3** and **W-5** replace them.
+>
+> Worked examples and a vegetation reference card:
+> `annotation/CHECKPOINT5_REVIEW.md`.
+
 ## General rules
 
 - **G-1** Label only what is visible in the cropped frame. Never use knowledge of the region or flight path.
@@ -16,7 +31,7 @@ Operational rules accompanying project specification revision 2. Cite rule ids w
 - **T-2** Place control points in QGIS Georeferencer with the frame as source
   and the frozen 2023 USGS NAIP ImageServer as target. Set the project and
   target CRS to `EPSG:26912`; follow `docs/registration.md`.
-- **T-3** Export masks as same-size, single-channel 8-bit PNGs: 255 vegetation, 0 background.
+- **T-3** Export masks as same-size, single-channel 8-bit PNGs: 255 vegetation, 0 background. Choose the export that produces PNG files and confirm the archive contains `.png` before uploading; a NumPy-only archive is not an acceptable submission. An archive that is empty because the frame has no vegetation is acceptable and expected.
 - **T-4** Use one stable annotator id in every record and filename.
 
 ## Task A: vegetation masks
@@ -33,8 +48,13 @@ The target is living green vegetation visible in the frame.
 - **A-8** Always exclude cloud, haze, snow, water, shadow, rock, sand, and man-made surfaces.
 - **A-9** At 100% from the top-left, click inside each patch for a segmenter proposal; correct overrun/omission with a small brush/eraser.
 - **A-10** Repeat in G-2 order and export `masks/annotator/img_SSSSSS__ID.png`.
+- **A-13** Label only from `frames_corrected/`. A blue or violet frame means the wrong task file is loaded; stop and tell the lead.
+- **A-14** Green must be the dominant channel. A region qualifies only when green is visibly its strongest colour, judged in isolation from its surroundings. Darker, greyer, or merely different does not qualify. This is the operational form of A-1 and supersedes any reading of A-1 based on relative appearance.
+- **A-15** Brightness difference is not hue difference. Darker rock units, shaded slopes, and damp washes differ from their surroundings in brightness; none is vegetation unless it is also green.
+- **A-16** Haze hides vegetation and never creates it. On a hazy frame mask only what is visible; do not infer vegetation from a general olive cast and do not mask more generously to compensate. Record the haze in `clarity`.
+- **A-17** Expect small masks. Measured across the sampled set, median vegetation cover is 0.009% of a frame, 22 of 377 frames exceed 0.5%, and the maximum is 2.4%. A mask above roughly 2% must be re-checked against the reference card before submission. This is a prompt to look again, not a hard limit.
 
-Examples: include a resolvable dark-green ribbon on a river bank; exclude tan plateau grassland; exclude a faint unresolved green wash.
+Examples: include a resolvable dark-green ribbon on a river bank, street trees and watered ground near Page; exclude tan plateau grassland, a darker brown rock unit, canyon shadow, turquoise ponds, and a faint unresolved olive wash.
 
 ## Task B: feature presence
 
@@ -49,6 +69,8 @@ For every feature choose `yes`, `no`, or `uncertain`.
 - **B-6 Cultivated field** `yes` requires geometric agricultural parcels, regular boundaries, or a center-pivot circle.
 - **B-7** A dry wash, ridgeline, or natural erosion line with zero engineered cues is `no` for road regardless of resemblance.
 - **B-8** Never infer one feature from another. Judge each from its own visible evidence.
+- **B-9 Shadow versus water.** Colour alone is never sufficient evidence for `water = yes`. Decide on shape: shadow branches dendritically, follows topography, narrows uphill, and shares the texture of the slope beside it; water fills a basin or channel with a level shoreline and a smooth surface. A branching pattern that follows topography is `no`, not `uncertain`. This is the water-flag counterpart of B-2/B-7.
+- **B-10 Road networks are not fields.** `field = yes` requires visible agricultural surface — crop colour, tillage texture, or a centre-pivot circle. Ground merely enclosed by tracks or graded roads is `no`, and treating enclosure as evidence also violates B-8.
 
 ## Task C: registration control points
 
@@ -79,6 +101,9 @@ Rows and columns are zero-indexed from the top-left and keys are `0,0` through `
 - `exposure`: `ok`; `over` when clipped white highlights cover over 10%; `under` when crushed detail-losing shadows cover over 10%.
 - `glare`: `none`; `present` for visible bright bloom or veiling flare.
 - **E-1** Heavy cloud, heavy clarity loss, or partial balloon makes a frame an exclusion candidate. Record the keep/drop decision and reason in the master table.
+- **E-2 Clarity is judged against this flight.** Every frame sits under atmospheric veiling, so `clear` means clear *for this dataset*: ground texture and small drainages stay crisp. Use `moderate` when veiling flattens fine texture and the scene loses local contrast, and reserve `heavy` for frames where features cannot be identified. The colour correction does not affect this judgement, because it removes the cast and leaves the veiling in place.
+- **E-3 `cloud` means discrete cloud.** The whole flight sits under a uniform veil; that belongs in `clarity`. Set `cloud` above `none` only for visible cloud or a distinct bank obscuring part of the ground.
+- **E-4** The `exposure` thresholds are numeric and binding, not impressions. `over` requires clipped highlights on more than 10% of the frame and `under` requires crushed shadows on more than 10%. Bright-looking haze is not over-exposure.
 
 ## Task F: caption-judge validation
 
@@ -95,6 +120,7 @@ Rows and columns are zero-indexed from the top-left and keys are `0,0` through `
   Zafir recorded that waiver for A1-A4 on 2026-07-26; the midpoint repeat
   remains mandatory.
 - **W-4** Preserve `img_SSSSSS__ID.png`; the adjudicated final is `img_SSSSSS.png`.
+- **W-5 Gold answers must be decidable.** B-0 permits `uncertain` for production annotators, but a gold/reference answer of `uncertain` cannot score anyone: `yes`, `no` and `uncertain` all match it equally well, so the item measures nothing. When producing gold, commit to whatever the feature's minimum-evidence test yields and log the frame and reasoning under Q-1. Reserve `uncertain` in gold for images that genuinely cannot support any answer. A gold set in which a feature is `uncertain` on most frames is not fit for scoring and must be redone.
 - **Q-1** Put unresolved cases in the append-only log with frame, question, consulted rules, ruling, and new numbered rule. Apply it retrospectively during adjudication.
 - **Q-2** Hold a short weekly adjudication, finalize conflicts, and fold rulings into the manual.
 - **Q-3** Repeat the qualification set midway; re-align any drift before production continues.

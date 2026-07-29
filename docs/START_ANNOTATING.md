@@ -14,6 +14,28 @@ The 377 annotation images are public GitHub files. Nobody needs the 71 GB raw
 Google Drive folder, the flight logs, or a repository clone to label them.
 Label Studio reads each JPEG directly from the URL embedded in the task file.
 
+> **Update, 2026-07-29 — read before running anything below.**
+>
+> Calibration is paused. Checkpoint 5 was reviewed and two things changed:
+>
+> - **Labelling now uses `frames_corrected/`.** The camera's white balance
+>   shifted the scene toward blue/violet, which made the vegetation rule
+>   unusable. Every task file now points at the corrected images. Existing
+>   projects keep the URLs they were built with, so they must be rebuilt with
+>   `--recreate` — which permanently deletes their annotations. Everyone must
+>   upload their current exports to Drive first.
+> - **The vegetation rules changed.** A-11 and A-12 were withdrawn; A-13 to
+>   A-17, B-9, B-10, E-2 to E-4 and W-5 replace them. See the
+>   [annotation manual](annotation-manual.md) and the decision log.
+>
+> Reviews to circulate:
+> [checkpoint 5 review](../annotation/CHECKPOINT5_REVIEW.md) for A1–A4, and the
+> [gold set review](../annotation/GOLD_SET_REVIEW.md) for Sammy. The revised
+> schedule to the unchanged August 20 freeze is in both.
+>
+> Sammy's gold set is on the critical path: it must be redone on the corrected
+> frames before A1–A4's calibration can be scored.
+
 ## What the project lead must do first
 
 Do these steps in order.
